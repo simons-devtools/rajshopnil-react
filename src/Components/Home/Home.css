@@ -1,0 +1,74 @@
+.banner-setting img {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.collection-packages-blue, .collection-packages-tomato {
+    margin-bottom: 50px;
+}
+
+.collection-packages-blue h1 {
+    font-size: 16px;
+    margin-left: 7px;
+    color: #370863;
+}
+
+.collection-packages-tomato h1 {
+    font-size: 16px;
+    margin-left: 7px;
+    color: #a32610;
+}
+
+/* Collection 1/2/6 styles */
+.collection-packages-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Collection 3 styles */
+.collection-img-box .banner-img {
+    width: 100%;
+    height: 451px;
+    margin-bottom: -5px;
+    cursor: pointer;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+    border-left: 1px solid #E2E8F0;
+}
+
+.full-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+.collection-img-box {
+    width: 40%;
+}
+
+.collection-banner-container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Eight collection explore btn style */
+.explore-btn button {
+    border: none;
+    border: 2px solid #d3bce9;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.explore-btn button:hover {
+    color: #fff;
+    background-color: #00b7ff;
+    border: 2px solid #00b7ff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}

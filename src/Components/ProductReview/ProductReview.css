@@ -1,0 +1,111 @@
+.packages {
+    padding: 15px 20px;
+    margin-top: 30px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #E2E8F0;
+    vertical-align: middle;
+}
+
+.review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 12px 0;
+    background-color: #f5f5f5;
+}
+
+.product-image img {
+    width: 150px;
+    height: 100px;
+    background-color: #fff;
+}
+
+.review-prod-info {
+    /* color: #c4c1c1; */
+    font-weight: bold;
+    padding: 6px 0;
+    letter-spacing: 2px;
+}
+
+.prod-price {
+    color: #db2804b9;
+    margin-bottom: 10px;
+}
+
+.extra {
+    width: 350px;
+    /* border: 1px solid #dbc2c2; */
+}
+
+.decrease, .increase, .delete {
+    padding: 5px 18px;
+    margin: 0 5px;
+    font-size: 14px;
+    border: none;
+    border: 1px solid #eae7ec;
+    background-color: transparent;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.decrease:hover, .increase:hover, .delete:hover {
+    background-color: #eae7ec;
+}
+
+.decrease:focus, .increase:focus, .delete:focus {
+    background-color: #fff;
+}
+
+.count {
+    font-size: 18px;
+    margin-left: 27px;
+}
+
+/* Ckeckbox */
+
+.add-to-checkout input {
+    position: relative;
+    cursor: pointer;
+}
+
+.add-to-checkout input:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    border: 1px solid #dbc2c2;
+    background-color: #fff;
+}
+
+.add-to-checkout input:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    border: 1px solid tomato;
+    background-color: tomato;
+}
+
+.add-to-checkout input:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 4px 5px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+.review-wrapper:hover {
+    box-shadow: 0 4px 8px 0 #00000033;
+}

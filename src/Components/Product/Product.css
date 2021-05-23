@@ -1,0 +1,27 @@
+.product-container {
+    margin: 20px 5px;
+    border: 1px solid #E2E8F0;
+}
+
+.product {
+    width: 233px;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 233px;
+    height: 170px;
+    padding: 20px;
+}
+
+.prod-name {
+    font-size: 14px;
+    padding: 10px 0; /* total character 22 */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.product-container:hover .product-img {
+    transform: scale(1.2);
+    transition: ease-in 0.5s;
+}

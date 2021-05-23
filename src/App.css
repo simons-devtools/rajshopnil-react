@@ -1,0 +1,29 @@
+html, body {
+  color: #411868;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+a {
+  color: #411868;
+}
+
+.quantity .titlee {
+  color: dimgray;
+  padding-right: 50px;
+  font-weight: bold;
+}
+
+.quantity .btn {
+  color: dimgray;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 3px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.quantity .btn:focus {
+  opacity: 1;
+}

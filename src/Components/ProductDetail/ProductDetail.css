@@ -1,0 +1,287 @@
+/* Flex Layout: 01 */
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 15px 30px 0;
+}
+
+.products-details {
+    flex-basis: 70%;
+    margin-bottom: 10px;
+}
+
+.other-info {
+    flex-basis: 30%;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Flex Layout: 02 */
+.product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.image-layout {
+    margin-bottom: 10px;
+}
+
+.product-info {
+    margin-left: 30px;
+}
+
+/* Colum no 01 styles */
+/* ------------------------ */
+.big-photo img {
+    width: 400px;
+    height: 320px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.small-photo img {
+    width: 75px;
+    height: 50px;
+    margin: 0 10px;
+    align-items: middle;
+    padding: 3px;
+    cursor: pointer;
+    border: 1px solid #E2E8F0;
+}
+
+.small-photo img:hover {
+    border: 1px solid tomato;
+}
+
+
+/* Colum no 02 styles */
+/* ----------------------- */
+.prod-first-row {
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.prod-first-row h2 {
+    font-size: 20px; /* total 30 character */
+}
+
+.social-madia, .brand-content {
+    padding: 10px 0;
+}
+
+.social-madia {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content .star {
+    color: #ff9100;
+    vertical-align: middle;
+}
+
+.left-content .rating {
+    color: blue;
+    padding-left: 5px;
+}
+
+.right-content .sharee, .lovee {
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.right-content .sharee {
+    color: dimgray;
+    cursor: pointer;
+}
+
+.right-content .lovee {
+    color: tomato;
+    cursor: pointer;
+}
+
+.brand-content .brand {
+    color: dimgray;
+    font-weight: bold;
+}
+
+.brand-content .providerr {
+    color: blue;
+}
+
+.prod-second-row .price, .promotions, .stock-content {
+    padding: 15px 0;
+}
+
+.price h1 {
+    color: tomato;
+    font-weight: bold;
+}
+
+.price .strech {
+    color: #a5a0a0;
+    text-decoration: line-through;
+    padding-right: 10px;
+}
+
+.promotions .promoLeft {
+    color: dimgray;
+    font-weight: bold;
+    padding-right: 45px;
+}
+
+.promotions .promoRight {
+    color: #fff;
+    font-size: 12px;
+    background-color: #ff8a75;
+    padding: 2px 10px;
+}
+
+.stock-content .stockLeft {
+    color: dimgray;
+    font-weight: bold;
+    padding-right: 85px;
+}
+
+.stock-content .green {
+    color: #06d606;
+}
+
+/* .stock-content .red {
+    color: red;
+} */
+
+.prod-handler .add-buy-btn {
+    width: 180px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 10px;
+    margin: 10px 10px 0 0;
+    background-color: #00b7ff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.prod-handler .add-cart-btn {
+    width: 180px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 10px;
+    margin: 10px 10px 0 0;
+    background-color: tomato;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.add-cart-btn:focus {
+    opacity: 1;
+}
+
+/* Colum no 03 styles */
+/* ----------------------- */
+.other-info p {
+    color: dimgray;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.other-row-one {
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.other-row-two {
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.other-row-one .row-one, .row-two, .row-three {
+    padding: 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.other-row-two .other-one {
+    padding: 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.other-row-two .other-two {
+    padding: 2px 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.del-option {
+    color: dimgray;
+    font-weight: bold;
+}
+
+.icon-right {
+    color: #a09b9b;
+    float: right;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-left {
+    color: #a09b9b;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.right-link {
+    color: blue;
+    float: right;
+    cursor: pointer;
+}
+
+.right-amount {
+    float: right;
+}
+
+.other-one {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.other-one .chat {
+    color: blue;
+    vertical-align: middle;
+    padding-left: 3px;
+    cursor: pointer;
+}
+
+.other-two {
+    display: flex;
+    font-weight: bold;
+}
+
+.flexColums-one {
+    border-right: 1px solid #E2E8F0;
+    padding: 0 5px 0 0;
+}
+
+.flexColums-two {
+    border-right: 1px solid #E2E8F0;
+    padding: 0 5px 0 5px;
+}
+
+.flexColums-three {
+    padding-left: 5px;
+}
+
+.other-three h4 {
+    color: blue;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}

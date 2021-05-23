@@ -1,0 +1,106 @@
+.cart-body {
+    background-color: #f5f5f5;
+}
+
+.wrapper-progressBar {
+    padding: 20px 0 10px 0;
+}
+
+.cart-detail {
+    padding: 5px 20px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.cart-body h1 {
+    padding-top: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e4dbec;
+}
+
+.progressBar li {
+    list-style-type: none;
+    float: left;
+    width: 33%;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.progressBar li:before {
+    content: " ";
+    line-height: 30px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+    background-color: white
+}
+
+.progressBar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    top: 30px;
+    left: -60%;
+    z-index: 1;
+}
+
+.progressBar li:first-child:after {
+    content: none;
+}
+
+.progressBar li.active {
+    color: dodgerblue;
+}
+
+.progressBar li.active:before {
+    border-color: dodgerblue;
+    background-color: dodgerblue
+}
+
+.progressBar li.active+li:after {
+    background-color: dodgerblue;
+}
+
+/* Payment styles */
+.cart-detail, .cart-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-infoo h3 {
+    padding-top: 25px;
+}
+
+.cart-total h2 {
+    padding: 5px 20px 30px 20px;
+}
+
+.cart-btnn {
+    padding-top: 10px;
+}
+
+.cart-btnn button {
+    width: 100%;
+    margin: auto;
+    color: azure;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: blue;
+    border: none;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cart-btnn button:focus {
+    transform: scale(1.04);
+}

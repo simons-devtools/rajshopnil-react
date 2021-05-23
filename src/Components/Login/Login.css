@@ -1,0 +1,23 @@
+.form-main {
+    padding: 100px 0;
+}
+
+.login-formm {
+    color: azure;
+    max-width: 700px;
+    height: 350px;
+    margin: auto;
+    text-align: center;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.form-body h1 {
+    font-size: 36px;
+    padding: 50px 0 10px 0;
+}
+
+.form-body img {
+    cursor: pointer;
+}

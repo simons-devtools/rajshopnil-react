@@ -1,0 +1,9 @@
+.product-collection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-prod h1 {
+    margin: 50px 15px 0 5px;
+    border-bottom: 1px solid #E2E8F0;
+}

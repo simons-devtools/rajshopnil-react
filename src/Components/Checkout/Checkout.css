@@ -1,0 +1,25 @@
+.checkout-mains {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    margin: 70px 0;
+}
+
+.left-contents {
+    width: 60%;
+    margin: 0 20px 0 15px;
+}
+
+.left-contents .headerr {
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.left-contents .items {
+    float: right;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.right-contents {
+    width: 35.7%;
+    margin-bottom: 5px;
+}

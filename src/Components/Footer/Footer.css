@@ -1,0 +1,91 @@
+footer {
+    letter-spacing: 2px;
+    border-top: 1px solid #E2E8F0;
+    margin-top: 100px;
+}
+
+.footer-form {
+    padding: 40px 0;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin: 0 50px 0 5px;
+}
+
+.email-input {
+    width: 400px;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-bottom: 1px solid #d3bce9;
+}
+
+.email-input:focus {
+    outline: none;
+}
+
+.sign-btn {
+    width: 200px;
+    border: none;
+    border: 1px solid #d3bce9;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sign-btn:hover {
+    color: #fff;
+    background-color: #00b7ff;
+    border: 1px solid #00b7ff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.footer-background {
+    padding: 20px 0;
+    background-color: #f3edf8;
+}
+
+.footer-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.footer-logo h2 {
+    font-size: 18px;
+}
+
+.footer-menus ul li {
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.social-icon-list ul {
+    display: flex;
+    border-bottom: 1px solid #bfc3c7;
+    text-align: center;
+}
+
+.social-icon-list ul li {
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.footer-end {
+    color: #fff;
+    background-color: #444141;
+    padding: 20px 0;
+    text-align: center;
+}

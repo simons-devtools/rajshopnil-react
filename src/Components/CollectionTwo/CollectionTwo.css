@@ -1,0 +1,25 @@
+.collection-two-wrapper {
+    width: 195px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.collection-two img {
+    width: 195px;
+    height: 150px;
+    padding: 20px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border: 1px solid #e8e9eb;
+}
+
+.collection-two h4 {
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.collection-two-wrapper:hover {
+    box-shadow: 0 4px 8px 0 #00000033;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

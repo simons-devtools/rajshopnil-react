@@ -1,0 +1,21 @@
+.product-manager {
+    border-top: 1px solid #ded9e2;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.head {
+    font-size: 15px;
+    padding: 5px 0;
+    background-color: #f5e9e9;
+}
+
+.all-product {
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.action {
+    height: 20px;
+    margin: 5px;
+}

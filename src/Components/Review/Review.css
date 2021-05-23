@@ -1,0 +1,24 @@
+.checkout-main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.prod-review-control {
+    width: 70%;
+    padding: 20px 20px 20px 15px;
+}
+
+.cart-control {
+    width: 28.5%;
+    height: 400px;
+    margin-top: 30px;
+}
+
+.prod-review-control .hheader {
+    border-bottom: 1px solid #e4dbec;
+}
+
+.prod-review-control .items {
+    float: right;
+}
