@@ -1,4 +1,4 @@
-# Devtools full stack web apps overview
+# Devtools client code overview
 
 This project was material-ui with [Live link](https://github.com/c-moX).
 
