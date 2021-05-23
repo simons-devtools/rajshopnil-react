@@ -1,6 +1,6 @@
-# Devtools client code overview
+# Devtools full stack web apps overview
 
-This project was material-ui with [Server Code](https://github.com/spsimon-dev-tools/devtoolsServer).
+This project was material-ui with [Live link](https://github.com/c-moX).
 
 ## Available Scripts
 react, react-router, material-ui, react-hook-form, axios, fetch ...
