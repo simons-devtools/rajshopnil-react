@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
 import './Header.css';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import NotificationsActiveRoundedIcon from '@material-ui/icons/NotificationsActiveRounded';
 import FavoriteRoundedIcon from '@material-ui/icons/FavoriteRounded';
@@ -8,12 +8,12 @@ import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import { Container } from '@material-ui/core';
 import { UserContext } from '../../App';
 import { MdbCartContext } from '../../App';
+import Search from '../Search/Search';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [mdbUserCart, setMdbUserCart] = useContext(MdbCartContext);
     const { isSiggedIn, photo } = loggedInUser;
-    // console.log('Header data', isSiggedIn);
 
     // For Humbarger Menubar:
     // const hamburger = document.querySelector(".hamburger");
@@ -53,12 +53,7 @@ const Header = () => {
                             <Link to="/home" className="nav-logo">DevTools</Link>
                         </div>
                         <div className="search-container">
-                            <form action="">
-                                <div className="search-control">
-                                    <p><input type="text" placeholder="Search somthing. . ." /></p>
-                                    <p className="search-btn">| Search</p>
-                                </div>
-                            </form>
+                            <Search />
                         </div>
                         <ul className="nav-menu">
                             <li className="nav-item">
