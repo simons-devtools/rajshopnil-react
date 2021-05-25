@@ -1,36 +1,51 @@
 import './Search.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Search = () => {
     // Search function:
     const [search, setSearch] = useState('');
     const [products, setProducts] = useState([])
+    const first5 = products.slice(0, 5);
 
     const handleChange = event => {
         setSearch(event.target.value);
+        getDataFromApi();
         // ...
     }
 
     // Search dynamic route func:
-    useEffect(() => {
+    const getDataFromApi = () => {
         fetch(`http://localhost:5200/search-products?name=${search}`)
             .then(res => res.json())
             .then(data => {
-                // console.log('Data', data);
                 setProducts(data)
             })
-    }, [search])
-    // }
-    console.log('Data', products);
+    }
+    // console.log('Data', first5);
 
     return (
         <div>
-            <form action="">
-                <div className="search-control">
-                    <p><input onChange={handleChange} type="text" placeholder="Search products or categories. . ." /></p>
-                    {/* <p className="search-btn">| Search</p> */}
-                </div>
-            </form>
+            <div className="">
+                <form action="">
+                    <div className="search-control">
+                        <p><input onChange={handleChange} type="text" placeholder="Search products or categories. . ." /></p>
+                    </div>
+                </form>
+            </div>
+            <div className="">
+                <ul>
+                    {
+                        first5.map(f =>
+                            <Link to={'/product-collection/' + f.category}>
+                                <li>
+                                    {f.name}
+                                </li>
+                            </Link>
+                        )
+                    }
+                </ul>
+            </div>
         </div>
     );
 }
