@@ -7,12 +7,12 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import { Container } from '@material-ui/core';
 import { UserContext } from '../../App';
-import { MdbCartContext } from '../../App';
+import { UserCartContext } from '../../App';
 import Search from '../Search/Search';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [mdbUserCart, setMdbUserCart] = useContext(MdbCartContext);
+    const [userCart, setUserCart] = useContext(UserCartContext);
     const { isSiggedIn, photo } = loggedInUser;
 
     // For Humbarger Menubar:
@@ -65,7 +65,7 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link to="/review" refresh="true" className="nav-link count-cart">
                                     <ShoppingBasketIcon />
-                                    <span className="cart-count">{mdbUserCart.length > 0 ? mdbUserCart.length : 0}</span>
+                                    <span className="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
                                 </Link>
                             </li>
                             <li className="nav-item profile-photo">

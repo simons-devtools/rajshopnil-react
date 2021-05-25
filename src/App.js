@@ -19,16 +19,16 @@ import {
 } from "react-router-dom";
 
 export const UserContext = createContext();
-export const MdbCartContext = createContext();
+export const UserCartContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [mdbUserCart, setMdbUserCart] = useState({});
+  const [getCart, setGetCart] = useState({});
 
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <MdbCartContext.Provider value={[mdbUserCart, setMdbUserCart]}>
+      <UserCartContext.Provider value={[getCart, setGetCart]}>
         {/* <p>Email: {loggedInUser.email}</p> */}
         <Router>
           <Header />
@@ -70,7 +70,7 @@ function App() {
 
           <Footer />
         </Router>
-      </MdbCartContext.Provider>
+      </UserCartContext.Provider>
     </UserContext.Provider>
   );
 }

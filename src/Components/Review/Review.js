@@ -6,13 +6,13 @@ import Cart from '../Cart/Cart';
 import { Container } from '@material-ui/core';
 import { useHistory } from 'react-router';
 import { UserContext } from '../../App';
-import { MdbCartContext } from '../../App';
+import { UserCartContext } from '../../App';
 
 const Review = () => {
-    document.title = 'DevTools | Products Review Page';
+    document.title = 'Devtools | Products Review Page';
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [mdbUserCart, setMdbUserCart] = useContext(MdbCartContext);
+    const [userCart, setUserCart] = useContext(UserCartContext);
     const [cart, setCart] = useState([]);
 
     // Get the cart products from mongodb cloud:
@@ -26,13 +26,10 @@ const Review = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log('Data', data);
                 setCart(data);
-                setMdbUserCart(data);
+                setUserCart(data);
             });
     }, [])
-    // console.log('Data', cart);
-    // console.log('Cart data', mdbUserCart);
 
 
     // Removed EventHandler Func
@@ -55,7 +52,7 @@ const Review = () => {
                     <div className="hheader">
                         <h1>
                             <span>Your wishlist products</span>
-                            <span className="items">{mdbUserCart.length} Items</span>
+                            <span className="items">{userCart.length} Items</span>
                         </h1>
                     </div>
                     <div className="multiple-chec">

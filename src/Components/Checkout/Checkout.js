@@ -22,12 +22,9 @@ const Checkout = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log('Data', data);
                 setCart(data);
             });
     }, [])
-    // console.log('Data', cart);
-    // console.log('Cart data', mdbUserCart);
 
     return (
         <Container>

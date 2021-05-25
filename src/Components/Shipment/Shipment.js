@@ -2,7 +2,7 @@ import './Shipment.css';
 import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import { UserContext } from '../../App';
-import { MdbCartContext } from '../../App';
+import { UserCartContext } from '../../App';
 import { useHistory } from 'react-router';
 // import DnsIcon from '@material-ui/icons/Dns';
 // import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
@@ -12,13 +12,11 @@ import { useHistory } from 'react-router';
 const Shipment = () => {
     const { register, handleSubmit } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [mdbUserCart, setMdbUserCart] = useContext(MdbCartContext);
-    // const cart = mdbUserCart.product;
+    const [userCart, setUserCart] = useContext(UserCartContext);
     const history = useHistory();
 
     const onSubmit = (data) => {
-        // console.log(data)
-        let newOrder = { ...loggedInUser, product: mdbUserCart, shipment: data, orderTime: new Date() };
+        let newOrder = { ...loggedInUser, product: userCart, shipment: data, orderTime: new Date() };
         fetch('http://localhost:5200/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -30,7 +28,6 @@ const Shipment = () => {
                 history.push('/payment');
             })
     };
-    // console.log('Order data', mdbUserCart);
 
     return (
         <div className="shipment-page">
