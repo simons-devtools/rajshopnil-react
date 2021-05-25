@@ -27,7 +27,7 @@ const Search = () => {
     return (
         <div>
             <form className="search" method="" action="" >
-                <input onChange={handleChange} type="search" placeholder="Search products or categories. . ." />
+                <input onChange={handleChange} type="text" placeholder="Search products or categories. . ." />
                 <ul className="results">
                     {
                         first5.map(f =>

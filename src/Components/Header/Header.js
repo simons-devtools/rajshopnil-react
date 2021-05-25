@@ -57,10 +57,10 @@ const Header = () => {
                         </div>
                         <ul className="nav-menu">
                             <li className="nav-item">
-                                <Link to="/" className="nav-link"><NotificationsActiveRoundedIcon /></Link>
+                                <Link to="/home" className="nav-link"><NotificationsActiveRoundedIcon /></Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link"><FavoriteRoundedIcon /></Link>
+                                <Link to="/home" className="nav-link"><FavoriteRoundedIcon /></Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/review" refresh="true" className="nav-link count-cart">
@@ -85,19 +85,19 @@ const Header = () => {
                                 <Link to="/home" refresh="true" className="nav-link">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">Docs</Link>
+                                <Link to="/home" className="nav-link">Docs</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">Services</Link>
+                                <Link to="/home" className="nav-link">Services</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">About</Link>
+                                <Link to="/home" className="nav-link">About</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/addProducts" className="nav-link">Add-Products</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">Product-Detail</Link>
+                                <Link to="/home" className="nav-link">Product-Detail</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/checkout" className="nav-link">Checkout</Link>
