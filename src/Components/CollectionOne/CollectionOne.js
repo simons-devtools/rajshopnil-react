@@ -1,4 +1,5 @@
 import React from 'react';
+import HolderImage from '../../images/icons/loading.gif';
 import { Link } from 'react-router-dom';
 import './CollectionOne.css';
 
@@ -11,7 +12,9 @@ const CollectionOne = (props) => {
             <div className="collection-one-wrapper">
                 <div className="click-handler">
                     <div className="collection-one">
-                        <img src={photoUrl} alt="" />
+                        {
+                            photoUrl === '' ? <img src={HolderImage} alt="" /> : <img src={photoUrl} alt="" />
+                        }
                         <h4>{name}</h4>
                     </div>
                 </div>

@@ -1,7 +1,8 @@
 import './CategoryProducts.css';
-import { Container } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
+import Loading from '../../images/icons/loading.gif';
 import Product from '../Product/Product';
+import { Container } from '@material-ui/core';
 import { useParams } from 'react-router';
 
 const CategoryProducts = () => {
@@ -22,7 +23,7 @@ const CategoryProducts = () => {
                 <h1>Our all <span style={{ color: 'tomato' }}>"{category}"</span> category products is below</h1>
                 <div className="product-collection">
                     {
-                        products.length === 0 && <h1 style={{ textAlign: 'center', fontSize: '30px', color: 'tomato' }}>Loading...</h1>
+                        products.length <= 0 && <img style={{ marginLeft: '35%' }} src={Loading} />
                     }
                     {
                         products.map(prod => prod.category === category ? <Product product={prod} key={prod.key} /> : '')

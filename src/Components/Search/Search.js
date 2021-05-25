@@ -25,7 +25,7 @@ const Search = () => {
     // console.log('Data', first5);
 
     return (
-        <div className="">
+        <div>
             <form className="search" method="" action="" >
                 <input onChange={handleChange} type="search" placeholder="Search products or categories. . ." />
                 <ul className="results">

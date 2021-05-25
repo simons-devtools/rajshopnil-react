@@ -1,4 +1,5 @@
 import React from 'react';
+import HolderImage from '../../images/icons/loading.gif';
 import { Link } from 'react-router-dom';
 import './CollectionEight.css';
 
@@ -10,7 +11,9 @@ const CollectionEight = (props) => {
             <div className="collection-eight-wrapper">
                 <div className="click-handler">
                     <div className="collection-eight">
-                        <img src={photoUrl} alt="" />
+                        {
+                            photoUrl !== '' ? <img src={photoUrl} /> : <img src={HolderImage} />
+                        }
                     </div>
                 </div>
             </div>

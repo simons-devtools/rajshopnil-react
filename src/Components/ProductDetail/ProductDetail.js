@@ -1,5 +1,6 @@
 import './ProductDetail.css';
 import React, { useContext, useEffect, useState } from 'react';
+import HolderImage from '../../images/icons/loading.gif';
 import ShareIcon from '@material-ui/icons/Share';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import InfoIcon from '@material-ui/icons/Info';
@@ -87,13 +88,15 @@ const ProductDetail = () => {
                         {/* Colum no 01 styles */}
                         <div className="image-layout">
                             <div className="big-photo">
-                                <img src={photoUrl} alt="Product img" />
+                                {
+                                    photoUrl !== '' ? <img src={photoUrl} /> : <img src={HolderImage} />
+                                }
                             </div>
                             <div className="small-photo">
                                 <img src={photoUrl} alt="" />
+                                <img src={HolderImage} alt="" />
                                 <img src={photoUrl} alt="" />
-                                <img src={photoUrl} alt="" />
-                                <img src={photoUrl} alt="" />
+                                <img src={HolderImage} alt="" />
                             </div>
                         </div>
 
