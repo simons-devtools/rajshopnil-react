@@ -25,27 +25,22 @@ const Search = () => {
     // console.log('Data', first5);
 
     return (
-        <div>
-            <div className="">
-                <form action="">
-                    <div className="search-control">
-                        <p><input onChange={handleChange} type="text" placeholder="Search products or categories. . ." /></p>
-                    </div>
-                </form>
-            </div>
-            <div className="">
-                <ul>
+        <div className="">
+            <form className="search" method="" action="" >
+                <input onChange={handleChange} type="search" placeholder="Search products or categories. . ." />
+                <ul className="results">
                     {
                         first5.map(f =>
                             <Link to={'/product-collection/' + f.category}>
                                 <li>
-                                    {f.name}
+                                    {f.name} <br />
+                                    <span className="categories-children">#{f.category}</span>
                                 </li>
                             </Link>
                         )
                     }
                 </ul>
-            </div>
+            </form>
         </div>
     );
 }
