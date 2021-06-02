@@ -94,19 +94,19 @@ const Header = () => {
                                 <Link to="/home" className="nav-link">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/addProducts" className="nav-link">Add-Products</Link>
+                                <Link to="/home" className="nav-link">Add-Products</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/home" className="nav-link">Product-Detail</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/checkout" className="nav-link">Checkout</Link>
+                                <Link to="/home" className="nav-link">Checkout</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/payment" className="nav-link">Payment</Link>
+                                <Link to="/home" className="nav-link">Payment</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/dashboard" className="nav-link">Dashboard</Link>
+                                <Link to="/home" className="nav-link">Dashboard</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/login" className="nav-link">Login</Link>

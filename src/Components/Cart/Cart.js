@@ -2,7 +2,6 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = (props) => {
-    // console.log(props);
     const cart = props.cart;
     // const total = cart.reduce( (total, prd) => total + prd.price, 0)
 
@@ -12,7 +11,6 @@ const Cart = (props) => {
         const product = cart[i].product;
         total = total + Number(product.price);
     }
-    // console.log('Cart data=', total);
 
     // Shipping Cost Condition
     let shipping = 0;
