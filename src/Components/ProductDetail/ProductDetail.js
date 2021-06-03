@@ -67,7 +67,7 @@ const ProductDetail = () => {
                         const toBeAddedKey = product.key;
                         let sameProduct = data.find(pd => pd.product.key === toBeAddedKey);
                         if (sameProduct) {
-                            console.log("You are allready added this product!")
+                            alert('You are allready added this product! Please check your cart OR try to another product.....!!');
                         }
                         else {
                             let newBooking = { ...loggedInUser, product };
@@ -85,35 +85,6 @@ const ProductDetail = () => {
                 });
         }
     }
-
-
-
-
-
-
-
-
-    // Cart database filter func:
-    // const addToCartHandler = (product) => {}
-    // const addToCartHandler = (product) => { //EventHandler Line
-    //     // console.log('Product Added', product);
-    //     const toBeAddedKey = product.key;
-    //     const sameProduct = cart.find(pd => pd.key === toBeAddedKey);
-    //     let count = 1;
-    //     let newCart;
-    //     if (sameProduct) {
-    //         count = sameProduct.quantity + 1;
-    //         sameProduct.quantity = count;
-    //         const others = cart.filter(pd => pd.key !== toBeAddedKey);
-    //         newCart = [...others, sameProduct];
-    //     }
-    //     else {
-    //         product.quantity = 1;
-    //         newCart = [...cart, product];
-    //     }
-    //     setCart(newCart);
-    //     addToDatabaseCart(toBeAddedKey, count);
-    // }
 
     return (
         <Container>
