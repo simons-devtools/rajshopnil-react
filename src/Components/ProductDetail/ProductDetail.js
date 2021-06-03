@@ -64,24 +64,22 @@ const ProductDetail = () => {
                             })
                     }
                     else {
-                        for (let i = 0; i < data.length; i++) {
-                            let newProduct = data[i];
-                            // console.log('Same key', newProduct);
-                            if (newProduct.product.key === product.key) {
-                                console.log("You are allready added this product!")
-                            }
-                            else {
-                                let newBooking = { ...loggedInUser, product };
-                                fetch('http://localhost:5200/addBooking', {
-                                    method: 'POST',
-                                    headers: { 'Content-Type': 'application/json' },
-                                    body: JSON.stringify(newBooking)
+                        const toBeAddedKey = product.key;
+                        let sameProduct = data.find(pd => pd.product.key === toBeAddedKey);
+                        if (sameProduct) {
+                            console.log("You are allready added this product!")
+                        }
+                        else {
+                            let newBooking = { ...loggedInUser, product };
+                            fetch('http://localhost:5200/addBooking', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(newBooking)
+                            })
+                                .then(res => res.json())
+                                .then(data => {
+                                    console.log('MDB Second Cart Product Added', data);
                                 })
-                                    .then(res => res.json())
-                                    .then(data => {
-                                        console.log('MDB Second Cart Product Added', data);
-                                    })
-                            }
                         }
                     }
                 });
