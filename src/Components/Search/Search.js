@@ -10,36 +10,33 @@ const Search = () => {
 
     const handleChange = event => {
         setSearch(event.target.value);
-        getDataFromApi();
-        // ...
-    }
-
-    // Search dynamic route func:
-    const getDataFromApi = () => {
         fetch(`http://localhost:5200/search-products?name=${search}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
             })
     }
-    // console.log('Data', first5);
+
+    function searchResult() {
+        const searchProduct = document.getElementById("searchProduct");
+        searchProduct.style.display = "none";
+    }
 
     return (
         <div>
             <form className="search" method="" action="" >
                 <input onChange={handleChange} type="text" placeholder="Search products or categories. . ." />
-                <ul className="results">
-                    {
-                        first5.map(f =>
-                            <Link to={'/product-collection/' + f.category}>
-                                <li>
-                                    {f.name} <br />
-                                    <span className="categories-children">#{f.category}</span>
-                                </li>
-                            </Link>
-                        )
-                    }
-                </ul>
+                <div id="searchProduct" className="results">
+                    <ul>
+                        {
+                            first5.map(f =>
+                                <Link to={`/product-collection/${f.category}`}>
+                                    <li onClick={searchResult}>{f.name}</li>
+                                </Link>
+                            )
+                        }
+                    </ul>
+                </div>
             </form>
         </div>
     );
