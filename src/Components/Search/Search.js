@@ -6,7 +6,7 @@ const Search = () => {
     // Search function:
     const [search, setSearch] = useState('');
     const [products, setProducts] = useState([])
-    const first5 = products.slice(0, 5);
+    const first10 = products.slice(0, 10);
 
     const handleChange = event => {
         setSearch(event.target.value);
@@ -16,10 +16,13 @@ const Search = () => {
                 setProducts(data)
             })
     }
+    // console.log('Search data', search);
 
-    function searchResult() {
+    function searchResult(event) {
         const searchProduct = document.getElementById("searchProduct");
         searchProduct.style.display = "none";
+        console.log('Handle clicked value', event);
+        setSearch(event);
     }
 
     return (
@@ -29,9 +32,9 @@ const Search = () => {
                 <div id="searchProduct" className="results">
                     <ul>
                         {
-                            first5.map(f =>
+                            first10.map(f =>
                                 <Link to={`/product-collection/${f.category}`}>
-                                    <li onClick={searchResult}>{f.name}</li>
+                                    <li onClick={() => searchResult(f.name)} id="SearchValue">{f.name}</li>
                                 </Link>
                             )
                         }

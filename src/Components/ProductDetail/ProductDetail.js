@@ -11,7 +11,7 @@ import AssignmentReturnIcon from '@material-ui/icons/AssignmentReturn';
 import EcoIcon from '@material-ui/icons/Eco';
 import ForumIcon from '@material-ui/icons/Forum';
 import StarIcon from '@material-ui/icons/Star';
-import { useHistory, useParams } from 'react-router';
+import { useHistory, useLocation, useParams } from 'react-router';
 import { Container } from '@material-ui/core';
 import { UserContext } from '../../App';
 
@@ -36,6 +36,9 @@ const ProductDetail = () => {
 
     // New cart product post to the mongodb cloud:
     const history = useHistory();
+    const location = useLocation();
+    let { from } = location.state || { from: { pathname: "/review" } };
+
     const addToCartHandler = (product) => {
         if (loggedInUser.isSiggedIn === true) {
             let newBooking = { ...loggedInUser, product };
@@ -51,6 +54,7 @@ const ProductDetail = () => {
         }
         else {
             history.push('/login');
+            history.replace(from);
         }
     }
     // console.log('PDP data', loggedInUser);
