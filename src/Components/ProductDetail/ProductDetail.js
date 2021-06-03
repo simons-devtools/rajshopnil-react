@@ -11,14 +11,14 @@ import AssignmentReturnIcon from '@material-ui/icons/AssignmentReturn';
 import EcoIcon from '@material-ui/icons/Eco';
 import ForumIcon from '@material-ui/icons/Forum';
 import StarIcon from '@material-ui/icons/Star';
-import { useHistory, useLocation, useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { Container } from '@material-ui/core';
 import { UserContext } from '../../App';
 
 const ProductDetail = () => {
     document.title = 'DevTools | Products Details';
     const { prodKey } = useParams();
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState({});
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const { name, price, photoUrl, category, seller } = product;
@@ -36,28 +36,63 @@ const ProductDetail = () => {
 
     // New cart product post to the mongodb cloud:
     const history = useHistory();
-    const location = useLocation();
-    let { from } = location.state || { from: { pathname: "/review" } };
-
     const addToCartHandler = (product) => {
-        if (loggedInUser.isSiggedIn === true) {
-            let newBooking = { ...loggedInUser, product };
-            fetch('http://localhost:5200/addBooking', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(newBooking)
+        if (loggedInUser.isSiggedIn !== true) {
+            history.push('/login');
+        }
+        else {
+            fetch('http://localhost:5200/bookings?email=' + loggedInUser.email, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    authorization: `Bearer ${sessionStorage.getItem('token')}`
+                }
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log('MDB Cart Product Added', data);
-                })
-        }
-        else {
-            history.push('/login');
-            history.replace(from);
+                    // console.log('Cart data', data);
+                    if (data.length === 0) {
+                        let newBooking = { ...loggedInUser, product };
+                        fetch('http://localhost:5200/addBooking', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(newBooking)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                console.log('MDB First Cart Product Added', data);
+                            })
+                    }
+                    else {
+                        for (let i = 0; i < data.length; i++) {
+                            let newProduct = data[i];
+                            // console.log('Same key', newProduct);
+                            if (newProduct.product.key === product.key) {
+                                console.log("You are allready added this product!")
+                            }
+                            else {
+                                let newBooking = { ...loggedInUser, product };
+                                fetch('http://localhost:5200/addBooking', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify(newBooking)
+                                })
+                                    .then(res => res.json())
+                                    .then(data => {
+                                        console.log('MDB Second Cart Product Added', data);
+                                    })
+                            }
+                        }
+                    }
+                });
         }
     }
-    // console.log('PDP data', loggedInUser);
+
+
+
+
+
+
 
 
     // Cart database filter func:
