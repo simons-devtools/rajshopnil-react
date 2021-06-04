@@ -1,6 +1,5 @@
 import './Review.css';
 import React, { useContext, useEffect, useState } from 'react';
-import { removeFromDatabaseCart } from '../../utilities/databaseManager';
 import ProductReview from '../ProductReview/ProductReview';
 import Cart from '../Cart/Cart';
 import { Container } from '@material-ui/core';
@@ -33,8 +32,11 @@ const Review = () => {
 
 
     // Removed EventHandler Func
-    const handleRemoveProduct = () => {
-        console.log('Delete handle clicked!');
+    const handleRemoveProduct = (key) => {
+        const sameProduct = cart.find(pd => pd.product.key === key);
+        if (sameProduct) {
+            alert('Hey! Are you sure remove this product from your cart?');
+        }
     }
 
     // Proceed Checkout eventHandler func
