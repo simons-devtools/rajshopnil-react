@@ -12,6 +12,7 @@ const Review = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [userCart, setUserCart] = useContext(UserCartContext);
+    const [cartProduct, setCartProduct] = useState([]);
     const [cart, setCart] = useState([]);
 
     // Get the cart products from mongodb cloud:
@@ -25,7 +26,7 @@ const Review = () => {
         })
             .then(res => res.json())
             .then(data => {
-                setCart(data);
+                setCartProduct(data);
                 setUserCart(data);
             });
     }, [])
@@ -33,11 +34,33 @@ const Review = () => {
 
     // Removed EventHandler Func
     const handleRemoveProduct = (key) => {
-        const sameProduct = cart.find(pd => pd.product.key === key);
+        const sameProduct = cartProduct.find(pd => pd.product.key === key);
         if (sameProduct) {
             alert('Hey! Are you sure remove this product from your cart?');
         }
     }
+
+    // Cart product increase button:
+    const addToCart = (product) => {
+        const toBeAddedKey = product.key;
+        const sameProduct = cart.filter(pd => pd.key === toBeAddedKey);
+        let count = 1;
+        let newCart;
+        if (sameProduct) {
+            sameProduct.quantity = 0;
+            count = sameProduct.quantity + 1;
+            sameProduct.quantity = count;
+            const others = cart.filter(pd => pd.key !== toBeAddedKey);
+            newCart = [...others, sameProduct];
+        }
+        else {
+            product.quantity = 1;
+            newCart = [...cart, product];
+        }
+        console.log(newCart);
+        setCart(newCart);
+    }
+    // console.log('Cart data', cart);
 
     // Proceed Checkout eventHandler func
     const history = useHistory();
@@ -57,8 +80,9 @@ const Review = () => {
                     </div>
                     <div className="multiple-chec">
                         {
-                            cart.map(pd => <ProductReview
+                            cartProduct.map(pd => <ProductReview
                                 key={pd.product.key}
+                                addToCart={addToCart}
                                 handleRemoveProduct={handleRemoveProduct}
                                 cart={pd}
                             />)
@@ -67,9 +91,9 @@ const Review = () => {
                 </div>
 
                 <div className="cart-control">
-                    <Cart cart={cart}>
+                    {/* <Cart cart={cartProduct}>
                         <button onClick={handleProceedCheckout}>Proceed To Checkout</button>
-                    </Cart>
+                    </Cart> */}
                 </div>
             </div>
         </Container>

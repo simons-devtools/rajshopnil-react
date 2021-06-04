@@ -7,7 +7,7 @@ import RemoveIcon from '@material-ui/icons/Remove';
 
 const ProductReview = (props) => {
     // console.log('Review products', props);
-    const { cart, handleRemoveProduct } = props;
+    let { cart, addToCart, handleRemoveProduct } = props;
     const { key, name, category, photoUrl, seller, price } = cart.product;
 
     return (
@@ -23,13 +23,13 @@ const ProductReview = (props) => {
 
                 <div className="review">
                     <div className="add-to-checkout">
-                        <input type="checkbox" name="a" />
+                        <input onClick={() => addToCart(cart.product)} type="checkbox" name="a" />
                     </div>
                     <div className="product-image">
                         <img src={photoUrl} alt="checkout-product-pic" />
                     </div>
                     <div className="review-product extra">
-                        <h2 style={{color: '#db2804b9'}}>{name}</h2>
+                        <h2 style={{ color: '#db2804b9' }}>{name}</h2>
                         <h3 className="review-prod-info">Category: {category}</h3>
                         <h3 className="review-prod-info">Seller: {seller}</h3>
                     </div>
@@ -38,9 +38,9 @@ const ProductReview = (props) => {
                         <button onClick={() => handleRemoveProduct(key)} className="delete"><DeleteSweepIcon /></button>
                     </div>
                     <div className="review-product">
-                        <button className="decrease"><AddIcon /></button> <br />
+                        <button className="increase"><AddIcon /></button> <br />
                         <strong className="count">0</strong> <br />
-                        <button className="increase"><RemoveIcon /></button>
+                        <button className="decrease"><RemoveIcon /></button>
                     </div>
                 </div>
             </div>
