@@ -23,7 +23,7 @@ const ProductReview = (props) => {
 
                 <div className="review">
                     <div className="add-to-checkout">
-                        <input onClick={() => addToCheckout(cart.product)} type="checkbox" name="a" />
+                        <input onClick={() => addToCheckout(cart.product, count)} type="checkbox" name="a" />
                     </div>
                     <div className="product-image">
                         <img src={photoUrl} alt="checkout-product-pic" />

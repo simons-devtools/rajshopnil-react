@@ -31,16 +31,7 @@ const Review = () => {
             });
     }, [])
 
-
-    // Removed EventHandler Func
-    const handleRemoveProduct = (key) => {
-        const sameProduct = cartProduct.find(pd => pd.product.key === key);
-        if (sameProduct) {
-            alert('Hey! Are you sure remove this product from your cart?');
-        }
-    }
-
-    // Increment and Decrement button func:
+    // Increment button func:
     const [count, setCount] = useState(1);
     const OnIncrementClick = useCallback((e) => {
         if (count < 5) {
@@ -50,6 +41,7 @@ const Review = () => {
         }
     }, [count]);
 
+    // Decrement button func:
     const OnDecrementClick = useCallback((e) => {
         if (count > 1) {
             setCount(count - 1);
@@ -58,9 +50,21 @@ const Review = () => {
         }
     }, [count]);
 
-    // Added the checkout func:
-    const addToCheckout = (product) => {
-        console.log('Checkout product', product);
+    // Added the new checkout func:
+    const addToCheckout = (product, count) => {
+        let newCount;
+        let currentCount = product.quantity + count - 1;
+        newCount = currentCount;
+        console.log(newCount);
+    }
+    // console.log('Cart data', cart);
+
+    // Removed EventHandler Func
+    const handleRemoveProduct = (key) => {
+        const sameProduct = cartProduct.find(pd => pd.product.key === key);
+        if (sameProduct) {
+            alert(`Hey! Are you sure remove this product from your cart? KEY=${key}`);
+        }
     }
 
     // Proceed Checkout eventHandler func
