@@ -72,7 +72,9 @@ const ProductDetail = () => {
 
     // Post user new cart product func:
     const postCartData = (product) => {
-        let newBooking = { ...loggedInUser, product };
+        product.quantity = 1;
+        let quantity = product.quantity;
+        let newBooking = { ...loggedInUser, product, quantity };
         fetch('http://localhost:5200/addBooking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

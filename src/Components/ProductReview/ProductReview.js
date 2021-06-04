@@ -39,7 +39,7 @@ const ProductReview = (props) => {
                     </div>
                     <div className="review-product">
                         <button className="increase"><AddIcon /></button> <br />
-                        <strong className="count">0</strong> <br />
+                        <strong className="count">{cart.quantity}</strong> <br />
                         <button className="decrease"><RemoveIcon /></button>
                     </div>
                 </div>
