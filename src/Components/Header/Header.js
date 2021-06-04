@@ -6,8 +6,7 @@ import FavoriteRoundedIcon from '@material-ui/icons/FavoriteRounded';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import { Container } from '@material-ui/core';
-import { UserContext } from '../../App';
-import { UserCartContext } from '../../App';
+import { UserContext, UserCartContext } from '../../App';
 import Search from '../Search/Search';
 
 const Header = () => {

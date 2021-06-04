@@ -13,13 +13,14 @@ import ForumIcon from '@material-ui/icons/Forum';
 import StarIcon from '@material-ui/icons/Star';
 import { useHistory, useParams } from 'react-router';
 import { Container } from '@material-ui/core';
-import { UserContext } from '../../App';
+import { UserCartContext, UserContext } from '../../App';
 
 const ProductDetail = () => {
     document.title = 'DevTools | Products Details';
     const { prodKey } = useParams();
     const [product, setProduct] = useState({});
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [userCart, setUserCart] = useContext(UserCartContext);
 
     const { name, price, photoUrl, category, seller } = product;
 
@@ -52,16 +53,7 @@ const ProductDetail = () => {
                 .then(data => {
                     // console.log('Cart data', data);
                     if (data.length === 0) {
-                        let newBooking = { ...loggedInUser, product };
-                        fetch('http://localhost:5200/addBooking', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(newBooking)
-                        })
-                            .then(res => res.json())
-                            .then(data => {
-                                console.log('MDB First Cart Product Added', data);
-                            })
+                        postCartData(product);
                     }
                     else {
                         const toBeAddedKey = product.key;
@@ -70,20 +62,26 @@ const ProductDetail = () => {
                             alert('You are allready added this product! Please check your cart OR try to another product.....!!');
                         }
                         else {
-                            let newBooking = { ...loggedInUser, product };
-                            fetch('http://localhost:5200/addBooking', {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify(newBooking)
-                            })
-                                .then(res => res.json())
-                                .then(data => {
-                                    console.log('MDB Second Cart Product Added', data);
-                                })
+                            postCartData(product);
                         }
                     }
+                    setUserCart(data);
                 });
         }
+    }
+
+    // Post user new cart product func:
+    const postCartData = (product) => {
+        let newBooking = { ...loggedInUser, product };
+        fetch('http://localhost:5200/addBooking', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newBooking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                alert('Congratulation! You are added this product of your cart.....!!');
+            })
     }
 
     return (

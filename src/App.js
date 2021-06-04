@@ -21,12 +21,12 @@ export const UserCartContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [getCart, setGetCart] = useState({});
+  const [userCart, setUserCart] = useState([]);
 
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <UserCartContext.Provider value={[getCart, setGetCart]}>
+      <UserCartContext.Provider value={[userCart, setUserCart]}>
         {/* <p>Email: {loggedInUser.email}</p> */}
         <Router>
           <Header />

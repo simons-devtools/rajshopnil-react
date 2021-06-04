@@ -33,10 +33,8 @@ const Review = () => {
 
 
     // Removed EventHandler Func
-    const handleRemoveProduct = (productKey) => {
-        const newCart = cart.filter(pd => pd.key !== productKey);
-        setCart(newCart);
-        removeFromDatabaseCart(productKey);
+    const handleRemoveProduct = () => {
+        console.log('Delete handle clicked!');
     }
 
     // Proceed Checkout eventHandler func
