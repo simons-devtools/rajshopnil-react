@@ -1,5 +1,5 @@
 import './Review.css';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, useCallback } from 'react';
 import ProductReview from '../ProductReview/ProductReview';
 import Cart from '../Cart/Cart';
 import { Container } from '@material-ui/core';
@@ -40,27 +40,28 @@ const Review = () => {
         }
     }
 
-    // Cart product increase button:
-    const addToCart = (product) => {
-        const toBeAddedKey = product.key;
-        const sameProduct = cart.filter(pd => pd.key === toBeAddedKey);
-        let count = 1;
-        let newCart;
-        if (sameProduct) {
-            sameProduct.quantity = 0;
-            count = sameProduct.quantity + 1;
-            sameProduct.quantity = count;
-            const others = cart.filter(pd => pd.key !== toBeAddedKey);
-            newCart = [...others, sameProduct];
+    // Increment and Decrement button func:
+    const [count, setCount] = useState(1);
+    const OnIncrementClick = useCallback((e) => {
+        if (count < 5) {
+            setCount(count + 1);
+        } else {
+            alert("Hey! Product count can't be bigger of 5");
         }
-        else {
-            product.quantity = 1;
-            newCart = [...cart, product];
+    }, [count]);
+
+    const OnDecrementClick = useCallback((e) => {
+        if (count > 1) {
+            setCount(count - 1);
+        } else {
+            alert("Hey! Product count can't be lower of 1");
         }
-        console.log(newCart);
-        setCart(newCart);
+    }, [count]);
+
+    // Added the checkout func:
+    const addToCheckout = (product) => {
+        console.log('Checkout product', product);
     }
-    // console.log('Cart data', cart);
 
     // Proceed Checkout eventHandler func
     const history = useHistory();
@@ -82,7 +83,10 @@ const Review = () => {
                         {
                             cartProduct.map(pd => <ProductReview
                                 key={pd.product.key}
-                                addToCart={addToCart}
+                                count={count}
+                                OnIncrementClick={OnIncrementClick}
+                                OnDecrementClick={OnDecrementClick}
+                                addToCheckout={addToCheckout}
                                 handleRemoveProduct={handleRemoveProduct}
                                 cart={pd}
                             />)
