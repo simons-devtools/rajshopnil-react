@@ -52,12 +52,15 @@ const Review = () => {
 
     // Added the new checkout func:
     const addToCheckout = (product, count) => {
-        let newCount;
-        let currentCount = product.quantity + count - 1;
-        newCount = currentCount;
-        console.log(newCount);
+        let newCount = 0;
+        let newCart;
+        product.quantity = 0;
+        newCount = product.quantity + count;
+        product.quantity = newCount;
+        newCart = product;
+        // console.log(newCart);
+        setCart(newCart);
     }
-    // console.log('Cart data', cart);
 
     // Removed EventHandler Func
     const handleRemoveProduct = (key) => {
