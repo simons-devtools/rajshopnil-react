@@ -57,7 +57,7 @@ const Review = () => {
         product.quantity = 0;
         newCount = product.quantity + count;
         product.quantity = newCount;
-        newCart = [product];
+        newCart = [...cart, product];
         setCart(newCart);
     }
     console.log('Review', cart);
