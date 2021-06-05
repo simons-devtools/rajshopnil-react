@@ -57,10 +57,10 @@ const Review = () => {
         product.quantity = 0;
         newCount = product.quantity + count;
         product.quantity = newCount;
-        newCart = product;
-        // console.log(newCart);
+        newCart = [product];
         setCart(newCart);
     }
+    console.log('Review', cart);
 
     // Removed EventHandler Func
     const handleRemoveProduct = (key) => {
@@ -102,9 +102,9 @@ const Review = () => {
                 </div>
 
                 <div className="cart-control">
-                    {/* <Cart cart={cartProduct}>
+                    <Cart cart={cart}>
                         <button onClick={handleProceedCheckout}>Proceed To Checkout</button>
-                    </Cart> */}
+                    </Cart>
                 </div>
             </div>
         </Container>

@@ -2,14 +2,15 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = (props) => {
+    // console.log('Calculation', props);
     const cart = props.cart;
     // const total = cart.reduce( (total, prd) => total + prd.price, 0)
 
     // Total Cost
     let total = 0;
     for (let i = 0; i < cart.length; i++) {
-        const product = cart[i].product;
-        total = total + Number(product.price);
+        const product = cart[i];
+        total = total + Number(product.price) * product.quantity;
     }
 
     // Shipping Cost Condition
@@ -26,7 +27,7 @@ const Cart = (props) => {
 
     // const subTotal = total.toFixed(2);
     // const shippingCost = shipping.toFixed(2);
-    const tax = Number(total / 20).toFixed(2); // for faction numbers "round"
+    const tax = Number(total / 50).toFixed(2); // for faction numbers "round"
     const grandTotal = (total + shipping + Number(tax)).toFixed(2); // for faction numbers "toFixed"
 
     // Formating faction numbers for function
