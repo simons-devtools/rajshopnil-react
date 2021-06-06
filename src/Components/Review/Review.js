@@ -34,20 +34,12 @@ const Review = () => {
     // Increment button func:
     const [count, setCount] = useState(1);
     const OnIncrementClick = useCallback((e) => {
-        if (count < 5) {
-            setCount(count + 1);
-        } else {
-            alert("Hey! Product count can't be bigger of 5");
-        }
+        count < 5 ? setCount(count + 1) : alert("Hey! Product count can't be bigger of 5");
     }, [count]);
 
     // Decrement button func:
     const OnDecrementClick = useCallback((e) => {
-        if (count > 1) {
-            setCount(count - 1);
-        } else {
-            alert("Hey! Product count can't be lower of 1");
-        }
+        count > 1 ? setCount(count - 1) : alert("Hey! Product count can't be lower of 1");
     }, [count]);
 
     // Added the new checkout cart func:
@@ -74,7 +66,7 @@ const Review = () => {
         }
     }
 
-    // 
+    // Replace the older cart box func:
     const replaceOldCart = (product, count) => {
         let newCount = 0;
         let newCart;
@@ -108,7 +100,7 @@ const Review = () => {
     const handleDeleteProduct = (key) => {
         const sameProduct = cartProduct.find(pd => pd.product.key === key);
         if (sameProduct) {
-            alert(`Hey! Are you sure remove this product from your cart? KEY=${key}`);
+            alert(`Hey! Are you sure delete this product from your wishlist? KEY=${key}`);
         }
     }
 
@@ -116,10 +108,8 @@ const Review = () => {
     const history = useHistory();
     const handleProceedCheckout = () => {
         // history.push('/checkout');
-        // console.log(cart);
         cart.length = 0;
         let newData = [...cart];
-        // console.log(newData);
         setCart(newData);
     }
     // console.log(cart);
