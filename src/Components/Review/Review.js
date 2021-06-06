@@ -84,13 +84,22 @@ const Review = () => {
         newCart = [...cart, product];
         setCart(newCart);
     }
+    // console.log(cart);
 
     // Remove the old checkout cart func:
     const removeFromCheckout = (addedTOKey) => {
         const sameProduct = cart.find(pd => pd.key === addedTOKey);
         if (sameProduct) {
-            alert(`Are you remove this product from your cart? KEY=${addedTOKey}`);
-        } else {
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].key === addedTOKey) {
+                    alert(`Are you sure remove this product from your cart? KEY=${addedTOKey}`);
+                    cart.splice(i, 1);
+                    let replaceCart = [...cart];
+                    setCart(replaceCart);
+                }
+            }
+        }
+        else {
             alert('Hey! Please add the product first!');
         }
     }
