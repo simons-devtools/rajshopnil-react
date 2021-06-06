@@ -50,20 +50,57 @@ const Review = () => {
         }
     }, [count]);
 
-    // Added the new checkout func:
+    // Added the new checkout cart func:
     const addToCheckout = (product, count) => {
-        let newCount = 0;
-        let newCart;
-        product.quantity = 0;
-        newCount = product.quantity + count;
-        product.quantity = newCount;
-        newCart = [...cart, product];
-        setCart(newCart);
-    }
-    console.log('Review', cart);
+        const addedTOKey = product.key;
+        const sameProduct = cart.find(pd => pd.key === addedTOKey);
+        if (sameProduct) {
+            if (sameProduct.quantity === count) {
+                alert('Hey! You are allready added this product of your cart! Please try again another product OR count the quantity.');
+            }
+            else {
+                // let newCart;
+                for (let i = 0; i < cart.length; i++) {
+                    if (cart[i].key === addedTOKey) {
+                        cart.splice(i, 1);
+                        let newCart = cart;
 
-    // Removed EventHandler Func
-    const handleRemoveProduct = (key) => {
+                        let newCount = 0;
+                        let replaceCart;
+                        product.quantity = 0;
+                        newCount = product.quantity + count;
+                        product.quantity = newCount;
+                        replaceCart = [...newCart, product];
+                        setCart(replaceCart);
+                    }
+                }
+            }
+        }
+        else {
+            alert(`Hey! Are you sure add this product to your cart? KEY=${addedTOKey}`);
+            let newCount = 0;
+            let newCart;
+            product.quantity = 0;
+            newCount = product.quantity + count;
+            product.quantity = newCount;
+            newCart = [...cart, product];
+            setCart(newCart);
+        }
+    }
+    // console.log('Review', cart);
+
+    // Remove the old checkout cart func:
+    const removeFromCheckout = (addedTOKey) => {
+        const sameProduct = cart.find(pd => pd.key === addedTOKey);
+        if (sameProduct) {
+            alert(`Are you remove this product from your cart? KEY=${addedTOKey}`);
+        } else {
+            alert('Hey! Please add the product first!');
+        }
+    }
+
+    // Delete wishlish product EventHandler Func:
+    const handleDeleteProduct = (key) => {
         const sameProduct = cartProduct.find(pd => pd.product.key === key);
         if (sameProduct) {
             alert(`Hey! Are you sure remove this product from your cart? KEY=${key}`);
@@ -94,7 +131,8 @@ const Review = () => {
                                 OnIncrementClick={OnIncrementClick}
                                 OnDecrementClick={OnDecrementClick}
                                 addToCheckout={addToCheckout}
-                                handleRemoveProduct={handleRemoveProduct}
+                                removeFromCheckout={removeFromCheckout}
+                                handleDeleteProduct={handleDeleteProduct}
                                 cart={pd}
                             />)
                         }

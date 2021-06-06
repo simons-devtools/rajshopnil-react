@@ -4,10 +4,12 @@ import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
 import DeleteSweepIcon from '@material-ui/icons/DeleteSweep';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 
 const ProductReview = (props) => {
-    // console.log('Review products', props);
-    let { cart, count, OnIncrementClick, OnDecrementClick, addToCheckout, handleRemoveProduct } = props;
+    // console.log('Review', props.cart.product);
+    let { cart, count, OnIncrementClick, OnDecrementClick, addToCheckout, removeFromCheckout, handleDeleteProduct } = props;
     const { key, name, category, photoUrl, seller, price } = cart.product;
 
     return (
@@ -23,7 +25,8 @@ const ProductReview = (props) => {
 
                 <div className="review">
                     <div className="add-to-checkout">
-                        <input onClick={() => addToCheckout(cart.product, count)} type="checkbox" name="a" />
+                        <button onClick={() => addToCheckout(cart.product, count)} className="increase" style={{ marginBottom: '33px' }}><AddShoppingCartIcon /></button> <br />
+                        <button onClick={() => removeFromCheckout(key)} className="decrease"><RemoveShoppingCartIcon /></button>
                     </div>
                     <div className="product-image">
                         <img src={photoUrl} alt="checkout-product-pic" />
@@ -35,7 +38,7 @@ const ProductReview = (props) => {
                     </div>
                     <div className="review-product">
                         <h2 className="prod-price">Price: ${price}</h2>
-                        <button onClick={() => handleRemoveProduct(key)} className="delete"><DeleteSweepIcon /></button>
+                        <button onClick={() => handleDeleteProduct(key)} className="delete"><DeleteSweepIcon /></button>
                     </div>
                     <div className="review-product">
                         <button onClick={OnIncrementClick} className="increase"><AddIcon /></button> <br />

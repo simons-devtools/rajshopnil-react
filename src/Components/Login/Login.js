@@ -95,20 +95,18 @@ const Login = () => {
     }
 
     return (
-        <div style={{backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${backCover})`, backgroundRepeat: 'no-repeat'}} className="form-main">
+        <div style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${backCover})`, backgroundRepeat: 'no-repeat' }} className="form-main">
             <div className="login-formm">
                 <div className="form-body">
                     <h1>Google Authentication</h1>
                     <img src={google} onClick={handleChange} />
                 </div>
-                <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
-                    <div>
-                        {
-                            user.isSiggedIn ? <button onClick={googleSignOut}>Google Sign Out</button> :
-                                <button onClick={googleSignIn} style={{ padding: "10px 30px" }}>Google Sign In</button>
-                        }
-                    </div>
-                </Slide>
+                <div>
+                    {
+                        user.isSiggedIn ? <button onClick={googleSignOut}>Google Sign Out</button> :
+                            <button onClick={googleSignIn} style={{ padding: "10px 30px" }}>Google Sign In</button>
+                    }
+                </div>
             </div>
         </div>
     );

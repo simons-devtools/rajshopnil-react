@@ -49,6 +49,26 @@
     cursor: pointer;
 }
 
+.addRemove {
+    padding: 5px 18px;
+    margin: 0 5px;
+    font-size: 14px;
+    border: none;
+    border: 1px solid #eae7ec;
+    background-color: transparent;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.add:focus {
+    background-color: green;
+}
+
+.ree:focus {
+    background-color: red;
+}
+
 .decrease:hover, .increase:hover, .delete:hover {
     background-color: #eae7ec;
 }
@@ -60,50 +80,6 @@
 .count {
     font-size: 18px;
     margin-left: 27px;
-}
-
-/* Ckeckbox */
-
-.add-to-checkout input {
-    position: relative;
-    cursor: pointer;
-}
-
-.add-to-checkout input:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 0;
-    left: 0;
-    border: 1px solid #dbc2c2;
-    background-color: #fff;
-}
-
-.add-to-checkout input:checked:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 0;
-    left: 0;
-    border: 1px solid tomato;
-    background-color: tomato;
-}
-
-.add-to-checkout input:checked:after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 10px;
-    border: solid #fff;
-    border-width: 0 4px 5px 0;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 2px;
-    left: 6px;
 }
 
 .review-wrapper:hover {
