@@ -59,18 +59,18 @@ const Review = () => {
                 alert('Hey! You are allready added this product of your cart! Please try again another product OR count the quantity.');
             }
             else {
-                // let newCart;
                 for (let i = 0; i < cart.length; i++) {
                     if (cart[i].key === addedTOKey) {
-                        cart.splice(i, 1);
-                        let newCart = cart;
+                        cart.splice(i, 1); // remove same product.
+                        let newCart = cart; // Ready new cart
 
+                        // new cart product:
                         let newCount = 0;
                         let replaceCart;
                         product.quantity = 0;
                         newCount = product.quantity + count;
                         product.quantity = newCount;
-                        replaceCart = [...newCart, product];
+                        replaceCart = [...newCart, product]; // cart + new product.
                         setCart(replaceCart);
                     }
                 }
