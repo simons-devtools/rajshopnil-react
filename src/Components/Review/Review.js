@@ -115,8 +115,14 @@ const Review = () => {
     // Proceed Checkout eventHandler func
     const history = useHistory();
     const handleProceedCheckout = () => {
-        history.push('/checkout');
+        // history.push('/checkout');
+        // console.log(cart);
+        cart.length = 0;
+        let newData = [...cart];
+        // console.log(newData);
+        setCart(newData);
     }
+    // console.log(cart);
 
     return (
         <Container>
