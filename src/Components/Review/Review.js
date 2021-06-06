@@ -59,35 +59,31 @@ const Review = () => {
                 alert('Hey! You are allready added this product of your cart! Please try again another product OR count the quantity.');
             }
             else {
+                alert(`Hey! Are you sure replace this product to your cart? KEY=${addedTOKey}`);
                 for (let i = 0; i < cart.length; i++) {
                     if (cart[i].key === addedTOKey) {
                         cart.splice(i, 1); // remove same product.
-                        let newCart = cart; // Ready new cart
-
-                        // new cart product:
-                        let newCount = 0;
-                        let replaceCart;
-                        product.quantity = 0;
-                        newCount = product.quantity + count;
-                        product.quantity = newCount;
-                        replaceCart = [...newCart, product]; // cart + new product.
-                        setCart(replaceCart);
+                        replaceOldCart(product, count);
                     }
                 }
             }
         }
         else {
             alert(`Hey! Are you sure add this product to your cart? KEY=${addedTOKey}`);
-            let newCount = 0;
-            let newCart;
-            product.quantity = 0;
-            newCount = product.quantity + count;
-            product.quantity = newCount;
-            newCart = [...cart, product];
-            setCart(newCart);
+            replaceOldCart(product, count);
         }
     }
-    // console.log('Review', cart);
+
+    // 
+    const replaceOldCart = (product, count) => {
+        let newCount = 0;
+        let newCart;
+        product.quantity = 0;
+        newCount = product.quantity + count;
+        product.quantity = newCount;
+        newCart = [...cart, product];
+        setCart(newCart);
+    }
 
     // Remove the old checkout cart func:
     const removeFromCheckout = (addedTOKey) => {
