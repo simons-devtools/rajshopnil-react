@@ -52,30 +52,36 @@ const Review = () => {
     // Added the new checkout CART PRODUCTS func:
     const addToCheckout = (product, count) => {
         const addedTOKey = product.key;
-        const sameProduct = cart.find(pd => pd.key === addedTOKey);
-        if (sameProduct) {
-            if (sameProduct.quantity === count) {
-                alert('Hey! You are allready added this product of your cart! Please try again another product OR count the quantity.');
-            }
-            else {
-                alert(`Hey! Are you sure replace this product to your cart? KEY=${addedTOKey}`);
-                for (let i = 0; i < cart.length; i++) {
-                    if (cart[i].key === addedTOKey) {
-                        cart.splice(i, 1); // remove same product.
-                        replaceOldCart(product, count);
-                    }
-                }
-            }
-        }
-        else {
+        if (cart.length === 0) {
             alert(`Hey! Are you sure add this product to your cart? KEY=${addedTOKey}`);
             replaceOldCart(product, count);
         }
+        else {
+            const sameProduct = cart.find(pd => pd.key === addedTOKey);
+            if (sameProduct) {
+                if (sameProduct.quantity === count) {
+                    alert('Hey! You are allready added this product of your cart! Please try again another product OR count the quantity.');
+                }
+                else {
+                    alert(`Hey! Are you sure replace this product to your cart? KEY=${addedTOKey}`);
+                    for (let i = 0; i < cart.length; i++) {
+                        if (cart[i].key === addedTOKey) {
+                            cart.splice(i, 1); // remove same product.
+                            replaceOldCart(product, count);
+                        }
+                    }
+                }
+            }
+            else {
+                alert(`Hey! Are you sure add this product to your cart? KEY=${addedTOKey}`);
+                replaceOldCart(product, count);
+            }
+        }
     }
+    console.log('Review', cart);
 
     // Replace the older cart box func:
     const replaceOldCart = (product, count) => {
-        const addedTOKey = product.key;
         let newCount = 0;
         let newCart;
         product.quantity = 0;
@@ -83,7 +89,6 @@ const Review = () => {
         product.quantity = newCount;
         newCart = [...cart, product];
         setCart(newCart);
-        // console.log(addedTOKey, newCount);
         addToDatabaseCart(newCart);
     }
 
