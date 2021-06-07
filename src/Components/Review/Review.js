@@ -6,6 +6,7 @@ import { Container } from '@material-ui/core';
 import { useHistory } from 'react-router';
 import { UserContext } from '../../App';
 import { UserCartContext } from '../../App';
+import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 
 const Review = () => {
     document.title = 'Devtools | Products Review Page';
@@ -15,7 +16,7 @@ const Review = () => {
     const [cartProduct, setCartProduct] = useState([]);
     const [cart, setCart] = useState([]);
 
-    // Get the cart products from mongodb cloud:
+    // Get users "WISHLIST PRODUCTS" from mongodb cloud:
     useEffect(() => {
         fetch('http://localhost:5200/bookings?email=' + loggedInUser.email, {
             method: 'GET',
@@ -31,6 +32,25 @@ const Review = () => {
             });
     }, [])
 
+    // Get users "CART PRODUCTS" from mongodb cloud:
+    useEffect(() => {
+        const savedCart = getDatabaseCart();
+        // console.log(savedCart);
+        const productKeys = Object.keys(savedCart);
+
+        fetch('http://localhost:5200/productsByKeys', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(productKeys)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setCart((data));
+            })
+    }, [])
+
     // Increment button func:
     const [count, setCount] = useState(1);
     const OnIncrementClick = useCallback((e) => {
@@ -42,7 +62,7 @@ const Review = () => {
         count > 1 ? setCount(count - 1) : alert("Hey! Product count can't be lower of 1");
     }, [count]);
 
-    // Added the new checkout cart func:
+    // Added the new checkout CART PRODUCTS func:
     const addToCheckout = (product, count) => {
         const addedTOKey = product.key;
         const sameProduct = cart.find(pd => pd.key === addedTOKey);
@@ -68,6 +88,7 @@ const Review = () => {
 
     // Replace the older cart box func:
     const replaceOldCart = (product, count) => {
+        const addedTOKey = product.key;
         let newCount = 0;
         let newCart;
         product.quantity = 0;
@@ -75,6 +96,8 @@ const Review = () => {
         product.quantity = newCount;
         newCart = [...cart, product];
         setCart(newCart);
+        // console.log(addedTOKey, newCount);
+        addToDatabaseCart(addedTOKey, newCount);
     }
     // console.log(cart);
 
