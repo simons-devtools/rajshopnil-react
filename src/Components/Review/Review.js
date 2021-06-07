@@ -6,7 +6,7 @@ import { Container } from '@material-ui/core';
 import { useHistory } from 'react-router';
 import { UserContext } from '../../App';
 import { UserCartContext } from '../../App';
-import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
+import { addToDatabaseCart, getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
 
 const Review = () => {
     document.title = 'Devtools | Products Review Page';
@@ -78,7 +78,6 @@ const Review = () => {
             }
         }
     }
-    console.log('Review', cart);
 
     // Replace the older cart box func:
     const replaceOldCart = (product, count) => {
@@ -96,14 +95,10 @@ const Review = () => {
     const removeFromCheckout = (addedTOKey) => {
         const sameProduct = cart.find(pd => pd.key === addedTOKey);
         if (sameProduct) {
-            for (let i = 0; i < cart.length; i++) {
-                if (cart[i].key === addedTOKey) {
-                    alert(`Are you sure remove this product from your cart? KEY=${addedTOKey}`);
-                    cart.splice(i, 1);
-                    let replaceCart = [...cart];
-                    setCart(replaceCart);
-                }
-            }
+            alert(`Are you sure remove this product from your cart? KEY=${addedTOKey}`);
+            const newCart = cart.filter(pd => pd.key !== addedTOKey);
+            setCart(newCart);
+            removeFromDatabaseCart(addedTOKey);
         }
         else {
             alert('Hey! Please add the product first!');

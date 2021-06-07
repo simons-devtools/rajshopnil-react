@@ -30,7 +30,11 @@ const addToDatabaseCart = (product) => {
 
 const removeFromDatabaseCart = key => {
     const currentCart = getDatabaseCart();
-    delete currentCart[key];
+    for (let i = 0; i < currentCart.length; i++) {
+        if (currentCart[i].key === key) {
+            currentCart.splice(i, 1);
+        }
+    }
     localStorage.setItem(getDataKey(), JSON.stringify(currentCart));
 }
 
