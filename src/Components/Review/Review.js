@@ -35,20 +35,7 @@ const Review = () => {
     // Get users "CART PRODUCTS" from mongodb cloud:
     useEffect(() => {
         const savedCart = getDatabaseCart();
-        // console.log(savedCart);
-        const productKeys = Object.keys(savedCart);
-
-        fetch('http://localhost:5200/productsByKeys', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(productKeys)
-        })
-            .then(res => res.json())
-            .then(data => {
-                setCart((data));
-            })
+        setCart(savedCart);
     }, [])
 
     // Increment button func:
@@ -97,9 +84,8 @@ const Review = () => {
         newCart = [...cart, product];
         setCart(newCart);
         // console.log(addedTOKey, newCount);
-        addToDatabaseCart(addedTOKey, newCount);
+        addToDatabaseCart(newCart);
     }
-    // console.log(cart);
 
     // Remove the old checkout cart func:
     const removeFromCheckout = (addedTOKey) => {
