@@ -3,11 +3,8 @@
 }
 
 .shipment-page h1 {
-    padding: 20px;
-    padding-left: 55px;
+    padding: 20px 0 0 20px;
 }
-
-.form-note {}
 
 /* Default contents styles */
 .shipping-form {
@@ -55,12 +52,24 @@
     color: #f5f5f5;
     background-color: #db2804b9;
     border: none;
-    cursor: pointer;
     transition: all 0.3s ease;
+    opacity: 30%;
+    cursor: not-allowed;
 }
 
 .shipping-form button:focus {
     transform: scale(1.04);
+}
+
+.form-message {
+    display: none;
+    color: red;
+    animation: slidein 3s;
+}
+
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
 }
 
 /* Hidden contents styles */

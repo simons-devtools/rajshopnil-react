@@ -46,14 +46,25 @@ const Shipment = (props) => {
 
         const customModal = document.getElementById("customModal");
         customModal.style.display = "block";
+
+        const button = document.getElementById("allowedBtn");
+        button.style.opacity = "100%";
+        button.style.cursor = "pointer";
+    }
+
+    // .....
+    function handleFormMessage() {
+        const warningMessage = document.getElementById("formMessage");
+        warningMessage.style.display = "block";
     }
 
     return (
         <div className="shipment-page">
-            <h1>Shipping & Billing Info</h1>
+            <h1>Customer Shipping & Billing Info</h1>
 
-            < form onSubmit={handleSubmit(onSubmit)} id="defaultModal" className="form-api">
+            <form id="defaultModal" className="form-api">
                 <div style={{ borderBottom: '1px solid #e4dbec' }}>
+                    <p id="formMessage" className="form-message">Please! insert shipping information. Click "Edit & Complete"</p>
                     <p>
                         <span className="iconss"><DnsIcon /></span>
                         <span>{name}</span>
@@ -61,7 +72,7 @@ const Shipment = (props) => {
                     </p>
                     <p>
                         <span className="iconss"><PhoneAndroidIcon /></span>
-                        <span>+880 1700000000</span>
+                        <span>Mobile number empty!</span>
                     </p>
                     <p>
                         <span className="iconss"><MailOutlineIcon /></span>
@@ -69,7 +80,7 @@ const Shipment = (props) => {
                     </p>
                     <p>
                         <span className="iconss"><HomeIcon /></span>
-                        <span>Salna-bazar, Gazipur-Shadar, Dhaka, Bangladesh</span>
+                        <span>Shipping address empty!</span>
                     </p>
                 </div>
                 <div style={{ paddingBottom: '20px' }}>
@@ -82,7 +93,7 @@ const Shipment = (props) => {
                         <span className="rightSide">${subTotal}</span>
                     </p>
                 </div>
-                <button type="submit">Proceed To Payment</button>
+                <button onClick={handleFormMessage} type="button">Proceed To Payment</button>
             </form>
 
             <div id="customModal" className="shipping-form">
@@ -93,7 +104,7 @@ const Shipment = (props) => {
                     <input type="email" placeholder="Email" {...register("email", { required: true })} /> <br />
                     <input type="text" placeholder="Address" {...register("address", { required: true })} /> <br />
                     <p className="form-note">Note: Submit form must be full filled</p>
-                    <button type="submit">Proceed To Payment</button>
+                    <button id="allowedBtn" type="submit">Proceed To Payment</button>
                 </form>
             </div>
 
