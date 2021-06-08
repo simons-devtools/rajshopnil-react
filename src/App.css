@@ -1,8 +1,29 @@
-html, body {
+body {
   color: #411868;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
+  overflow-y: scroll;
+  overflow-x: auto;
 }
+
+/* Start scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #0000004d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #ff0000cc;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #ff000066;
+}
+/* end scrollbar */
 
 a {
   color: #411868;

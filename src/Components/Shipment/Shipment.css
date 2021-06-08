@@ -51,10 +51,11 @@
     text-align: center;
     color: #f5f5f5;
     background-color: #db2804b9;
+    letter-spacing: 5px;
     border: none;
-    transition: all 0.3s ease;
     opacity: 30%;
     cursor: not-allowed;
+    transition: all 0.3s ease;
 }
 
 .shipping-form button:focus {
