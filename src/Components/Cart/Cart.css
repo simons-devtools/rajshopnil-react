@@ -2,10 +2,6 @@
     background-color: #f5f5f5;
 }
 
-.wrapper-progressBar {
-    padding: 20px 0 10px 0;
-}
-
 .cart-detail {
     padding: 5px 20px;
     letter-spacing: 2px;
@@ -18,54 +14,12 @@
     border-bottom: 1px solid #e4dbec;
 }
 
-.progressBar li {
-    list-style-type: none;
-    float: left;
-    width: 33%;
-    position: relative;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.progressBar li:before {
-    content: " ";
-    line-height: 30px;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ddd;
+.cart-image {
     display: block;
-    text-align: center;
-    margin: 0 auto 10px;
-    background-color: white
-}
-
-.progressBar li:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: #ddd;
-    top: 30px;
-    left: -60%;
-    z-index: 1;
-}
-
-.progressBar li:first-child:after {
-    content: none;
-}
-
-.progressBar li.active {
-    color: dodgerblue;
-}
-
-.progressBar li.active:before {
-    border-color: dodgerblue;
-    background-color: dodgerblue
-}
-
-.progressBar li.active+li:after {
-    background-color: dodgerblue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 123px;
 }
 
 /* Payment styles */

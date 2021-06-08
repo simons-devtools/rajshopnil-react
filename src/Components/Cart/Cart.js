@@ -1,5 +1,6 @@
 import React from 'react';
 import './Cart.css';
+import CartImage from '../../images/icons/pngegg.png';
 
 const Cart = (props) => {
     // console.log('Calculation', props);
@@ -42,11 +43,7 @@ const Cart = (props) => {
                 <h1>Your order cart details</h1>
 
                 <div className="wrapper-progressBar">
-                    <ul className="progressBar">
-                        <li className="active">Processed</li>
-                        <li className="active">Payment</li>
-                        <li>Paid</li>
-                    </ul>
+                    <img src={CartImage} alt="" className="cart-image" />
                 </div>
 
                 <div className="cart-detail">

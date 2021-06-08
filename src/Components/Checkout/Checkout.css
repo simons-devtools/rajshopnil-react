@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-around; */
-    margin: 70px 0;
+    margin: 50px 0;
 }
 
 .left-contents {
@@ -12,6 +12,8 @@
 
 .left-contents .headerr {
     border-bottom: 1px solid #E2E8F0;
+    background-color: #f5f5f5;
+    padding: 20px;
 }
 
 .left-contents .items {
