@@ -14,6 +14,7 @@ const Review = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [userCart, setUserCart] = useContext(UserCartContext);
     const [cartProduct, setCartProduct] = useState([]);
+    const [count, setCount] = useState(1);
     const [cart, setCart] = useState([]);
 
     // Get users "WISHLIST PRODUCTS" from mongodb cloud:
@@ -39,7 +40,6 @@ const Review = () => {
     }, [])
 
     // Increment button func:
-    const [count, setCount] = useState(1);
     const OnIncrementClick = useCallback((e) => {
         count < 5 ? setCount(count + 1) : alert("Hey! Product count can't be bigger of 5");
     }, [count]);
@@ -86,6 +86,7 @@ const Review = () => {
         product.quantity = 0;
         newCount = product.quantity + count;
         product.quantity = newCount;
+        setCount(newCount);
         newCart = [...cart, product];
         setCart(newCart);
         addToDatabaseCart(newCart);
@@ -116,10 +117,10 @@ const Review = () => {
     // Proceed Checkout eventHandler func
     const history = useHistory();
     const handleProceedCheckout = () => {
-        // history.push('/checkout');
-        cart.length = 0;
-        let newData = [...cart];
-        setCart(newData);
+        history.push('/checkout');
+        // cart.length = 0;
+        // let newData = [...cart];
+        // setCart(newData);
     }
     // console.log(cart);
 
