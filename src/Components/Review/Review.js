@@ -2,11 +2,13 @@ import './Review.css';
 import React, { useContext, useEffect, useState, useCallback } from 'react';
 import ProductReview from '../ProductReview/ProductReview';
 import Cart from '../Cart/Cart';
+import EmptyCartImg from '../../images/icons/empty1.jpg';
 import { Container } from '@material-ui/core';
 import { useHistory } from 'react-router';
 import { UserContext } from '../../App';
 import { UserCartContext } from '../../App';
 import { addToDatabaseCart, getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
+import { Link } from 'react-router-dom';
 
 const Review = () => {
     document.title = 'Devtools | Products Review Page';
@@ -131,23 +133,34 @@ const Review = () => {
                     <div className="hheader">
                         <h1>
                             <span>Your wishlist products</span>
-                            <span className="items">{userCart.length} Items</span>
+                            <span className="items">({userCart.length}) Items</span>
                         </h1>
                     </div>
-                    <div className="multiple-chec">
-                        {
-                            cartProduct.map(pd => <ProductReview
-                                key={pd.product.key}
-                                count={count}
-                                OnIncrementClick={OnIncrementClick}
-                                OnDecrementClick={OnDecrementClick}
-                                addToCheckout={addToCheckout}
-                                removeFromCheckout={removeFromCheckout}
-                                handleDeleteProduct={handleDeleteProduct}
-                                cart={pd}
-                            />)
-                        }
-                    </div>
+
+                    {
+                        cartProduct.length === 0 ?
+                            <div className="empty-default">
+                                <img src={EmptyCartImg} alt="" />
+                                <h1>Your cart is empty. . . . .!!</h1>
+                                <Link to="/home">
+                                    <button>Continue Shopping</button>
+                                </Link>
+                            </div> :
+                            <div className="multiple-chec">
+                                {
+                                    cartProduct.map(pd => <ProductReview
+                                        key={pd.product.key}
+                                        count={count}
+                                        OnIncrementClick={OnIncrementClick}
+                                        OnDecrementClick={OnDecrementClick}
+                                        addToCheckout={addToCheckout}
+                                        removeFromCheckout={removeFromCheckout}
+                                        handleDeleteProduct={handleDeleteProduct}
+                                        cart={pd}
+                                    />)
+                                }
+                            </div>
+                    }
                 </div>
 
                 <div className="cart-control">
@@ -155,6 +168,7 @@ const Review = () => {
                         <button onClick={handleProceedCheckout}>Proceed To Checkout</button>
                     </Cart>
                 </div>
+
             </div>
         </Container>
     );

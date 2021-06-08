@@ -24,3 +24,35 @@
 .hheader .items {
     float: right;
 }
+
+.empty-default {
+    text-align: center;
+}
+
+.empty-default img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+}
+
+.empty-default h1 {
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.empty-default button {
+    width: 250px;
+    padding: 5px;
+    border: none;
+    color: dimgray;
+    border: 1px solid #411868;
+    background-color:thistle;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+.empty-default button:hover {
+    opacity: 50%;
+}

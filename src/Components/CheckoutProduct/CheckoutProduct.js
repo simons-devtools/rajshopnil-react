@@ -5,8 +5,8 @@ import DeleteSweepIcon from '@material-ui/icons/DeleteSweep';
 
 const CheckoutProduct = (props) => {
     // console.log('Checkout', props);
-    const { product } = props.product;
-    const { name, category, photoUrl, price, quantity } = product;
+    const { product, removeFromCheckout } = props;
+    const { key, name, category, photoUrl, price, quantity } = product;
 
     return (
         <div className="checkoutt-wrapper">
@@ -25,7 +25,7 @@ const CheckoutProduct = (props) => {
                 <div className="review-product extra">
                     <h2 style={{ color: '#db2804b9' }}>{name}</h2>
                     <h3 style={{ padding: '10px 0' }}>Category: {category}</h3>
-                    <button className="delete"><DeleteSweepIcon /></button>
+                    <button onClick={() => removeFromCheckout(key)} className="delete"><DeleteSweepIcon /></button>
                 </div>
                 <div className="review-product">
                     <h1 className="prod-Price">Price: ${price}</h1>

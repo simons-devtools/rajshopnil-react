@@ -3,12 +3,15 @@
 }
 
 .shipment-page h1 {
-    padding-top: 20px;
+    padding: 20px;
     padding-left: 55px;
 }
 
-/* Default contents styales */
+.form-note {}
+
+/* Default contents styles */
 .shipping-form {
+    display: none;
     padding-top: 10px;
 }
 
@@ -36,30 +39,9 @@
     letter-spacing: 3px;
 }
 
-/* Hidden contents styles */
-/* .form-api {
-    margin-left: 40px;
+.form-api {
+    display: block;
 }
-
-.form-api p {
-    width: 320px;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: transparent;
-    font-size: 11px;
-}
-
-.form-api .iconss {
-    color: dimgray;
-    margin-right: 5px;
-    vertical-align: middle;
-}
-
-.form-api .right {
-    float: right;
-    color: blue;
-    cursor: pointer;
-} */
 
 .shipping-form button, .form-api button {
     width: 100%;
@@ -79,4 +61,35 @@
 
 .shipping-form button:focus {
     transform: scale(1.04);
+}
+
+/* Hidden contents styles */
+.form-api p {
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: transparent;
+    font-size: 11px;
+}
+
+.form-api .iconss {
+    color: dimgray;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.form-api .rights {
+    float: right;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-api .rights:hover {
+    text-decoration: underline;
+}
+
+.rightSide {
+    float: right;
+    color: blue;
+    font-weight: bold;
 }
