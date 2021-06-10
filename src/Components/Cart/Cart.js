@@ -1,6 +1,6 @@
 import React from 'react';
 import './Cart.css';
-import CartImage from '../../images/icons/pngegg.png';
+import CartImage from '../../images/icons/cartImage.png';
 
 const Cart = (props) => {
     // console.log('Calculation', props);

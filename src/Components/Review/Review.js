@@ -75,8 +75,13 @@ const Review = () => {
                 }
             }
             else {
-                alert(`Hey! Are you sure add this product to your cart? KEY=${addedTOKey}`);
-                replaceOldCart(product, count);
+                if (cart.length > 4) {
+                    alert('Sorry bro! We cannot supply you more than 5 products.');
+                }
+                else {
+                    alert(`Hey! Are you sure add this product to your cart? KEY=${addedTOKey}`);
+                    replaceOldCart(product, count);
+                }
             }
         }
     }
@@ -120,9 +125,6 @@ const Review = () => {
     const history = useHistory();
     const handleProceedCheckout = () => {
         cart.length === 0 ? alert('Please! Continue shopping after follow this way.') : history.push('/checkout');
-        // cart.length = 0;
-        // let newData = [...cart];
-        // setCart(newData);
     }
 
     return (

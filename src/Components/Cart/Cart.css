@@ -18,8 +18,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    height: 123px;
+    width: 100%;
+    height: 150px;
 }
 
 /* Payment styles */
@@ -29,15 +29,11 @@
 }
 
 .cart-infoo h3 {
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 .cart-total h2 {
     padding: 5px 20px 30px 20px;
-}
-
-.cart-btnn {
-    padding-top: 10px;
 }
 
 .cart-btnn button {
