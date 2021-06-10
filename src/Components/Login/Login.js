@@ -8,8 +8,6 @@ import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
 
-import Slide from '@material-ui/core/Slide';
-
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 } else {
@@ -17,13 +15,6 @@ if (!firebase.apps.length) {
 }
 
 const Login = () => {
-    // Modal layout start:
-    const [checked, setChecked] = React.useState(false);
-
-    const handleChange = () => {
-        setChecked((prev) => !prev);
-    }; // Modal layout start;
-
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const history = useHistory();
@@ -98,8 +89,8 @@ const Login = () => {
         <div style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${backCover})`, backgroundRepeat: 'no-repeat' }} className="form-main">
             <div className="login-formm">
                 <div className="form-body">
+                    <img src={google} alt="" />
                     <h1>Google Authentication</h1>
-                    <img src={google} onClick={handleChange} />
                 </div>
                 <div>
                     {

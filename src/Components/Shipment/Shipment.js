@@ -41,18 +41,22 @@ const Shipment = (props) => {
 
     // Handle for the FORM toggle func:
     function handleForm() {
-        const defaultModal = document.getElementById("defaultModal");
-        defaultModal.style.display = "none";
+        if (cart.length === 0) {
+            alert('Please! Continue shopping after follow this way.');
+        } else {
+            const defaultModal = document.getElementById("defaultModal");
+            defaultModal.style.display = "none";
 
-        const customModal = document.getElementById("customModal");
-        customModal.style.display = "block";
+            const customModal = document.getElementById("customModal");
+            customModal.style.display = "block";
 
-        const button = document.getElementById("allowedBtn");
-        button.style.opacity = "100%";
-        button.style.cursor = "pointer";
+            const button = document.getElementById("allowedBtn");
+            button.style.opacity = "100%";
+            button.style.cursor = "pointer";
+        }
     }
 
-    // .....
+    // Handle toggle button message func:
     function handleFormMessage() {
         const warningMessage = document.getElementById("formMessage");
         warningMessage.style.display = "block";
@@ -62,7 +66,7 @@ const Shipment = (props) => {
         <div className="shipment-page">
             <h1>Customer Shipping & Billing Info</h1>
 
-            <form id="defaultModal" className="form-api">
+            <div id="defaultModal" className="form-api">
                 <div style={{ borderBottom: '1px solid #e4dbec' }}>
                     <p id="formMessage" className="form-message">Please! insert shipping information. Click "Edit & Complete"</p>
                     <p>
@@ -94,7 +98,7 @@ const Shipment = (props) => {
                     </p>
                 </div>
                 <button onClick={handleFormMessage} type="button">Proceed To Payment</button>
-            </form>
+            </div>
 
             <div id="customModal" className="shipping-form">
                 <form onSubmit={handleSubmit(onSubmit)}>

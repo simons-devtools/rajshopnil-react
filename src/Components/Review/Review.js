@@ -119,12 +119,11 @@ const Review = () => {
     // Proceed Checkout eventHandler func
     const history = useHistory();
     const handleProceedCheckout = () => {
-        history.push('/checkout');
+        cart.length === 0 ? alert('Please! Continue shopping after follow this way.') : history.push('/checkout');
         // cart.length = 0;
         // let newData = [...cart];
         // setCart(newData);
     }
-    // console.log(cart);
 
     return (
         <Container>

@@ -36,7 +36,7 @@
 
 /* --------- */
 .payment-summary h3 {
-    padding: 20px 0;
+    padding: 20px 0 10px 0;
 }
 
 .payment-info {
@@ -48,7 +48,8 @@
 .right {
     padding: 5px;
     margin-left: 30px;
-    color: #fff;
-    background-color: #f59280;
-    border-radius: 50%;
+    color: tomato;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid #fff;
 }
