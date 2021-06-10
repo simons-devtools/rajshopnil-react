@@ -53,3 +53,23 @@
     background-color: #fff;
     border: 1px solid #fff;
 }
+
+.pay-area button {
+    width: 150px;
+    padding: 8px 0;
+    color: azure;
+    background-color: tomato;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.pay-area button:hover {
+    opacity: 50%;
+}
+
+.pay-area button:focus {
+    border: 1px solid #E2E8F0;
+}

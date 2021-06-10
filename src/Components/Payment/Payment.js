@@ -48,10 +48,11 @@ const Payment = () => {
                 </div>
             </div>
 
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center' }} className="pay-area">
                 <h2 style={{ borderBottom: '1px solid #e4dbec' }}>Developer is Sleeping!!</h2>
-                <h1 style={{ paddingTop: '10px' }}>You are welcome to continue shopping!</h1>
                 <h3 style={{ color: 'green' }}>Please! wait, Your order is proccesing</h3>
+                <h1 style={{ paddingTop: '10px' }}>You are welcome to continue shopping!</h1>
+                <button type="submit">Order Confirm</button>
             </div>
         </div>
     );

@@ -94,7 +94,7 @@ const Review = () => {
         addToDatabaseCart(newCart);
     }
 
-    // Remove the old checkout cart func:
+    // Remove the localstorage/old checkout cart func:
     const removeFromCheckout = (addedTOKey) => {
         const sameProduct = cart.find(pd => pd.key === addedTOKey);
         if (sameProduct) {
@@ -108,7 +108,7 @@ const Review = () => {
         }
     }
 
-    // Delete wishlish product EventHandler Func:
+    // Delete mongodb/wishlish product EventHandler Func:
     const handleDeleteProduct = (key) => {
         const sameProduct = cartProduct.find(pd => pd.product.key === key);
         if (sameProduct) {
