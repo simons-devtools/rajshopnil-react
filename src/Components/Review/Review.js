@@ -113,12 +113,17 @@ const Review = () => {
         }
     }
 
-    // Delete mongodb/wishlish product EventHandler Func:
-    const handleDeleteProduct = (key) => {
-        const sameProduct = cartProduct.find(pd => pd.product.key === key);
-        if (sameProduct) {
-            alert(`Hey! Are you sure delete this product from your wishlist? KEY=${key}`);
-        }
+    // Delete mongodb/wishlish product EventHandler Func: /oneProductDelete/:id
+    // function handleDeleteProduct(id) {}
+    function handleDeleteProduct(id) {
+        // console.log('ID No', id);
+        fetch(`http://localhost:5200/delete/${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log('Result', result);
+            })
     }
 
     // Proceed Checkout eventHandler func

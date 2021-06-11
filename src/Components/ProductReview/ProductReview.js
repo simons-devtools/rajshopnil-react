@@ -10,7 +10,7 @@ import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 const ProductReview = (props) => {
     // console.log('Review', props.cart.product);
     let { cart, count, OnIncrementClick, OnDecrementClick, addToCheckout, removeFromCheckout, handleDeleteProduct } = props;
-    const { key, name, category, photoUrl, seller, price } = cart.product;
+    const { _id, key, name, category, photoUrl, seller, price } = cart.product;
 
     return (
         <div className="review-wrapper">
@@ -26,7 +26,7 @@ const ProductReview = (props) => {
                 <div className="review">
                     <div className="add-to-checkout">
                         <button onClick={() => addToCheckout(cart.product, count)} className="increase" style={{ marginBottom: '33px' }}><AddShoppingCartIcon /></button> <br />
-                        <button onClick={() => removeFromCheckout(key)} className="decrease"><RemoveShoppingCartIcon /></button>
+                        <button onClick={() => removeFromCheckout(_id)} className="decrease"><RemoveShoppingCartIcon /></button>
                     </div>
                     <div className="product-image">
                         <img src={photoUrl} alt="checkout-product-pic" />
@@ -38,7 +38,8 @@ const ProductReview = (props) => {
                     </div>
                     <div className="review-product">
                         <h2 className="prod-price">Price: ${price}</h2>
-                        <button onClick={() => handleDeleteProduct(key)} className="delete"><DeleteSweepIcon /></button>
+                        {/* <button onClick={() => handleDeleteProduct(cart._id)} className="delete"><DeleteSweepIcon /></button> */}
+                        <button onClick={() => handleDeleteProduct(cart._id)} className="delete"><DeleteSweepIcon /></button>
                     </div>
                     <div className="review-product">
                         <button onClick={OnIncrementClick} className="increase"><AddIcon /></button> <br />
