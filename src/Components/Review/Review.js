@@ -33,7 +33,7 @@ const Review = () => {
                 setCartProduct(data);
                 setUserCart(data);
             });
-    }, [])
+    }, [loggedInUser.email])
 
     // Get users "CART PRODUCTS" from mongodb cloud:
     useEffect(() => {
@@ -86,7 +86,7 @@ const Review = () => {
         }
     }
 
-    // Replace the older cart box func:
+    // Replace the older CART BOX func:
     const replaceOldCart = (product, count) => {
         let newCount = 0;
         let newCart;
@@ -113,7 +113,7 @@ const Review = () => {
         }
     }
 
-    // Delete mongodb/wishlish product EventHandler Func: /oneProductDelete/:id
+    // Delete mongodb/wishlish product EventHandler Func: Route: (/oneProductDelete/:id)
     function handleDeleteProduct(id) {
         let sameKeyProduct = cartProduct.find(pd => pd._id === id);
         const sameKey = sameKeyProduct.product.key;

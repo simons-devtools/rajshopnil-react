@@ -67,7 +67,7 @@ const Home = () => {
             </div>
 
             {
-                allCollection.length <= 0 ? <img style={{ marginLeft: '38%' }} src={Loading} /> :
+                allCollection.length <= 0 ? <img style={{ marginLeft: '38%' }} src={Loading} alt="loading-img" /> :
                     <Container>
 
                         {/* Collection One */}

@@ -68,7 +68,7 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item profile-photo">
-                                {isSiggedIn === true ? <img src={photo} /> : <span className="nav-link profile"><AccountCircleRoundedIcon /></span>}
+                                {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span className="nav-link profile"><AccountCircleRoundedIcon /></span>}
                             </li>
                         </ul>
                     </nav>

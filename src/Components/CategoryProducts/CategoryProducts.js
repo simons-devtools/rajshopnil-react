@@ -23,7 +23,7 @@ const CategoryProducts = () => {
                 <h1>Our all <span style={{ color: 'tomato' }}>"{category}"</span> category products is below</h1>
                 <div className="product-collection">
                     {
-                        products.length <= 0 && <img style={{ marginLeft: '35%' }} src={Loading} />
+                        products.length <= 0 && <img style={{ marginLeft: '35%' }} src={Loading} alt="loading-img" />
                     }
                     {
                         products.map(prod => prod.category === category ? <Product product={prod} key={prod.key} /> : '')

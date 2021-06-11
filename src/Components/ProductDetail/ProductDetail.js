@@ -95,7 +95,7 @@ const ProductDetail = () => {
                         <div className="image-layout">
                             <div className="big-photo">
                                 {
-                                    photoUrl !== '' ? <img src={photoUrl} /> : <img src={HolderImage} />
+                                    photoUrl !== '' ? <img src={photoUrl} alt="product-img" /> : <img src={HolderImage} alt="loading-img" />
                                 }
                             </div>
                             <div className="small-photo">
