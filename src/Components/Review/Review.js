@@ -114,15 +114,42 @@ const Review = () => {
     }
 
     // Delete mongodb/wishlish product EventHandler Func: /oneProductDelete/:id
-    // function handleDeleteProduct(id) {}
     function handleDeleteProduct(id) {
-        // console.log('ID No', id);
-        fetch(`http://localhost:5200/delete/${id}`, {
+        let sameKeyProduct = cartProduct.find(pd => pd._id === id);
+        const sameKey = sameKeyProduct.product.key;
+
+        fetch(`http://localhost:5200/deleteOne/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(result => {
-                console.log('Result', result);
+                // console.log('Deleted is', result);
+                alert('Are you sure delete this product from your wishlist...??');
+                for (let i = 0; i < cartProduct.length; i++) {
+                    const product = cartProduct[i];
+                    if (product._id === id) {
+                        cartProduct.splice(i, 1);
+                        let newCartProducts = [...cartProduct];
+                        setCartProduct(newCartProducts);
+                        setUserCart(newCartProducts);
+
+                        for (let i = 0; i < cart.length; i++) {
+                            const cProduct = cart[i];
+                            if (cProduct.key === sameKeyProduct.product.key) {
+                                cart.splice(i, 1);
+                                let fixedCart = [...cart];
+                                setCart(fixedCart);
+                                removeFromDatabaseCart(sameKey);
+                            }
+                            else {
+                                alert('Sorry! Something is wrong.');
+                            }
+                        }
+                    }
+                    else {
+                        alert('Sorry bro! Something is wrong. Please try again letter.');
+                    }
+                }
             })
     }
 

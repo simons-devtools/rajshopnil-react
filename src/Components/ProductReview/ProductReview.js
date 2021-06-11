@@ -10,7 +10,7 @@ import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 const ProductReview = (props) => {
     // console.log('Review', props.cart.product);
     let { cart, count, OnIncrementClick, OnDecrementClick, addToCheckout, removeFromCheckout, handleDeleteProduct } = props;
-    const { _id, key, name, category, photoUrl, seller, price } = cart.product;
+    const { key, name, category, photoUrl, seller, price } = cart.product;
 
     return (
         <div className="review-wrapper">
@@ -26,7 +26,7 @@ const ProductReview = (props) => {
                 <div className="review">
                     <div className="add-to-checkout">
                         <button onClick={() => addToCheckout(cart.product, count)} className="increase" style={{ marginBottom: '33px' }}><AddShoppingCartIcon /></button> <br />
-                        <button onClick={() => removeFromCheckout(_id)} className="decrease"><RemoveShoppingCartIcon /></button>
+                        <button onClick={() => removeFromCheckout(key)} className="decrease"><RemoveShoppingCartIcon /></button>
                     </div>
                     <div className="product-image">
                         <img src={photoUrl} alt="checkout-product-pic" />
