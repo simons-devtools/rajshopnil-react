@@ -13,6 +13,7 @@ import CollectionSix from '../CollectionSix/CollectionSix';
 import CollectionSeven from '../CollectionSeven/CollectionSeven';
 import CollectionEight from '../CollectionEight/CollectionEight';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import { Container } from '@material-ui/core';
 
 const Home = () => {
@@ -71,7 +72,7 @@ const Home = () => {
 
                         {/* Collection One */}
                         <div className="collection-packages-blue">
-                            <h1>Electronic Devices</h1>
+                            <h1><LibraryAddIcon className="icons" /> Electronic Devices</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectOne.map(collect => <CollectionOne oneCollection={collect} key={collect._id} />)
@@ -81,7 +82,7 @@ const Home = () => {
 
                         {/* Collection Two */}
                         <div className="collection-packages-tomato">
-                            <h1>Electronic Accessories</h1>
+                            <h1><span><LibraryAddIcon className="icons" /></span> Electronic Accessories</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectTwo.map(collect => <CollectionTwo twoCollection={collect} key={collect._id} />)
@@ -105,7 +106,7 @@ const Home = () => {
 
                         {/* Collection Four */}
                         <div className="collection-packages-tomato">
-                            <h1><span><LibraryAddIcon /></span> TV and Home Appliances</h1>
+                            <h1><span><LibraryAddIcon className="icons" /></span> TV and Home Appliances</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectFour.map(collect => <CollectionFour fourCollection={collect} key={collect._id} />)
@@ -130,7 +131,7 @@ const Home = () => {
 
                         {/* Collection Six */}
                         <div className="collection-packages-tomato">
-                            <h1>Health and Beauty</h1>
+                            <h1><span><LibraryAddIcon className="icons" /></span> Health and Beauty</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectSix.map(collect => <CollectionSix sixCollection={collect} key={collect._id} />)
@@ -140,7 +141,7 @@ const Home = () => {
 
                         {/* Collection Seven */}
                         <div className="collection-packages-tomato">
-                            <h1><span><LibraryAddIcon /></span> Sports and Outdoor</h1>
+                            <h1><span><LibraryAddIcon className="icons" /></span> Sports and Outdoor</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectSeven.map(collect => <CollectionSeven sevenCollection={collect} key={collect._id} />)
@@ -150,7 +151,6 @@ const Home = () => {
 
                         {/* Collection Eight */}
                         <div className="collection-packages-blue">
-                            <p className="grid-packages">Mega products</p>
                             <h1>All collection best selling categories products</h1>
                             <div className="collection-packages-container">
                                 {
@@ -158,7 +158,7 @@ const Home = () => {
                                 }
                             </div>
                             <div className="explore-btn">
-                                <button>See More</button>
+                                <button>See More <DoubleArrowIcon className="icons" /></button>
                             </div>
                         </div>
                     </Container>

@@ -14,7 +14,7 @@
 .collection-eight img {
     width: 195px;
     height: 150px;
-    padding: 50px;
+    padding: 20px 30px;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -25,10 +25,4 @@
 
 .collection-eight-wrapper:hover img {
     transform: scale(1.5);
-}
-
-.grid-packages {
-    font-size: 36px;
-    font-family: serif;
-    margin-left: 5px;
 }
