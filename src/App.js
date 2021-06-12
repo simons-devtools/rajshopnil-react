@@ -15,6 +15,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import NotFound from './Components/NotFound/NotFound';
 
 export const UserContext = createContext();
 export const UserCartContext = createContext();
@@ -27,7 +28,6 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <UserCartContext.Provider value={[userCart, setUserCart]}>
-        {/* <p>Email: {loggedInUser.email}</p> */}
         <Router>
           <Header />
 
@@ -57,6 +57,9 @@ function App() {
             <PrivateRoute path="/payment">
               <Payment />
             </PrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
           {/* Switch route end */}
 

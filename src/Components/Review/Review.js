@@ -174,7 +174,7 @@ const Review = () => {
                         cartProduct.length === 0 ?
                             <div className="empty-default">
                                 <img src={EmptyCartImg} alt="" />
-                                <h1>Your cart is empty. . . . .!!</h1>
+                                <h1>Horray! Your current cart is empty. . . . .!!</h1>
                                 <Link to="/home">
                                     <button>Continue Shopping</button>
                                 </Link>
