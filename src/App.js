@@ -42,7 +42,7 @@ function App() {
             <Route path="/product-collection/:category">
               <CategoryProducts />
             </Route>
-            <Route path="/product/:prodCategory/:prodKey">
+            <Route path="/product/:category/:prodKey">
               <ProductDetail />
             </Route>
             <Route path="/login">

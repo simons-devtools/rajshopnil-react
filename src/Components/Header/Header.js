@@ -14,6 +14,16 @@ const Header = () => {
     const [userCart, setUserCart] = useContext(UserCartContext);
     const { isSiggedIn, photo } = loggedInUser;
 
+    function loggedOutBtn() {
+        let newCart;
+        let currentCart = [...userCart];
+        newCart = currentCart;
+        newCart.length = 0;
+
+        setUserCart(newCart);
+        setLoggedInUser({});
+    }
+
     // For Humbarger Menubar:
     // const hamburger = document.querySelector(".hamburger");
     // const navMenu = document.querySelector(".nav-menu");
@@ -93,7 +103,7 @@ const Header = () => {
                                 <Link to="/home" className="nav-link">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/home" className="nav-link">Add-Products</Link>
+                                <Link to="/home" className="nav-link">Add-Product</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/home" className="nav-link">Product-Detail</Link>
@@ -108,7 +118,9 @@ const Header = () => {
                                 <Link to="/home" className="nav-link">Dashboard</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/login" className="nav-link">Login</Link>
+                                {
+                                    isSiggedIn ? <strong onClick={loggedOutBtn} style={{ fontSize: '14px' }}>Logout</strong> : <Link to="/login" className="nav-link">Login</Link>
+                                }
                             </li>
                         </ul>
                         <div className="hamburger">
