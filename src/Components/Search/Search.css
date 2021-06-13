@@ -66,7 +66,7 @@
 .results li {
     font-size: 14px;
     text-align: start;
-    padding: 5px 15px;
+    padding: 5px 15px 5px 3px;
 }
 
 .results li:hover {
@@ -74,6 +74,6 @@
 }
 
 .search-icons {
-    color: #a8d6fc;
+    color: #8ec9fa;
     vertical-align: middle;
 }
