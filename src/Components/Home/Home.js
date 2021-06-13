@@ -15,6 +15,9 @@ import CollectionEight from '../CollectionEight/CollectionEight';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import { Container } from '@material-ui/core';
+import Filter9PlusIcon from '@material-ui/icons/Filter9Plus';
+import Filter6Icon from '@material-ui/icons/Filter6';
+import Filter4Icon from '@material-ui/icons/Filter4';
 
 const Home = () => {
     const [allCollection, setAllCollection] = useState([]);
@@ -72,7 +75,7 @@ const Home = () => {
 
                         {/* Collection One */}
                         <div className="collection-packages-blue">
-                            <h1><LibraryAddIcon className="icons" /> Electronic Devices</h1>
+                            <h1><Filter6Icon className="icons" /> Electronic Devices</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectOne.map(collect => <CollectionOne oneCollection={collect} key={collect._id} />)
@@ -82,7 +85,7 @@ const Home = () => {
 
                         {/* Collection Two */}
                         <div className="collection-packages-tomato">
-                            <h1><span><LibraryAddIcon className="icons" /></span> Electronic Accessories</h1>
+                            <h1><span><Filter6Icon className="icons" /></span> Electronic Accessories</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectTwo.map(collect => <CollectionTwo twoCollection={collect} key={collect._id} />)
@@ -106,7 +109,7 @@ const Home = () => {
 
                         {/* Collection Four */}
                         <div className="collection-packages-tomato">
-                            <h1><span><LibraryAddIcon className="icons" /></span> TV and Home Appliances</h1>
+                            <h1><span><Filter4Icon className="icons" /></span> TV and Home Appliances</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectFour.map(collect => <CollectionFour fourCollection={collect} key={collect._id} />)
@@ -131,7 +134,7 @@ const Home = () => {
 
                         {/* Collection Six */}
                         <div className="collection-packages-tomato">
-                            <h1><span><LibraryAddIcon className="icons" /></span> Health and Beauty</h1>
+                            <h1><span><Filter6Icon className="icons" /></span> Health and Beauty</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectSix.map(collect => <CollectionSix sixCollection={collect} key={collect._id} />)
@@ -141,7 +144,7 @@ const Home = () => {
 
                         {/* Collection Seven */}
                         <div className="collection-packages-tomato">
-                            <h1><span><LibraryAddIcon className="icons" /></span> Sports and Outdoor</h1>
+                            <h1><span><Filter4Icon className="icons" /></span> Sports and Outdoor</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectSeven.map(collect => <CollectionSeven sevenCollection={collect} key={collect._id} />)
@@ -151,7 +154,7 @@ const Home = () => {
 
                         {/* Collection Eight */}
                         <div className="collection-packages-blue">
-                            <h1>All collection best selling categories products</h1>
+                            <h1><Filter9PlusIcon className="icons" /> All collection best selling categories products</h1>
                             <div className="collection-packages-container">
                                 {
                                     collectEight.map(collect => <CollectionEight eightCollection={collect} key={collect._id} />)

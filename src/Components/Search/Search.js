@@ -1,4 +1,6 @@
 import './Search.css';
+import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,7 +8,7 @@ const Search = () => {
     // Search function:
     const [search, setSearch] = useState('');
     const [products, setProducts] = useState([])
-    const first10 = products.slice(0, 10);
+    // const first10 = products.slice(0, 10);
 
     const handleChange = event => {
         setSearch(event.target.value);
@@ -16,12 +18,10 @@ const Search = () => {
                 setProducts(data)
             })
     }
-    // console.log('Search data', search);
 
     function searchResult(event) {
         const searchProduct = document.getElementById("searchProduct");
         searchProduct.style.display = "none";
-        console.log('Handle clicked value', event);
         setSearch(event);
     }
 
@@ -32,9 +32,12 @@ const Search = () => {
                 <div id="searchProduct" className="results">
                     <ul>
                         {
-                            first10.map(f =>
+                            products.map(f =>
                                 <Link to={`/product-collection/${f.category}`}>
-                                    <li onClick={() => searchResult(f.name)} id="SearchValue">{f.name}</li>
+                                    <li onClick={() => searchResult(f.name)} id="SearchValue">
+                                        <span><DoubleArrowIcon className="search-icons" /> {f.name}</span>
+                                        <span>{f.category}</span>
+                                    </li>
                                 </Link>
                             )
                         }

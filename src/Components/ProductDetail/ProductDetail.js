@@ -14,6 +14,7 @@ import StarIcon from '@material-ui/icons/Star';
 import { useHistory, useParams } from 'react-router';
 import { Container } from '@material-ui/core';
 import { UserCartContext, UserContext } from '../../App';
+import { Link } from 'react-router-dom';
 
 const ProductDetail = () => {
     document.title = 'DevTools | Products Details';
@@ -261,7 +262,9 @@ const ProductDetail = () => {
                             </div>
                         </div>
                         <div className="other-three">
-                            <h4>GO TO STORAGE</h4>
+                            <Link to="/home">
+                                <h4>GO TO STORAGE</h4>
+                            </Link>
                         </div>
                     </div>
                 </div>
