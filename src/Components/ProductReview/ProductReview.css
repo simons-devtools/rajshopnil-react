@@ -9,9 +9,20 @@
 .review {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 12px 0;
+    justify-content: space-between;
+    /* padding: 0 15px; */
     background-color: #f5f5f5;
+}
+
+.review-left {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.review-rigth {
+    display: flex;
+    padding: 15px 20px;
 }
 
 .product-image img {
@@ -21,7 +32,6 @@
 }
 
 .review-prod-info {
-    /* color: #c4c1c1; */
     font-weight: bold;
     padding: 6px 0;
     letter-spacing: 2px;
@@ -29,12 +39,11 @@
 
 .prod-price {
     color: #db2804b9;
-    margin-bottom: 10px;
 }
 
-.extra {
-    width: 350px;
-    /* border: 1px solid #dbc2c2; */
+.middle {
+    text-align: center;
+    padding: 0 40px;
 }
 
 .decrease, .increase, .delete {

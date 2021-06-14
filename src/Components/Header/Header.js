@@ -64,23 +64,25 @@ const Header = () => {
                         <div className="search-container">
                             <Search />
                         </div>
-                        <ul className="nav-menu">
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link"><NotificationsActiveRoundedIcon /></Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link"><FavoriteRoundedIcon /></Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/review" refresh="true" className="nav-link count-cart">
-                                    <ShoppingBasketIcon />
-                                    <span className="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
-                                </Link>
-                            </li>
-                            <li className="nav-item profile-photo">
-                                {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span className="nav-link profile"><AccountCircleRoundedIcon /></span>}
-                            </li>
-                        </ul>
+                        <div>
+                            <ul className="nav-menu">
+                                <li className="nav-item">
+                                    <Link to="/home" className="nav-link"><NotificationsActiveRoundedIcon /></Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/home" className="nav-link"><FavoriteRoundedIcon /></Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/review" refresh="true" className="nav-link count-cart">
+                                        <ShoppingBasketIcon />
+                                        <span className="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
+                                    </Link>
+                                </li>
+                                <li className="nav-item profile-photo">
+                                    {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span className="nav-link profile"><AccountCircleRoundedIcon /></span>}
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                 </Container>
             </header>

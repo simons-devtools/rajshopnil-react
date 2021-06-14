@@ -1,18 +1,28 @@
 .checkout-main {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px 0;
+    justify-content: space-between;
+    margin: 30px 20px 30px 0;
 }
 
 .prod-review-control {
-    width: 70%;
-    padding: 20px 20px 20px 12px;
+    flex-basis: 70%;
+    padding: 20px 5px 20px 12px;
 }
 
 .cart-control {
-    width: 28.5%;
+    flex-basis: 28.5%;
     height: 400px;
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .prod-review-control {
+        flex-basis: 100%;
+    }
+    .cart-control {
+        flex-basis: 100%;
+    }
 }
 
 .prod-review-control .hheader {
@@ -48,7 +58,7 @@
     border: none;
     color: dimgray;
     border: 1px solid #411868;
-    background-color:thistle;
+    background-color: thistle;
     font-size: 14px;
     letter-spacing: 5px;
 }

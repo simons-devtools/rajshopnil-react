@@ -25,27 +25,30 @@ const ProductReview = (props) => {
                 </div>
 
                 <div className="review">
-                    <div className="add-to-checkout">
-                        <button onClick={() => addToCheckout(cart.product, count)} className="increase" style={{ marginBottom: '33px' }}><AddShoppingCartIcon /></button> <br />
-                        <button onClick={() => removeFromCheckout(key)} className="decrease"><RemoveShoppingCartIcon /></button>
+                    <div className="review-left">
+                        <div className="add-to-checkout">
+                            <button onClick={() => addToCheckout(cart.product, count)} className="increase" style={{ marginBottom: '33px' }}><AddShoppingCartIcon /></button> <br />
+                            <button onClick={() => removeFromCheckout(key)} className="decrease"><RemoveShoppingCartIcon /></button>
+                        </div>
+                        <div className="product-image">
+                            <img src={photoUrl} alt="checkout-product-pic" />
+                        </div>
                     </div>
-                    <div className="product-image">
-                        <img src={photoUrl} alt="checkout-product-pic" />
-                    </div>
-                    <div className="review-product extra">
-                    <Link to={`/product/${category}/${key}`}><h2 style={{ color: '#db2804b9' }}>{name}</h2></Link>
-                        <h3 className="review-prod-info">Category: {category}</h3>
-                        <h3 className="review-prod-info">Seller: {seller}</h3>
-                    </div>
-                    <div className="review-product">
-                        <h2 className="prod-price">Price: ${price}</h2>
-                        {/* <button onClick={() => handleDeleteProduct(cart._id)} className="delete"><DeleteSweepIcon /></button> */}
-                        <button onClick={() => handleDeleteProduct(cart._id)} className="delete"><DeleteSweepIcon /></button>
-                    </div>
-                    <div className="review-product">
-                        <button onClick={OnIncrementClick} className="increase"><AddIcon /></button> <br />
-                        <strong className="count">{count}</strong> <br />
-                        <button onClick={OnDecrementClick} className="decrease"><RemoveIcon /></button>
+                    <div className="review-rigth">
+                        <div className="review-product">
+                            <Link to={`/product/${category}/${key}`}><h2 style={{ color: '#db2804b9' }}>{name}</h2></Link>
+                            <h3 className="review-prod-info">Category: {category}</h3>
+                            <h3 className="review-prod-info">Seller: {seller}</h3>
+                        </div>
+                        <div className="review-product middle">
+                            <h2 className="prod-price">Price: ${price}</h2>
+                            <button onClick={() => handleDeleteProduct(cart._id)} className="delete"><DeleteSweepIcon /></button>
+                        </div>
+                        <div className="review-product">
+                            <button onClick={OnIncrementClick} className="increase"><AddIcon /></button> <br />
+                            <strong className="count">{count}</strong> <br />
+                            <button onClick={OnDecrementClick} className="decrease"><RemoveIcon /></button>
+                        </div>
                     </div>
                 </div>
             </div>
