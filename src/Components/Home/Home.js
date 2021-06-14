@@ -15,14 +15,15 @@ import CollectionEight from '../CollectionEight/CollectionEight';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import { Container } from '@material-ui/core';
-import Filter9PlusIcon from '@material-ui/icons/Filter9Plus';
 import Filter6Icon from '@material-ui/icons/Filter6';
+import Filter5Icon from '@material-ui/icons/Filter5';
 import Filter4Icon from '@material-ui/icons/Filter4';
 
 const Home = () => {
     const [allCollection, setAllCollection] = useState([]);
 
 
+    // For the collection one only:
     const elecDevice1 = allCollection.filter(prod => prod.category === 'smart-phone');
     const smartPhone = elecDevice1.slice(0, 1);
 
@@ -48,9 +49,9 @@ const Home = () => {
 
     // const collectOne = allCollection.slice(0, 6);
     const collectTwo = allCollection.slice(21, 27);
-    const collectThree = allCollection.slice(41, 45);
+    const collectThree = allCollection.slice(41, 46);
     const collectFour = allCollection.slice(61, 65);
-    const collectFive = allCollection.slice(81, 87);
+    const collectFive = allCollection.slice(81, 86);
     const collectSix = allCollection.slice(101, 107);
     const collectSeven = allCollection.slice(30, 34);
     const collectEight = allCollection.slice(45, 57);
@@ -70,7 +71,7 @@ const Home = () => {
             </div>
 
             {
-                allCollection.length <= 0 ? <img style={{ marginLeft: '38%' }} src={Loading} alt="loading-img" /> :
+                allCollection.length <= 0 ? <img style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }} src={Loading} alt="loading-img" /> :
                     <Container>
                         <div className="home-main">
 
@@ -96,15 +97,11 @@ const Home = () => {
 
                             {/* Collection Three */}
                             <div className="collection-packages-blue">
-                                <div className="full-layout">
-                                    <div className="collection-img-box">
-                                        <img src={PresentationImg} className="banner-img" alt="" />
-                                    </div>
-                                    <div className="collection-banner-container">
-                                        {
-                                            collectThree.map(collect => <CollectionThree threeCollection={collect} key={collect._id} />)
-                                        }
-                                    </div>
+                                <h1><Filter5Icon className="icons" /> Mens Fashions</h1>
+                                <div className="collection-banner-container">
+                                    {
+                                        collectThree.map(collect => <CollectionThree threeCollection={collect} key={collect._id} />)
+                                    }
                                 </div>
                             </div>
 
@@ -120,16 +117,11 @@ const Home = () => {
 
                             {/* Collection Five */}
                             <div className="collection-packages-blue">
-                                <div className="full-layout">
-
-                                    <div className="collection-banner-container">
-                                        {
-                                            collectFive.map(collect => <CollectionFive fiveCollection={collect} key={collect._id} />)
-                                        }
-                                    </div>
-                                    <div className="collection-img-box">
-                                        <img src={DataManagementImg} className="banner-img" alt="" />
-                                    </div>
+                                <h1><Filter5Icon className="icons" /> Womens Fashions</h1>
+                                <div className="collection-banner-container">
+                                    {
+                                        collectFive.map(collect => <CollectionFive fiveCollection={collect} key={collect._id} />)
+                                    }
                                 </div>
                             </div>
 
@@ -155,7 +147,7 @@ const Home = () => {
 
                             {/* Collection Eight */}
                             <div className="collection-packages-blue">
-                                <h1><Filter9PlusIcon className="icons" /> All collection best selling categories products</h1>
+                                <h1><LibraryAddIcon className="icons" /> All collection best selling categories products</h1>
                                 <div className="collection-packages-container">
                                     {
                                         collectEight.map(collect => <CollectionEight eightCollection={collect} key={collect._id} />)

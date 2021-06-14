@@ -92,7 +92,7 @@ header {
 }
 
 .nav-item {
-    margin-left: 4.7rem;
+    margin-left: 4.8rem;
 }
 
 .nav-link{
@@ -114,24 +114,28 @@ header {
 /* @madia queries styles */
 @media only screen and (max-width: 768px) {
     .nav-menu {
+        display: none;
         position: fixed;
-        left: -100%;
-        top: 5rem;
+        top: 22rem;
+        bottom: 20rem;
+        left: 0;
+        width: 80%;
         flex-direction: column;
         background-color: #fff;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
+        padding: 10px 0;
+        overflow: scroll;
+        overflow-x: auto;
+        overflow-y: auto;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    .nav-menu.active {
-        left: 0;
+    .nav-item:hover {
+        background-color: #e7dcdc;
     }
 
     .nav-item {
-        margin: 2.5rem 0;
+        margin: 1rem 0;
     }
 
     .hamburger {

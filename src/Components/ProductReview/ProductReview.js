@@ -27,7 +27,7 @@ const ProductReview = (props) => {
                 <div className="review">
                     <div className="review-left">
                         <div className="add-to-checkout">
-                            <button onClick={() => addToCheckout(cart.product, count)} className="increase" style={{ marginBottom: '33px' }}><AddShoppingCartIcon /></button> <br />
+                            <button onClick={() => addToCheckout(cart.product, count)} className="increase" style={{ marginBottom: '38px' }}><AddShoppingCartIcon /></button> <br />
                             <button onClick={() => removeFromCheckout(key)} className="decrease"><RemoveShoppingCartIcon /></button>
                         </div>
                         <div className="product-image">

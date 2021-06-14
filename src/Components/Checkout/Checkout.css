@@ -6,7 +6,21 @@
 
 .left-contents {
     width: 60%;
-    margin: 0 20px 0 13px;
+    margin: 0 10px 20px 13px;
+}
+
+.right-contents {
+    width: 35.7%;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .left-contents {
+        flex-basis: 100%;
+    }
+    .right-contents {
+        flex-basis: 100%;
+    }
 }
 
 .left-contents .headerr {
@@ -17,9 +31,4 @@
 
 .left-contents .items {
     float: right;
-}
-
-.right-contents {
-    width: 35.7%;
-    margin-bottom: 5px;
 }
