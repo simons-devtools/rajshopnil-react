@@ -46,11 +46,17 @@ const Header = () => {
     return (
         <div className="navbar-head">
 
+            <div className="hamburger">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+            </div>
+
             <div className="topbar">
                 <p>
-                    <span>Authorized by mr. simon | </span>
-                    <span>Mobile: +880 1799867752 | </span>
-                    <span>Email: cmoxsh@gmail.com | </span>
+                    <span>Authorized by mr. simon</span>
+                    <span>Mobile: +880 1799867752</span>
+                    <span>Email: cmoxsh@gmail.com</span>
                     <span>Root: Gazipur, Dhaka, Bangladesh</span>
                 </p>
             </div>
@@ -125,11 +131,7 @@ const Header = () => {
                                 }
                             </li>
                         </ul>
-                        <div className="hamburger">
-                            <span className="bar"></span>
-                            <span className="bar"></span>
-                            <span className="bar"></span>
-                        </div>
+                        {/* BAR... */}
                     </nav>
                 </Container>
             </div>

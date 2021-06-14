@@ -1,21 +1,23 @@
 /* Top Menus Styles */
 .navbar-head {
     position: sticky;
-    top: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .topbar {
-    padding: 7px 0;
+    padding: 8px 0;
     text-align: center;
     background: #787878;
 }
 
-.topbar span {
-    font-size: 12px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    padding: 0 58px;
+.topbar p {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #e7dcdc;
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
 }
 
 .logos a {
@@ -31,11 +33,11 @@
 /* Header and Navnar */
 .hheaderr {
     background-color: #fff;
-    margin-right: 5px;
     border-bottom: 1px solid #101010;
 }
 
 header {
+    padding-top: 10px;
     background-color: #fff;
 }
 
@@ -46,21 +48,6 @@ header {
     align-items: center;
     padding: 1rem 1.5rem;
     background-color: #fff;
-}
-
-/* Hamburger Styles */
-.hamburger {
-    display: none;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
 }
 
 /* Basic style other elements */
@@ -111,18 +98,36 @@ header {
     color: #482ff7;
 }
 
+/* Hamburger Styles */
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 6.6rem;
+    right: 5rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
 /* @madia queries styles */
 @media only screen and (max-width: 768px) {
     .nav-menu {
         display: none;
         position: fixed;
-        top: 22rem;
+        top: 10rem;
         bottom: 20rem;
         left: 0;
-        width: 80%;
+        width: 100%;
         flex-direction: column;
         background-color: #fff;
-        padding: 10px 0;
+        padding: 10px 32px;
         overflow: scroll;
         overflow-x: auto;
         overflow-y: auto;
