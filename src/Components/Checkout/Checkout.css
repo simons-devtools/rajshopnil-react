@@ -1,13 +1,12 @@
 .checkout-mains {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
     margin: 50px 0;
 }
 
 .left-contents {
     width: 60%;
-    margin: 0 20px 0 15px;
+    margin: 0 20px 0 13px;
 }
 
 .left-contents .headerr {
