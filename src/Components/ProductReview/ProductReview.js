@@ -35,7 +35,7 @@ const ProductReview = (props) => {
                         </div>
                     </div>
                     <div className="review-rigth">
-                        <div className="review-product">
+                        <div className="review-product extra">
                             <Link to={`/product/${category}/${key}`}><h2 style={{ color: '#db2804b9' }}>{name}</h2></Link>
                             <h3 className="review-prod-info">Category: {category}</h3>
                             <h3 className="review-prod-info">Seller: {seller}</h3>
