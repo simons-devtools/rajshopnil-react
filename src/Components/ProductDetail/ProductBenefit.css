@@ -6,7 +6,7 @@
 
 .other-row-one {
     background-color: #f5f5f5;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .other-row-two {
@@ -32,6 +32,10 @@
 .del-option {
     color: dimgray;
     font-weight: bold;
+}
+
+.sub-content {
+    margin-left: 20px;
 }
 
 .icon-right {

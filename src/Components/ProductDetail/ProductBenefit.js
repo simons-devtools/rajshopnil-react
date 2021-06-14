@@ -9,7 +9,9 @@ import EcoIcon from '@material-ui/icons/Eco';
 import ForumIcon from '@material-ui/icons/Forum';
 import { Link } from 'react-router-dom';
 
-const ProductBenefit = () => {
+const ProductBenefit = (props) => {
+    const { product } = props;
+
     return (
         <>
             <div className="other-info">
@@ -17,10 +19,10 @@ const ProductBenefit = () => {
                     <div className="row-one">
                         <p>
                             <small className="del-option">Delivery Options</small>
-                            <span className="icon-right"><InfoIcon /></span>
+                            <span className="icon-right"><InfoIcon className="icons" /></span>
                         </p>
                         <h4>
-                            <span className="icon-left"><LocationOnIcon /></span>
+                            <span className="icon-left"><LocationOnIcon className="icons" /></span>
                             <span>Dhaka, Gazipur, Tongi</span>
                             <span className="right-link">CHANGE</span>
                         </h4>
@@ -28,15 +30,15 @@ const ProductBenefit = () => {
                     <div className="row-two">
                         <div className="row-two-one">
                             <h4>
-                                <span className="icon-left"><HomeWorkIcon /></span>
-                                <span>Home Delevery</span>
-                                <span className="right-amount">$15</span>
+                                <span className="icon-left"><HomeWorkIcon className="icons" /></span>
+                                <span>Home Delivery</span>
+                                <span className="right-amount">${product.price}</span>
                             </h4>
-                            <p><small>4 - 7 days</small></p>
+                            <p className="sub-content"><small>Only 4 - 7 days</small></p>
                         </div>
                         <div className="row-two-two">
                             <h4>
-                                <span className="icon-left"><LocalAtmIcon /></span>
+                                <span className="icon-left"><LocalAtmIcon className="icons" /></span>
                                 <span>Cash on Delevery Available</span>
                             </h4>
                         </div>
@@ -45,17 +47,17 @@ const ProductBenefit = () => {
                         <div className="row-three-one">
                             <p>
                                 <small>Return & Warranty</small>
-                                <small className="icon-right"><InfoIcon /></small>
+                                <small className="icon-right"><InfoIcon className="icons" /></small>
                             </p>
                             <h4>
-                                <span className="icon-left"><AssignmentReturnIcon /></span>
+                                <span className="icon-left"><AssignmentReturnIcon className="icons" /></span>
                                 <span>7 Days Returns</span>
                             </h4>
-                            <p><small>Change of mind is not applicable</small></p>
+                            <p className="sub-content"><small>Change of mind is not applicable</small></p>
                         </div>
                         <div className="row-three-one">
                             <h4>
-                                <span className="icon-left"><EcoIcon /></span>
+                                <span className="icon-left"><EcoIcon className="icons" /></span>
                                 <span>Warranty not available</span>
                             </h4>
                         </div>
@@ -71,7 +73,7 @@ const ProductBenefit = () => {
                         </div>
                         <div className="flexible">
                             <p>
-                                <span className="chat"><ForumIcon /></span>
+                                <span className="chat"><ForumIcon className="icons" /></span>
                                 <span className="chat">Chat Now</span>
                             </p>
                         </div>

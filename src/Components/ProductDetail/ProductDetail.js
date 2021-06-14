@@ -108,7 +108,7 @@ const ProductDetail = () => {
                 </div>
 
                 {/* Product Benefit Contents */}
-                <ProductBenefit />
+                <ProductBenefit product={product} />
             </div>
         </Container>
     );
