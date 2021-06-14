@@ -1,0 +1,99 @@
+.other-info p {
+    color: dimgray;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.other-row-one {
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.other-row-two {
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.other-row-one .row-one, .row-two, .row-three {
+    padding: 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.other-row-two .other-one {
+    padding: 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.other-row-two .other-two {
+    padding: 2px 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.del-option {
+    color: dimgray;
+    font-weight: bold;
+}
+
+.icon-right {
+    color: #a09b9b;
+    float: right;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-left {
+    color: #a09b9b;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.right-link {
+    color: blue;
+    float: right;
+    cursor: pointer;
+}
+
+.right-amount {
+    float: right;
+}
+
+.other-one {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.other-one .chat {
+    color: blue;
+    vertical-align: middle;
+    padding-left: 3px;
+    cursor: pointer;
+}
+
+.other-two {
+    display: flex;
+    font-weight: bold;
+}
+
+.flexColums-one {
+    border-right: 1px solid #E2E8F0;
+    padding: 0 5px 0 0;
+}
+
+.flexColums-two {
+    border-right: 1px solid #E2E8F0;
+    padding: 0 5px 0 5px;
+}
+
+.flexColums-three {
+    padding-left: 5px;
+}
+
+.other-three h4 {
+    color: blue;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
