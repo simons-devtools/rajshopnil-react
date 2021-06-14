@@ -1,12 +1,12 @@
 .collection-five-wrapper {
-    width: 243px;
+    width: 241.5px;
     height: 225px;
     cursor: pointer;
     border: 1px solid #E2E8F0;
 }
 
 .collection-five img {
-    width: 243px;
+    width: 241.5px;
     height: 190px;
     padding: 25px 50px;
     transition: .5s ease;
@@ -15,7 +15,6 @@
 }
 
 .collection-five h4 {
-    /* padding: 10px; */
     text-align: center;
 }
 

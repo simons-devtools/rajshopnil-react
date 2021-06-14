@@ -18,8 +18,8 @@ const CategoryProducts = () => {
     }, [])
 
     return (
-        <div>
-            <Container className="category-prod">
+        <Container>
+            <div className="category-prod">
                 <h1>Our all <span style={{ color: 'tomato' }}>"{category}"</span> category products is below</h1>
                 <div className="product-collection">
                     {
@@ -29,8 +29,8 @@ const CategoryProducts = () => {
                         products.map(prod => prod.category === category ? <Product product={prod} key={prod.key} /> : '')
                     }
                 </div>
-            </Container>
-        </div>
+            </div>
+        </Container>
     );
 };
 

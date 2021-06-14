@@ -1,15 +1,12 @@
 .collection-one-wrapper {
-    width: 195px;
+    width: 191.5px;
     margin: 10px 5px;
-    cursor: pointer;
 }
 
 .collection-one img {
-    width: 195px;
+    width: 191.5px;
     height: 150px;
     padding: 20px;
-    transition: .5s ease;
-    backface-visibility: hidden;
     border: 1px solid #e8e9eb;
 }
 

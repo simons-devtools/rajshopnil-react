@@ -15,13 +15,13 @@ const Product = (props) => {
                         photoUrl !== '' ? <img src={photoUrl} className="product-img" alt="product-img" /> : <img src={HolderImage} className="product-img" alt="" />
                     }
                     <h4 className="prod-name">
-                        <span>{name} </span>
-                        <strong style={{ fontSize: '20px', color: 'tomato' }}>${price}</strong>
+                        <span>{name} </span> <br />
+                        <strong style={{ fontSize: '12px', color: 'tomato' }}>Price: ${price}</strong>
                     </h4>
                 </div>
             </div>
         </Link>
     );
-};
+}
 
 export default Product;

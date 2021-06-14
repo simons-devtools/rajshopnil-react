@@ -72,97 +72,100 @@ const Home = () => {
             {
                 allCollection.length <= 0 ? <img style={{ marginLeft: '38%' }} src={Loading} alt="loading-img" /> :
                     <Container>
+                        <div className="home-main">
 
-                        {/* Collection One */}
-                        <div className="collection-packages-blue">
-                            <h1><Filter6Icon className="icons" /> Electronic Devices</h1>
-                            <div className="collection-packages-container">
-                                {
-                                    collectOne.map(collect => <CollectionOne oneCollection={collect} key={collect._id} />)
-                                }
-                            </div>
-                        </div>
-
-                        {/* Collection Two */}
-                        <div className="collection-packages-tomato">
-                            <h1><span><Filter6Icon className="icons" /></span> Electronic Accessories</h1>
-                            <div className="collection-packages-container">
-                                {
-                                    collectTwo.map(collect => <CollectionTwo twoCollection={collect} key={collect._id} />)
-                                }
-                            </div>
-                        </div>
-
-                        {/* Collection Three */}
-                        <div className="collection-packages-blue">
-                            <div className="full-layout">
-                                <div className="collection-img-box">
-                                    <img src={PresentationImg} className="banner-img" alt="" />
-                                </div>
-                                <div className="collection-banner-container">
+                            {/* Collection One */}
+                            <div className="collection-packages-blue">
+                                <h1><Filter6Icon className="icons" /> Electronic Devices</h1>
+                                <div className="collection-packages-container">
                                     {
-                                        collectThree.map(collect => <CollectionThree threeCollection={collect} key={collect._id} />)
+                                        collectOne.map(collect => <CollectionOne oneCollection={collect} key={collect._id} />)
                                     }
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Collection Four */}
-                        <div className="collection-packages-tomato">
-                            <h1><span><Filter4Icon className="icons" /></span> TV and Home Appliances</h1>
-                            <div className="collection-packages-container">
-                                {
-                                    collectFour.map(collect => <CollectionFour fourCollection={collect} key={collect._id} />)
-                                }
-                            </div>
-                        </div>
-
-                        {/* Collection Five */}
-                        <div className="collection-packages-blue">
-                            <div className="full-layout">
-
-                                <div className="collection-banner-container">
+                            {/* Collection Two */}
+                            <div className="collection-packages-tomato">
+                                <h1><span><Filter6Icon className="icons" /></span> Electronic Accessories</h1>
+                                <div className="collection-packages-container">
                                     {
-                                        collectFive.map(collect => <CollectionFive fiveCollection={collect} key={collect._id} />)
+                                        collectTwo.map(collect => <CollectionTwo twoCollection={collect} key={collect._id} />)
                                     }
                                 </div>
-                                <div className="collection-img-box">
-                                    <img src={DataManagementImg} className="banner-img" alt="" />
+                            </div>
+
+                            {/* Collection Three */}
+                            <div className="collection-packages-blue">
+                                <div className="full-layout">
+                                    <div className="collection-img-box">
+                                        <img src={PresentationImg} className="banner-img" alt="" />
+                                    </div>
+                                    <div className="collection-banner-container">
+                                        {
+                                            collectThree.map(collect => <CollectionThree threeCollection={collect} key={collect._id} />)
+                                        }
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Collection Six */}
-                        <div className="collection-packages-tomato">
-                            <h1><span><Filter6Icon className="icons" /></span> Health and Beauty</h1>
-                            <div className="collection-packages-container">
-                                {
-                                    collectSix.map(collect => <CollectionSix sixCollection={collect} key={collect._id} />)
-                                }
+                            {/* Collection Four */}
+                            <div className="collection-packages-tomato">
+                                <h1><span><Filter4Icon className="icons" /></span> TV and Home Appliances</h1>
+                                <div className="collection-packages-container">
+                                    {
+                                        collectFour.map(collect => <CollectionFour fourCollection={collect} key={collect._id} />)
+                                    }
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Collection Seven */}
-                        <div className="collection-packages-tomato">
-                            <h1><span><Filter4Icon className="icons" /></span> Sports and Outdoor</h1>
-                            <div className="collection-packages-container">
-                                {
-                                    collectSeven.map(collect => <CollectionSeven sevenCollection={collect} key={collect._id} />)
-                                }
-                            </div>
-                        </div>
+                            {/* Collection Five */}
+                            <div className="collection-packages-blue">
+                                <div className="full-layout">
 
-                        {/* Collection Eight */}
-                        <div className="collection-packages-blue">
-                            <h1><Filter9PlusIcon className="icons" /> All collection best selling categories products</h1>
-                            <div className="collection-packages-container">
-                                {
-                                    collectEight.map(collect => <CollectionEight eightCollection={collect} key={collect._id} />)
-                                }
+                                    <div className="collection-banner-container">
+                                        {
+                                            collectFive.map(collect => <CollectionFive fiveCollection={collect} key={collect._id} />)
+                                        }
+                                    </div>
+                                    <div className="collection-img-box">
+                                        <img src={DataManagementImg} className="banner-img" alt="" />
+                                    </div>
+                                </div>
                             </div>
-                            <div className="explore-btn">
-                                <button>See More <DoubleArrowIcon className="icons" /></button>
+
+                            {/* Collection Six */}
+                            <div className="collection-packages-tomato">
+                                <h1><span><Filter6Icon className="icons" /></span> Health and Beauty</h1>
+                                <div className="collection-packages-container">
+                                    {
+                                        collectSix.map(collect => <CollectionSix sixCollection={collect} key={collect._id} />)
+                                    }
+                                </div>
                             </div>
+
+                            {/* Collection Seven */}
+                            <div className="collection-packages-tomato">
+                                <h1><span><Filter4Icon className="icons" /></span> Sports and Outdoor</h1>
+                                <div className="collection-packages-container">
+                                    {
+                                        collectSeven.map(collect => <CollectionSeven sevenCollection={collect} key={collect._id} />)
+                                    }
+                                </div>
+                            </div>
+
+                            {/* Collection Eight */}
+                            <div className="collection-packages-blue">
+                                <h1><Filter9PlusIcon className="icons" /> All collection best selling categories products</h1>
+                                <div className="collection-packages-container">
+                                    {
+                                        collectEight.map(collect => <CollectionEight eightCollection={collect} key={collect._id} />)
+                                    }
+                                </div>
+                                <div className="explore-btn">
+                                    <button>See More <DoubleArrowIcon className="icons" /></button>
+                                </div>
+                            </div>
+
                         </div>
                     </Container>
             }

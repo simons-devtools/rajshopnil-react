@@ -1,20 +1,19 @@
 .collection-eight-wrapper {
-    width: 195px;
-    margin: 5px;
+    width: 191.5px;
+    margin: 10px 5px;
     border: 1px solid #e8e9eb;
-    cursor: pointer;
 }
 
 .collection-eight {
-    width: 195px;
+    width: 191.5px;
     height: 150px;
     overflow: hidden;
 }
 
 .collection-eight img {
-    width: 195px;
+    width: 191.5px;
     height: 150px;
-    padding: 20px 30px;
+    padding: 10px 20px;
     transition: .5s ease;
     backface-visibility: hidden;
 }

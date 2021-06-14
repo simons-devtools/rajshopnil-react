@@ -1,19 +1,18 @@
 .collection-seven-wrapper {
-    width: 290px;
-    margin: 9px;
+    width: 292px;
+    margin: 10px 5px 0 5px;
     border: 1px solid #E2E8F0;
     box-shadow: 0 2px 4px 0 #00000033;
 }
 
 .collection-seven img {
-    width: 100%;
+    width: 292px;
     height: 200px;
-    padding: 25px 50px;
-    transition: .5s ease;
-    backface-visibility: hidden;
+    padding: 15px 30px;
 }
 
 .collection-seven h4 {
-    padding: 10px;
+    font-size: 14px;
+    padding-bottom: 10px;
     text-align: center;
 }

@@ -13,7 +13,7 @@ const CollectionOne = (props) => {
                 <div className="click-handler">
                     <div className="collection-one">
                         {
-                            photoUrl === '' ? <img src={HolderImage} alt="" /> : <img src={photoUrl} alt="" />
+                            photoUrl === '' ? <img src={HolderImage} alt="product-img" /> : <img src={photoUrl} alt="product-img" />
                         }
                         <h4>{name}</h4>
                     </div>

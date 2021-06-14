@@ -1,18 +1,14 @@
 .collection-three-wrapper {
-    width: 366px;
+    width: 357px;
     height: 225px;
     cursor: pointer;
     border: 1px solid #E2E8F0;
 }
 
 .collection-three img {
-    /* width: 100%; */
-    width: 300px;
+    width: 250px;
     height: 180px;
-    padding: 25px 50px;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    vertical-align: middle;
+    padding: 20px 15px;
 }
 
 .collection-three h4 {
