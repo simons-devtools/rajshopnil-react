@@ -49,17 +49,11 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
-    color: #f5f5f5;
-    background-color: #db2804b9;
+    color: #f1e9e9;
+    background-color: #fdbfb3b9;
     letter-spacing: 5px;
     border: none;
-    opacity: 30%;
     cursor: not-allowed;
-    transition: all 0.3s ease;
-}
-
-.shipping-form button:focus {
-    transform: scale(1.04);
 }
 
 .form-message {

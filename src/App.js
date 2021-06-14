@@ -33,12 +33,6 @@ function App() {
 
           {/* Switch route start */}
           <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
             <Route path="/product-collection/:category">
               <CategoryProducts />
             </Route>
@@ -57,6 +51,12 @@ function App() {
             <PrivateRoute path="/payment">
               <Payment />
             </PrivateRoute>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
             <Route path="*">
               <NotFound />
             </Route>

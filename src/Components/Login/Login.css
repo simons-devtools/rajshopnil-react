@@ -1,5 +1,15 @@
 .form-main {
     padding: 100px 0;
+    animation: slidein 1s;
+}
+
+@keyframes slidein {
+    from {
+        transform: scaleX(0%);
+    }
+    to {
+        transform: scaleY(100%);
+    }
 }
 
 .login-formm {

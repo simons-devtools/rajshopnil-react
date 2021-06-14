@@ -24,13 +24,9 @@
     background-color: #fff;
 }
 
-.review-product h2 {
-    padding: 5px 0;
-}
-
-.prod-Price {
+.prod-Pricee {
     color: #db2804b9;
-    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .extra {

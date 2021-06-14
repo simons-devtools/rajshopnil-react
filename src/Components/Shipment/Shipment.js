@@ -51,7 +51,7 @@ const Shipment = (props) => {
             customModal.style.display = "block";
 
             const button = document.getElementById("allowedBtn");
-            button.style.opacity = "100%";
+            button.style.backgroundColor = "tomato";
             button.style.cursor = "pointer";
         }
     }
@@ -70,21 +70,21 @@ const Shipment = (props) => {
                 <div style={{ borderBottom: '1px solid #e4dbec' }}>
                     <p id="formMessage" className="form-message">Please! insert shipping information. Click "Edit & Complete"</p>
                     <p>
-                        <span className="iconss"><DnsIcon /></span>
+                        <span className="iconss"><DnsIcon className="icons" /></span>
                         <span>{name}</span>
                         <span onClick={handleForm} className="rights">Edit & Complete</span>
                     </p>
                     <p>
-                        <span className="iconss"><PhoneAndroidIcon /></span>
-                        <span>Mobile number empty!</span>
+                        <span className="iconss"><PhoneAndroidIcon className="icons" /></span>
+                        <span style={{ color: 'red' }}>Mobile number empty!</span>
                     </p>
                     <p>
-                        <span className="iconss"><MailOutlineIcon /></span>
+                        <span className="iconss"><MailOutlineIcon className="icons" /></span>
                         <span>{email}</span>
                     </p>
                     <p>
-                        <span className="iconss"><HomeIcon /></span>
-                        <span>Shipping address empty!</span>
+                        <span className="iconss"><HomeIcon className="icons" /></span>
+                        <span style={{ color: 'red' }}>Shipping address empty!</span>
                     </p>
                 </div>
                 <div style={{ paddingBottom: '20px' }}>

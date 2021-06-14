@@ -14,8 +14,6 @@ const Product = (props) => {
                     {
                         photoUrl !== '' ? <img src={photoUrl} className="product-img" alt="product-img" /> : <img src={HolderImage} className="product-img" alt="" />
                     }
-                    {/* <img src={photoUrl} className="product-img" alt="product-img" /> */}
-                    {/* <img src={HolderImage} className="product-img" alt="" /> */}
                     <h4 className="prod-name">
                         <span>{name} </span>
                         <strong style={{ fontSize: '20px', color: 'tomato' }}>${price}</strong>
