@@ -63,7 +63,7 @@ const Shipment = (props) => {
 
     return (
         <div className="shipment-page">
-            <h1>Customer Shipping & Billing Info</h1>
+            <h1>Shipping & Billing Info</h1>
 
             <div id="defaultModal" className="form-api">
                 <div style={{ borderBottom: '1px solid #e4dbec' }}>
@@ -91,7 +91,7 @@ const Shipment = (props) => {
                         <span className="rightSide">{cart.length} psc</span>
                     </p>
                     <p>
-                        <span>Total price (vat + tax included)</span>
+                        <span>Total price (vat + tax)</span>
                         <span className="rightSide">${subTotal}</span>
                     </p>
                 </div>
@@ -100,12 +100,14 @@ const Shipment = (props) => {
             </div>
 
             <div id="customModal" className="shipping-form">
-                <form onSubmit={handleSubmit(onSubmit)} className="main-forms">
-                    <input type="firstName" placeholder="First name" {...register("firstName", { required: true, maxLength: 20 })} />
-                    <input type="lastName" placeholder="Last name" {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })} />
-                    <input type="phone" placeholder="Mobile" {...register("phone", { required: true })} />
-                    <input type="email" placeholder="Email" {...register("email", { required: true })} />
-                    <input type="text" placeholder="Address" {...register("address", { required: true })} />
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="main-forms">
+                        <input type="firstName" placeholder="First name" {...register("firstName", { required: true, maxLength: 20 })} />
+                        <input type="lastName" placeholder="Last name" {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })} />
+                        <input type="phone" placeholder="Mobile" {...register("phone", { required: true })} />
+                        <input type="email" placeholder="Email" {...register("email", { required: true })} />
+                        <input type="text" placeholder="Address" {...register("address", { required: true })} />
+                    </div>
                     <button id="allowedBtn" type="submit">Proceed To Payment</button>
                 </form>
             </div>

@@ -1,7 +1,7 @@
 import './Checkout.css';
+import CheckoutProduct from './CheckoutProduct';
+import Shipment from './Shipment';
 import React, { useContext, useEffect, useState } from 'react';
-import Shipment from '../Shipment/Shipment';
-import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
 import { Container } from '@material-ui/core';
 import { UserContext } from '../../App';
 import { getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';

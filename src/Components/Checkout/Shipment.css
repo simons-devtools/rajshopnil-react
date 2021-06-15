@@ -17,6 +17,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 14px 0;
 }
 
 .shipping-form input {
@@ -65,12 +66,8 @@
 }
 
 /* Hidden contents styles */
-.form-api{
-    margin: 10px 0;
-}
-
 .form-api p {
-    padding: 15px 20px;
+    padding: 14.5px 20px;
     font-size: 14px;
 }
 
@@ -83,7 +80,6 @@
 .rights {
     float: right;
     color: blue;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -95,5 +91,4 @@
     float: right;
     color: blue;
     font-size: 14px;
-    font-weight: bold;
 }

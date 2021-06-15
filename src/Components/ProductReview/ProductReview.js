@@ -29,7 +29,7 @@ const ProductReview = (props) => {
                         <button onClick={() => removeFromCheckout(key)} className="decrease"><RemoveShoppingCartIcon /></button>
                     </div>
                     <div className="product-image">
-                        <img src={photoUrl} alt="checkout-product-pic" />
+                        <img src={photoUrl} alt="review-product-pic" />
                     </div>
                 </div>
 
