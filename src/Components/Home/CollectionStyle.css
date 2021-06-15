@@ -1,6 +1,10 @@
 /* Collection six/6 package styles */
+.collection-six {
+    margin: 5px 0;
+}
+
 .collection-six img {
-    width: 190px;
+    min-width: 190px;
     height: 150px;
     padding: 20px;
     border: 1px solid #e8e9eb;
@@ -22,6 +26,7 @@
 
 /* Collection five/5 package styles */
 .collection-five {
+    margin: 5px 0;
     border: 1px solid #E2E8F0;
 }
 
@@ -47,6 +52,7 @@
 
 /* Collection four/4 package styles */
 .collection-four {
+    margin: 5px 0;
     border: 1px solid #E2E8F0;
 }
 
