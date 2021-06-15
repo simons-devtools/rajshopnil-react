@@ -72,20 +72,20 @@ const Header = () => {
                         </div>
                         <div>
                             <ul className="nav-menu">
-                                <li className="nav-item">
-                                    <Link to="/home" className="nav-link"><NotificationsActiveRoundedIcon /></Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/home" className="nav-link"><FavoriteRoundedIcon /></Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/review" refresh="true" className="nav-link count-cart">
+                                <Link to="/home" className="nav-link">
+                                    <li className="nav-item"><NotificationsActiveRoundedIcon /></li>
+                                </Link>
+                                <Link to="/home" className="nav-link">
+                                    <li className="nav-item"><FavoriteRoundedIcon /></li>
+                                </Link>
+                                <Link to="/review" refresh="true" className="count-cart">
+                                    <li className="nav-item">
                                         <ShoppingBasketIcon />
                                         <span className="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
-                                    </Link>
-                                </li>
+                                    </li>
+                                </Link>
                                 <li className="nav-item profile-photo">
-                                    {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span className="nav-link profile"><AccountCircleRoundedIcon /></span>}
+                                    {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span className="profile"><AccountCircleRoundedIcon /></span>}
                                 </li>
                             </ul>
                         </div>
@@ -98,36 +98,36 @@ const Header = () => {
                 <Container className="header">
                     <nav className="navbar">
                         <ul className="nav-menu">
-                            <li className="">
-                                <Link to="/home" refresh="true" className="nav-link">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link">Docs</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link">Services</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link">About</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link">Add-Product</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link">Product-Detail</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link">Checkout</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link">Payment</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/home" className="nav-link">Dashboard</Link>
-                            </li>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">Home</li>
+                            </Link>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">Docs</li>
+                            </Link>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">Services</li>
+                            </Link>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">About</li>
+                            </Link>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">Add-product</li>
+                            </Link>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">Product-Detail</li>
+                            </Link>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">Checkout</li>
+                            </Link>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">Payment</li>
+                            </Link>
+                            <Link to="/home" refresh="true">
+                                <li className="nav-item">Dashboard</li>
+                            </Link>
                             <li className="nav-item">
                                 {
-                                    isSiggedIn ? <strong onClick={loggedOutBtn} style={{ fontSize: '14px' }}>Logout</strong> : <Link to="/login" className="nav-link">Login</Link>
+                                    isSiggedIn ? <strong onClick={loggedOutBtn} style={{ fontSize: '14px', cursor: 'pointer' }}>Logout</strong> : <Link to="/login" className="nav-link">Login</Link>
                                 }
                             </li>
                         </ul>
@@ -136,7 +136,7 @@ const Header = () => {
                 </Container>
             </div>
 
-        </div>
+        </div >
     );
 };
 

@@ -50,12 +50,53 @@ header {
     background-color: #fff;
 }
 
+/* Basic style other elements */
+.profile {
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.profile-photo img {
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.cart-count {
+    color: red;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-item {
+    font-size: 1.6rem;
+    margin: 0 4.8rem 0 0;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-item:hover {
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
 /* Hamburger Styles */
 .hamburger {
     display: none;
     position: fixed;
     top: 6.6rem;
-    right: 0;
+    right: 5rem;
 }
 
 .bar {
@@ -68,98 +109,31 @@ header {
     background-color: #101010;
 }
 
-/* Basic style other elements */
-.profile {
-    margin-right: 3px;
-    vertical-align: middle;
-}
-
-.nav-menu .profile-photo img {
-    height: 30px;
-    margin-right: 5px;
-    border-radius: 50%;
-}
-
-.nav-menu .nav-item .count-cart {
-    display: flex;
-}
-
-.nav-menu .nav-item .cart-count {
-    color: red;
-    font-weight: bold;
-    margin-top: -10px;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-item {
-    margin-left: 4.8rem;
-}
-
-.nav-link{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #475569;
-}
-
-.nav-link:hover{
-    color: #482ff7;
-}
-
-.nav-logo {
-    font-size: 2.1rem;
-    font-weight: 500;
-    color: #482ff7;
-}
-
 /* @madia queries styles */
 @media only screen and (max-width: 768px) {
     .nav-menu {
         display: block;
         position: fixed;
-        top: 22rem;
-        bottom: 20rem;
+        top: 9.5rem;
+        right: 4.5rem;
+        bottom: 15rem;
         left: 0;
-        width: 80%;
         flex-direction: column;
         background-color: #fff;
-        padding: 10px 0;
         overflow: scroll;
         overflow-x: auto;
         overflow-y: auto;
-        transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
-
+    .nav-item {
+        padding: 5px 32px;
+        margin: 1rem 0;
+    }
     .nav-item:hover {
         background-color: #e7dcdc;
     }
-
-    .nav-item {
-        margin: 1rem 0;
-    }
-
     .hamburger {
         display: block;
         cursor: pointer;
     }
-
 }
-
-/* Inside the Media Query. */
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
