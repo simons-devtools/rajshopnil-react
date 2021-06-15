@@ -1,12 +1,10 @@
 .collection-three-wrapper {
-    /* width: 357px; */
-    height: 225px;
-    cursor: pointer;
+    margin-left: 3px;
     border: 1px solid #E2E8F0;
 }
 
 .collection-three img {
-    width: 238.5px;
+    width: 235px;
     height: 180px;
     padding: 20px 15px;
 }

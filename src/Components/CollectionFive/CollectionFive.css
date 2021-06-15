@@ -1,12 +1,11 @@
 .collection-five-wrapper {
-    width: 241.5px;
-    height: 225px;
+    margin-left: 3px;
     cursor: pointer;
     border: 1px solid #E2E8F0;
 }
 
 .collection-five img {
-    width: 241.5px;
+    width: 235px;
     height: 190px;
     padding: 25px 50px;
     transition: .5s ease;

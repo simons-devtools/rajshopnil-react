@@ -50,6 +50,24 @@ header {
     background-color: #fff;
 }
 
+/* Hamburger Styles */
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 6.6rem;
+    right: 0;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
 /* Basic style other elements */
 .profile {
     margin-right: 3px;
@@ -98,36 +116,18 @@ header {
     color: #482ff7;
 }
 
-/* Hamburger Styles */
-.hamburger {
-    display: none;
-    position: fixed;
-    top: 6.6rem;
-    right: 5rem;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
-}
-
 /* @madia queries styles */
 @media only screen and (max-width: 768px) {
     .nav-menu {
-        display: none;
+        display: block;
         position: fixed;
-        top: 10rem;
+        top: 22rem;
         bottom: 20rem;
         left: 0;
-        width: 100%;
+        width: 80%;
         flex-direction: column;
         background-color: #fff;
-        padding: 10px 32px;
+        padding: 10px 0;
         overflow: scroll;
         overflow-x: auto;
         overflow-y: auto;

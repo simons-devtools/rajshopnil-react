@@ -1,27 +1,18 @@
 .collection-eight-wrapper {
-    width: 191.5px;
-    margin: 10px 5px;
+    margin: 10px 0 10px 8px;
     border: 1px solid #e8e9eb;
 }
 
 .collection-eight {
-    width: 191.5px;
-    height: 150px;
     overflow: hidden;
 }
 
 .collection-eight img {
-    width: 191.5px;
+    width: 191px;
     height: 150px;
     padding: 10px 20px;
-    transition: .5s ease;
-    backface-visibility: hidden;
 }
 
 .collection-eight-wrapper:hover {
     box-shadow: 0 4px 8px 0 #00000033;
-}
-
-.collection-eight-wrapper:hover img {
-    transform: scale(1.5);
 }
