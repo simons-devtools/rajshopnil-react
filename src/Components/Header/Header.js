@@ -24,119 +24,103 @@ const Header = () => {
         setLoggedInUser({});
     }
 
-    // For Humbarger Menubar:
-    // const hamburger = document.querySelector(".hamburger");
-    // const navMenu = document.querySelector(".nav-menu");
-    // hamburger.addEventListener("click", mobileMenu);
-
-    // function mobileMenu() {
-    //     hamburger.classList.toggle("active");
-    //     navMenu.classList.toggle("active");
-    // }
-
-    // Handle Close Button:
-    // const navLink = document.querySelectorAll(".nav-link");
-    // navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-    // function closeMenu() {
-    //     hamburger.classList.remove("active");
-    //     navMenu.classList.remove("active");
-    // }
+    // .....
+    function toggleBtn() {
+        const modalContent = document.getElementById("modalContent");
+        modalContent.style.display = "block";
+    }
 
     return (
-        <div className="navbar-head">
-
-            <div className="hamburger">
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
-            </div>
-
+        <header>
+            {/* Navbar top contents */}
             <div className="topbar">
-                <p>
-                    <span>Authorized by mr. simon</span>
-                    <span>Mobile: +880 1799867752</span>
-                    <span>Email: cmoxsh@gmail.com</span>
-                    <span>Root: Gazipur, Dhaka, Bangladesh</span>
-                </p>
+                <Container>
+                    <p>
+                        <span>Authorized by mr. simon</span>
+                        <span>Mobile: +880 1799867752</span>
+                        <span>Email: cmoxsh@gmail.com</span>
+                        <span>Root: Gazipur, Dhaka, Bangladesh</span>
+                    </p>
+                </Container>
             </div>
 
-            <header>
+            <nav>
                 <Container>
-                    <nav className="navbar">
+                    {/* Toggle/mediaQ navbar */}
+                    <div onClick={toggleBtn} className="hamburger">
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                    </div>
+
+                    {/* Navbar middle contents */}
+                    <div className="navbar-one">
                         <div className="logos">
-                            <Link to="/home" className="nav-logo">DevTools</Link>
-                        </div>
-                        <div className="search-container">
-                            <Search />
+                            <Link to="/home">DevTools</Link>
                         </div>
                         <div>
-                            <ul className="nav-menu">
-                                <Link to="/home" className="nav-link">
-                                    <li className="nav-item"><NotificationsActiveRoundedIcon /></li>
-                                </Link>
-                                <Link to="/home" className="nav-link">
-                                    <li className="nav-item"><FavoriteRoundedIcon /></li>
-                                </Link>
-                                <Link to="/review" refresh="true" className="count-cart">
-                                    <li className="nav-item">
-                                        <ShoppingBasketIcon />
-                                        <span className="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
-                                    </li>
-                                </Link>
-                                <li className="nav-item profile-photo">
-                                    {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span className="profile"><AccountCircleRoundedIcon /></span>}
-                                </li>
-                            </ul>
+                            <Search />
                         </div>
-                    </nav>
-                </Container>
-            </header>
+                        <ul className="nav-menu-one">
+                            <Link to="/home">
+                                <li className="nav-item"><NotificationsActiveRoundedIcon /></li>
+                            </Link>
+                            <Link to="/home">
+                                <li className="nav-item"><FavoriteRoundedIcon /></li>
+                            </Link>
+                            <Link to="/review" refresh="true" className="count-cart">
+                                <li className="nav-item">
+                                    <ShoppingBasketIcon className="cartt" />
+                                    <span id="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
+                                </li>
+                            </Link>
+                            <li className="nav-item profile-photo">
+                                {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span><AccountCircleRoundedIcon /></span>}
+                            </li>
+                        </ul>
+                    </div>
 
-
-            <div className="hheaderr">
-                <Container className="header">
-                    <nav className="navbar">
-                        <ul className="nav-menu">
+                    {/* Navbar Bottom contents */}
+                    <div className="navbar-two">
+                        <ul id="modalContent" className="nav-menu-two">
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">Home</li>
+                                <li className="nav-link">Home</li>
                             </Link>
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">Docs</li>
+                                <li className="nav-link">Docs</li>
                             </Link>
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">Services</li>
+                                <li className="nav-link">Services</li>
                             </Link>
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">About</li>
+                                <li className="nav-link">About</li>
                             </Link>
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">Add-product</li>
+                                <li className="nav-link">Add-product</li>
                             </Link>
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">Product-Detail</li>
+                                <li className="nav-link">Product-Detail</li>
                             </Link>
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">Checkout</li>
+                                <li className="nav-link">Checkout</li>
                             </Link>
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">Payment</li>
+                                <li className="nav-link">Payment</li>
                             </Link>
                             <Link to="/home" refresh="true">
-                                <li className="nav-item">Dashboard</li>
+                                <li className="nav-link">Dashboard</li>
                             </Link>
-                            <li className="nav-item">
+                            <li className="nav-link">
                                 {
                                     isSiggedIn ? <strong onClick={loggedOutBtn} style={{ fontSize: '14px', cursor: 'pointer' }}>Logout</strong> : <Link to="/login" className="nav-link">Login</Link>
                                 }
                             </li>
                         </ul>
-                        {/* BAR... */}
-                    </nav>
+                    </div>
                 </Container>
-            </div>
 
-        </div >
+            </nav>
+        </header >
     );
 };
 
