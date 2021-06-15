@@ -1,6 +1,5 @@
 .packages {
     padding: 15px 20px;
-    margin-top: 30px;
     background-color: #f5f5f5;
     border-bottom: 1px solid #E2E8F0;
     vertical-align: middle;
@@ -54,7 +53,7 @@
 
 .decrease, .increase, .delete {
     padding: 5px 18px;
-    margin: 0 5px;
+    margin: 0 10px 0 5px;
     font-size: 14px;
     border: none;
     border: 1px solid #eae7ec;
