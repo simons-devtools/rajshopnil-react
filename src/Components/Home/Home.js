@@ -63,103 +63,99 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
-            <div className="banner-setting">
-                <img src={BannerSetting} alt="" />
+        <main>
+            <div>
+                <img src={BannerSetting} style={{ width: '100%' }} alt="home-banner-img" />
             </div>
 
             {
                 allCollection.length <= 0 ? <img style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }} src={Loading} alt="loading-img" /> :
                     <Container>
-                        <div className="home-main">
-
-                            {/* Collection One */}
-                            <div className="collection-packages-blue">
-                                <h1><Filter6Icon className="icons" /> Electronic Devices</h1>
-                                <div className="collection-packages-container">
-                                    {
-                                        collectOne.map(collect => <CollectionOne oneCollection={collect} key={collect._id} />)
-                                    }
-                                </div>
+                        {/* Collection One */}
+                        <div className="packages-blue">
+                            <h1><Filter6Icon className="icons" /> Electronic Devices</h1>
+                            <div className="collection-container">
+                                {
+                                    collectOne.map(collect => <CollectionOne oneCollection={collect} key={collect._id} />)
+                                }
                             </div>
+                        </div>
 
-                            {/* Collection Two */}
-                            <div className="collection-packages-tomato">
-                                <h1><span><Filter6Icon className="icons" /></span> Electronic Accessories</h1>
-                                <div className="collection-packages-container">
-                                    {
-                                        collectTwo.map(collect => <CollectionTwo twoCollection={collect} key={collect._id} />)
-                                    }
-                                </div>
+                        {/* Collection Two */}
+                        <div className="packages-tomato">
+                            <h1><span><Filter6Icon className="icons" /></span> Electronic Accessories</h1>
+                            <div className="collection-container">
+                                {
+                                    collectTwo.map(collect => <CollectionTwo twoCollection={collect} key={collect._id} />)
+                                }
                             </div>
+                        </div>
 
-                            {/* Collection Three */}
-                            <div className="collection-packages-blue">
-                                <h1><Filter5Icon className="icons" /> Mens Fashions</h1>
-                                <div className="collection-packages-container">
-                                    {
-                                        collectThree.map(collect => <CollectionThree threeCollection={collect} key={collect._id} />)
-                                    }
-                                </div>
+                        {/* Collection Three */}
+                        <div className="packages-blue">
+                            <h1><Filter5Icon className="icons" /> Mens Fashions</h1>
+                            <div className="collection-container">
+                                {
+                                    collectThree.map(collect => <CollectionThree threeCollection={collect} key={collect._id} />)
+                                }
                             </div>
+                        </div>
 
-                            {/* Collection Four */}
-                            <div className="collection-packages-tomato">
-                                <h1><span><Filter4Icon className="icons" /></span> TV and Home Appliances</h1>
-                                <div className="collection-packages-container">
-                                    {
-                                        collectFour.map(collect => <CollectionFour fourCollection={collect} key={collect._id} />)
-                                    }
-                                </div>
+                        {/* Collection Four */}
+                        <div className="packages-tomato">
+                            <h1><span><Filter4Icon className="icons" /></span> TV and Home Appliances</h1>
+                            <div className="collection-container">
+                                {
+                                    collectFour.map(collect => <CollectionFour fourCollection={collect} key={collect._id} />)
+                                }
                             </div>
+                        </div>
 
-                            {/* Collection Five */}
-                            <div className="collection-packages-blue">
-                                <h1><Filter5Icon className="icons" /> Womens Fashions</h1>
-                                <div className="collection-packages-container">
-                                    {
-                                        collectFive.map(collect => <CollectionFive fiveCollection={collect} key={collect._id} />)
-                                    }
-                                </div>
+                        {/* Collection Five */}
+                        <div className="packages-blue">
+                            <h1><Filter5Icon className="icons" /> Womens Fashions</h1>
+                            <div className="collection-container">
+                                {
+                                    collectFive.map(collect => <CollectionFive fiveCollection={collect} key={collect._id} />)
+                                }
                             </div>
+                        </div>
 
-                            {/* Collection Six */}
-                            <div className="collection-packages-tomato">
-                                <h1><span><Filter6Icon className="icons" /></span> Health and Beauty</h1>
-                                <div className="collection-packages-container">
-                                    {
-                                        collectSix.map(collect => <CollectionSix sixCollection={collect} key={collect._id} />)
-                                    }
-                                </div>
+                        {/* Collection Six */}
+                        <div className="packages-tomato">
+                            <h1><span><Filter6Icon className="icons" /></span> Health and Beauty</h1>
+                            <div className="collection-container">
+                                {
+                                    collectSix.map(collect => <CollectionSix sixCollection={collect} key={collect._id} />)
+                                }
                             </div>
+                        </div>
 
-                            {/* Collection Seven */}
-                            <div className="collection-packages-tomato">
-                                <h1><span><Filter4Icon className="icons" /></span> Sports and Outdoor</h1>
-                                <div className="collection-packages-container">
-                                    {
-                                        collectSeven.map(collect => <CollectionSeven sevenCollection={collect} key={collect._id} />)
-                                    }
-                                </div>
+                        {/* Collection Seven */}
+                        <div className="packages-tomato">
+                            <h1><span><Filter4Icon className="icons" /></span> Sports and Outdoor</h1>
+                            <div className="collection-container">
+                                {
+                                    collectSeven.map(collect => <CollectionSeven sevenCollection={collect} key={collect._id} />)
+                                }
                             </div>
+                        </div>
 
-                            {/* Collection Eight */}
-                            <div className="collection-packages-blue">
-                                <h1><LibraryAddIcon className="icons" /> All collection best selling categories products</h1>
-                                <div className="collection-packages-container">
-                                    {
-                                        collectEight.map(collect => <CollectionEight eightCollection={collect} key={collect._id} />)
-                                    }
-                                </div>
-                                <div className="explore-btn">
-                                    <button>See More <DoubleArrowIcon className="icons" /></button>
-                                </div>
+                        {/* Collection Eight */}
+                        <div className="packages-blue">
+                            <h1><LibraryAddIcon className="icons" /> All collection best selling categories products</h1>
+                            <div className="collection-container">
+                                {
+                                    collectEight.map(collect => <CollectionEight eightCollection={collect} key={collect._id} />)
+                                }
                             </div>
-
+                            <div className="explore-btn">
+                                <button>See More <DoubleArrowIcon className="icons" /></button>
+                            </div>
                         </div>
                     </Container>
             }
-        </div>
+        </main>
     );
 };
 

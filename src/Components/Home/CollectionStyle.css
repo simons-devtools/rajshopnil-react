@@ -1,0 +1,87 @@
+/* Collection six/6 package styles */
+.collection-six img {
+    width: 190px;
+    height: 150px;
+    padding: 20px;
+    border: 1px solid #e8e9eb;
+}
+
+.collection-six h4 {
+    color: dimgrey;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px;
+    text-align: center;
+}
+
+.collection-six:hover {
+    box-shadow: 0 4px 8px 0 #00000033;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Collection five/5 package styles */
+.collection-five {
+    border: 1px solid #E2E8F0;
+}
+
+.collection-five img {
+    width: 220px;
+    height: 170px;
+    padding: 20px;
+}
+
+.collection-five h4 {
+    color: dimgrey;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 5px 10px 5px;
+    text-align: center;
+}
+
+.collection-five:hover {
+    box-shadow: 0 4px 8px 0 #00000033;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Collection four/4 package styles */
+.collection-four {
+    border: 1px solid #E2E8F0;
+}
+
+.collection-four img {
+    width: 250px;
+    height: 180px;
+    padding: 20px;
+}
+
+.collection-four h4 {
+    color: dimgrey;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 5px 10px 5px;
+    text-align: center;
+}
+
+.collection-four:hover {
+    box-shadow: 0 4px 8px 0 #00000033;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Collection twilve/12 package styles */
+.collection-eight {
+    margin: 5px 0;
+    border: 1px solid #e8e9eb;
+}
+
+.collection-eight img {
+    width: 200px;
+    height: 160px;
+    padding: 20px;
+}
+
+.collection-eight:hover {
+    box-shadow: 0 4px 8px 0 #00000033;
+}

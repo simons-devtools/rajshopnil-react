@@ -1,29 +1,25 @@
-.banner-setting img {
-    width: 100%;
-    margin-bottom: 100px;
+.packages-blue, .packages-tomato {
+    margin: 50px 0;
 }
 
-.collection-packages-blue, .collection-packages-tomato {
-    margin: 30px 0;
-}
-
-.collection-packages-blue h1 {
+.packages-blue h1 {
     font-size: 16px;
-    margin-left: 7px;
     color: #370863;
+    padding-bottom: 10px;
     vertical-align: middle;
 }
 
-.collection-packages-tomato h1 {
+.packages-tomato h1 {
     font-size: 16px;
-    margin-left: 7px;
     color: #a32610;
+    padding-bottom: 10px;
     vertical-align: middle;
 }
 
-.collection-packages-container {
+.collection-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* Eight collection explore btn style */
@@ -54,3 +50,5 @@
 .icons {
     vertical-align: middle;
 }
+
+/* Extra collection packagesstyles */
