@@ -1,8 +1,6 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
 import BannerSetting from '../../images/all-images/Banner.jpg';
-import PresentationImg from '../../images/all-images/presentation.jpg';
-import DataManagementImg from '../../images/all-images/data-management.jpg';
 import Loading from '../../images/icons/loading.gif';
 import CollectionOne from '../CollectionOne/CollectionOne';
 import CollectionTwo from '../CollectionTwo/CollectionTwo';
@@ -98,7 +96,7 @@ const Home = () => {
                             {/* Collection Three */}
                             <div className="collection-packages-blue">
                                 <h1><Filter5Icon className="icons" /> Mens Fashions</h1>
-                                <div className="collection-banner-container">
+                                <div className="collection-packages-container">
                                     {
                                         collectThree.map(collect => <CollectionThree threeCollection={collect} key={collect._id} />)
                                     }
@@ -118,7 +116,7 @@ const Home = () => {
                             {/* Collection Five */}
                             <div className="collection-packages-blue">
                                 <h1><Filter5Icon className="icons" /> Womens Fashions</h1>
-                                <div className="collection-banner-container">
+                                <div className="collection-packages-container">
                                     {
                                         collectFive.map(collect => <CollectionFive fiveCollection={collect} key={collect._id} />)
                                     }
