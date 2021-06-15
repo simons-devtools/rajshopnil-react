@@ -161,7 +161,7 @@ const Review = () => {
 
     return (
         <Container>
-            <div className="checkout-main">
+            <div className="review-main">
                 <div className="prod-review-control">
                     <div className="hheader">
                         <h1>
@@ -172,6 +172,7 @@ const Review = () => {
 
                     {
                         cartProduct.length === 0 ?
+                            /* Empty content styles */
                             <div className="empty-default">
                                 <img src={EmptyCartImg} alt="" />
                                 <h1>Horray! Your current cart is empty. . . . .!!</h1>
@@ -179,7 +180,7 @@ const Review = () => {
                                     <button>Continue Shopping</button>
                                 </Link>
                             </div> :
-                            <div className="multiple-chec">
+                            <div className="review-products">
                                 {
                                     cartProduct.map(pd => <ProductReview
                                         key={pd.product.key}
