@@ -51,7 +51,6 @@ const Shipment = (props) => {
             customModal.style.display = "block";
 
             const button = document.getElementById("allowedBtn");
-            button.style.backgroundColor = "tomato";
             button.style.cursor = "pointer";
         }
     }
@@ -68,7 +67,6 @@ const Shipment = (props) => {
 
             <div id="defaultModal" className="form-api">
                 <div style={{ borderBottom: '1px solid #e4dbec' }}>
-                    <p id="formMessage" className="form-message">Please! insert shipping information. Click "Edit & Complete"</p>
                     <p>
                         <span className="iconss"><DnsIcon className="icons" /></span>
                         <span>{name}</span>
@@ -89,25 +87,25 @@ const Shipment = (props) => {
                 </div>
                 <div style={{ paddingBottom: '20px' }}>
                     <p>
-                        <span>Subtotal items</span>
+                        <span>Total items</span>
                         <span className="rightSide">{cart.length} psc</span>
                     </p>
                     <p>
-                        <span>Subtotal price (vat + tax included)</span>
+                        <span>Total price (vat + tax included)</span>
                         <span className="rightSide">${subTotal}</span>
                     </p>
                 </div>
+                <p id="formMessage" className="form-message">Please! insert shipping information.</p>
                 <button onClick={handleFormMessage} type="button">Proceed To Payment</button>
             </div>
 
             <div id="customModal" className="shipping-form">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <input type="firstName" placeholder="First name" {...register("firstName", { required: true, maxLength: 20 })} /> <br />
-                    <input type="lastName" placeholder="Last name" {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })} /> <br />
-                    <input type="phone" placeholder="Mobile" {...register("phone", { required: true })} /> <br />
-                    <input type="email" placeholder="Email" {...register("email", { required: true })} /> <br />
-                    <input type="text" placeholder="Address" {...register("address", { required: true })} /> <br />
-                    <p className="form-note">Note: Submit form must be full filled</p>
+                <form onSubmit={handleSubmit(onSubmit)} className="main-forms">
+                    <input type="firstName" placeholder="First name" {...register("firstName", { required: true, maxLength: 20 })} />
+                    <input type="lastName" placeholder="Last name" {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })} />
+                    <input type="phone" placeholder="Mobile" {...register("phone", { required: true })} />
+                    <input type="email" placeholder="Email" {...register("email", { required: true })} />
+                    <input type="text" placeholder="Address" {...register("address", { required: true })} />
                     <button id="allowedBtn" type="submit">Proceed To Payment</button>
                 </form>
             </div>

@@ -7,7 +7,6 @@
 
 .prod-review-control {
     flex-basis: 68%;
-    margin-bottom: 10px;
 }
 
 .cart-control {
@@ -38,11 +37,11 @@
 }
 
 .empty-default img {
+    width: 30%;
+    height: 30%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    height: 30%;
 }
 
 .empty-default h1 {
@@ -59,8 +58,4 @@
     background-color: thistle;
     font-size: 14px;
     letter-spacing: 5px;
-}
-
-.empty-default button:hover {
-    opacity: 50%;
 }

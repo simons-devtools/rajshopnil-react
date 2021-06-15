@@ -1,17 +1,17 @@
 .checkout-mains {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px 0;
+    justify-content: space-between;
+    margin: 30px 0;
 }
 
 .left-contents {
-    width: 60%;
-    margin: 0 10px 20px 13px;
+    flex-basis: 68%;
+    margin-bottom: 10px;
 }
 
 .right-contents {
-    width: 35.7%;
-    margin-bottom: 5px;
+    flex-basis: 30%;
 }
 
 @media (max-width: 768px) {
