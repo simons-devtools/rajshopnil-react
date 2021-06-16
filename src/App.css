@@ -36,6 +36,13 @@ body {
 }
 /* end scrollbar */
 
+.loading {
+  display: block;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a {
   color: #411868;
   text-decoration: none;

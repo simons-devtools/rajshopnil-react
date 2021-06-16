@@ -20,6 +20,13 @@ import Filter4Icon from '@material-ui/icons/Filter4';
 const Home = () => {
     const [allCollection, setAllCollection] = useState([]);
 
+    // All data loaded:
+    useEffect(() => {
+        const url = 'http://localhost:5200/products';
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setAllCollection(data))
+    }, [])
 
     // For the collection one only:
     const elecDevice1 = allCollection.filter(prod => prod.category === 'smart-phone');
@@ -55,13 +62,6 @@ const Home = () => {
     const collectEight = allCollection.slice(45, 57);
     // console.log('Data=', collectOne);
 
-    useEffect(() => {
-        const url = 'http://localhost:5200/products';
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setAllCollection(data))
-    }, [])
-
     return (
         <main>
             <div>
@@ -69,7 +69,7 @@ const Home = () => {
             </div>
 
             {
-                allCollection.length <= 0 ? <img style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }} src={Loading} alt="loading-img" /> :
+                allCollection.length <= 0 ? <img src={Loading} className="loading" alt="loading-img" /> :
                     <Container>
                         {/* Collection One */}
                         <div className="packages-blue">

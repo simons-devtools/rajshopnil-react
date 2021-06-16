@@ -9,7 +9,7 @@ const ProductControler = (props) => {
     const { name, price, category, seller } = product;
 
     return (
-        <div className="product-info">
+        <div className="product-detail-info">
             <div className="prod-first-row">
                 <h2>{name}</h2>
                 <div className="social-madia">

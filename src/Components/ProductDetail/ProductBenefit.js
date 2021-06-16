@@ -14,7 +14,7 @@ const ProductBenefit = (props) => {
 
     return (
         <>
-            <div className="other-info">
+            <div className="delivery-info">
                 <div className="other-row-one">
                     <div className="row-one">
                         <p>

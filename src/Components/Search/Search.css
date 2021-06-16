@@ -32,13 +32,13 @@
 
 .results ul {
     position: fixed;
-    top: 11.5%;
+    top: 13%;
     overflow: scroll;
     overflow-y: auto;
     overflow-x: auto;
     width: 595px;
     max-height: 308px;
-    margin: 0 8px;
+    margin: 0 3.5px;
     border-color: #66b1ee;
     box-shadow: 0 0 2px #55a8ece6;
     background-color: #fff;

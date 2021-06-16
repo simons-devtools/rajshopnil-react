@@ -97,18 +97,24 @@ const ProductDetail = () => {
                         </div>
 
                         {/* Products Controler Contents */}
-                        <ProductControler
-                            product={product}
-                            addToCartHandler={addToCartHandler}
-                        />
+                        <div className="product-info">
+                            <ProductControler
+                                product={product}
+                                addToCartHandler={addToCartHandler}
+                            />
+                        </div>
                     </div>
 
                     {/* Products Feature Contents */}
-                    <ProductFeature />
+                    <div className="product-features">
+                        <ProductFeature />
+                    </div>
                 </div>
 
                 {/* Product Benefit Contents */}
-                <ProductBenefit product={product} />
+                <div className="product-customer-info">
+                    <ProductBenefit product={product} />
+                </div>
             </div>
         </Container>
     );
