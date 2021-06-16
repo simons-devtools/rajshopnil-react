@@ -101,7 +101,6 @@ const Payment = () => {
 
             {/* Payment details */}
             <div style={{ textAlign: 'center' }} className="pay-area">
-                <h2 style={{ borderBottom: '1px solid #e4dbec' }}>Developer is Sleeping!!</h2>
                 <h3 style={{ color: 'green' }}>Please! wait, Your order is proccesing</h3>
                 <h1 style={{ paddingTop: '10px' }}>You are welcome to continue shopping!</h1>
                 <button onClick={handleOrderConfirm} type="submit">Order Confirm</button>
