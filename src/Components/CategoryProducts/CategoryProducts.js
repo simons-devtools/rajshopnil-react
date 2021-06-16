@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../../images/icons/loading.gif';
 import Product from './Product';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import { Container } from '@material-ui/core';
 import { useParams } from 'react-router';
 
@@ -28,6 +29,9 @@ const CategoryProducts = () => {
                             }
                         </div>
                 }
+            </div>
+            <div className="explore-btn">
+                <button>See More <DoubleArrowIcon className="icons" /></button>
             </div>
         </Container>
     );

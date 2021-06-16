@@ -10,11 +10,15 @@ const Footer = () => {
     return (
         <footer>
 
-            <Container className="footer-form">
-                <span className="footer-text">Stay updated on special offers, design trends, and more</span>
-                <input type="email" placeholder="Email Address. . ." className="email-input" />
-                <input type="submit" value="Sign up now" className="sign-btn" />
+
+            <Container>
+                <div className="footer-form">
+                    <p style={{ fontSize: '14px' }}>Stay updated on special offers, design trends, and more</p>
+                    <input type="email" placeholder="Your email address please. . ." className="email-input" />
+                    <input type="submit" value="Sign up now" className="sign-btn" />
+                </div>
             </Container>
+
             <div className="footer-background">
                 <Container>
                     <div className="footer-flexbox">

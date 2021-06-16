@@ -5,20 +5,19 @@ footer {
 }
 
 .footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     padding: 40px 0;
-}
-
-.footer-text {
-    font-size: 14px;
-    margin: 0 50px 0 5px;
 }
 
 .email-input {
     width: 400px;
-    padding: 10px;
-    margin-right: 10px;
+    padding: 10px 0;
     border: none;
     border-bottom: 1px solid #d3bce9;
+    letter-spacing: 3px;
 }
 
 .email-input:focus {
@@ -67,6 +66,11 @@ footer {
     padding: 10px 0;
 }
 
+.footer-menus ul li a:hover {
+    color: #66b1ee;
+    text-decoration: underline;
+}
+
 .social-icon-list ul {
     display: flex;
     border-bottom: 1px solid #bfc3c7;
@@ -83,9 +87,22 @@ footer {
     border-radius: 50%;
 }
 
+.social-icon-list ul li a:hover {
+    color: #66b1ee;
+}
+
 .footer-end {
     color: #fff;
     background-color: #444141;
     padding: 20px 0;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer-menus {
+        margin-bottom: 14px;
+    }
+    .email-input {
+        margin: 10px 0;
+    }
 }
