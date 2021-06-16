@@ -19,15 +19,15 @@ const CategoryProducts = () => {
     return (
         <Container>
             <div style={{ margin: '30px 0' }}>
-                <h1>Our all <span style={{ color: 'tomato' }}>"{category}"</span> category products is below</h1>
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-                    {
-                        products.length <= 0 && <img style={{ marginLeft: '35%' }} src={Loading} alt="loading-img" />
-                    }
-                    {
-                        products.map(prod => prod.category === category ? <Product product={prod} key={prod.key} /> : '')
-                    }
-                </div>
+                <h1>Our all <span style={{ color: 'tomato' }}>'{category}'</span> category products is below</h1>
+                {
+                    products.length <= 0 ? <img src={Loading} className="loading" alt="loading-img" /> :
+                        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                            {
+                                products.map(prod => prod.category === category ? <Product product={prod} key={prod.key} /> : '')
+                            }
+                        </div>
+                }
             </div>
         </Container>
     );

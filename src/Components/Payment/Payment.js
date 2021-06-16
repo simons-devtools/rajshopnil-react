@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import './Payment.css';
+import React, { useEffect, useState } from 'react';
+import Loading from '../../images/icons/loading.gif';
 import Image1 from '../../images/product-pic/bkash.png';
 import Image2 from '../../images/product-pic/nagad.png';
 import Image3 from '../../images/product-pic/payoneer.png';
@@ -69,31 +70,34 @@ const Payment = () => {
             </div>
 
             {/* Payments method */}
-            <div className="payment-container">
-                <div className="payment-method">
-                    <h1>Select payment method</h1>
-                    <ul className="select-payment">
-                        <li><img src={Image1} className="item-box" alt="" /></li>
-                        <li><img src={Image2} className="item-box" alt="" /></li>
-                        <li><img src={Image3} className="item-box" alt="" /></li>
-                        <li><img src={Image4} className="item-box" alt="" /></li>
-                    </ul>
-                </div>
+            {
+                cart.length <= 0 ? <img src={Loading} className="loading" alt="loading-img" /> :
+                    <div className="payment-container">
+                        <div className="payment-method">
+                            <h1>Select payment method</h1>
+                            <ul className="select-payment">
+                                <li><img src={Image1} className="item-box" alt="" /></li>
+                                <li><img src={Image2} className="item-box" alt="" /></li>
+                                <li><img src={Image3} className="item-box" alt="" /></li>
+                                <li><img src={Image4} className="item-box" alt="" /></li>
+                            </ul>
+                        </div>
 
-                <div className="payment-summary">
-                    <h1>Order Summary</h1>
-                    <div>
-                        <article className="payment-info">
-                            <strong>Subtotal Items</strong>
-                            <span className="right">{cart.length} psc</span>
-                        </article>
-                        <article className="payment-info">
-                            <span><strong>Total Amount </strong>(1 items and shipping fee included)</span>
-                            <span className="right">${subTotal}</span>
-                        </article>
+                        <div className="payment-summary">
+                            <h1>Order Summary</h1>
+                            <div>
+                                <article className="payment-info">
+                                    <strong>Subtotal Items</strong>
+                                    <span className="right">{cart.length} psc</span>
+                                </article>
+                                <article className="payment-info">
+                                    <span><strong>Total Amount </strong>(1 items and shipping fee included)</span>
+                                    <span className="right">${subTotal}</span>
+                                </article>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+            }
 
             {/* Payment details */}
             <div style={{ textAlign: 'center' }} className="pay-area">
