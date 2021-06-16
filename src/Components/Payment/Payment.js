@@ -84,7 +84,7 @@ const Payment = () => {
                         </div>
 
                         <div className="payment-summary">
-                            <h1>Order Summary</h1>
+                            <h1>Order cart summary</h1>
                             <div>
                                 <article className="payment-info">
                                     <strong>Subtotal Items</strong>
