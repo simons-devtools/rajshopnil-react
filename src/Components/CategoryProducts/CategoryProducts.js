@@ -1,7 +1,6 @@
-import './CategoryProducts.css';
 import React, { useEffect, useState } from 'react';
 import Loading from '../../images/icons/loading.gif';
-import Product from '../Product/Product';
+import Product from './Product';
 import { Container } from '@material-ui/core';
 import { useParams } from 'react-router';
 
@@ -19,9 +18,9 @@ const CategoryProducts = () => {
 
     return (
         <Container>
-            <div className="category-prod">
+            <div style={{ margin: '30px 0' }}>
                 <h1>Our all <span style={{ color: 'tomato' }}>"{category}"</span> category products is below</h1>
-                <div className="product-collection">
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                     {
                         products.length <= 0 && <img style={{ marginLeft: '35%' }} src={Loading} alt="loading-img" />
                     }

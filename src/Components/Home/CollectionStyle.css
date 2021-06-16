@@ -1,4 +1,4 @@
-/* Collection six/6 package styles */
+/* Collection (six/6 products) styles */
 .collection-six {
     margin: 5px 0;
 }
@@ -24,7 +24,7 @@
     border-bottom-left-radius: 5px;
 }
 
-/* Collection five/5 package styles */
+/* Collection (five/5 + categories products) styles */
 .collection-five {
     margin: 5px 0;
     border: 1px solid #E2E8F0;
@@ -50,7 +50,7 @@
     border-bottom-left-radius: 5px;
 }
 
-/* Collection four/4 package styles */
+/* Collection (four/4 products) styles */
 .collection-four {
     margin: 5px 0;
     border: 1px solid #E2E8F0;
@@ -76,7 +76,7 @@
     border-bottom-left-radius: 5px;
 }
 
-/* Collection twilve/12 package styles */
+/* Collection (twilve/12 products) styles */
 .collection-eight {
     margin: 5px 0;
     border: 1px solid #e8e9eb;
