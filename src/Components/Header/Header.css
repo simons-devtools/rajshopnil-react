@@ -57,6 +57,10 @@ nav {
     color: #66b1ee;
 }
 
+.cartt {
+    margin-bottom: 5px;
+}
+
 #cart-count {
     color: red;
     font-weight: bold;

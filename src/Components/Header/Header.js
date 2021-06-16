@@ -63,19 +63,19 @@ const Header = () => {
                         </div>
                         <ul className="nav-menu-one">
                             <Link to="/home">
-                                <li className="nav-item"><NotificationsActiveRoundedIcon /></li>
+                                <li className="nav-item"><NotificationsActiveRoundedIcon className="icons" /></li>
                             </Link>
                             <Link to="/home">
-                                <li className="nav-item"><FavoriteRoundedIcon /></li>
+                                <li className="nav-item"><FavoriteRoundedIcon className="icons" /></li>
                             </Link>
                             <Link to="/review" refresh="true" className="count-cart">
-                                <li className="nav-item">
-                                    <ShoppingBasketIcon className="cartt" />
+                                <li className="nav-item cartt">
+                                    <ShoppingBasketIcon className="icons" />
                                     <span id="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
                                 </li>
                             </Link>
                             <li className="nav-item profile-photo">
-                                {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span><AccountCircleRoundedIcon /></span>}
+                                {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span><AccountCircleRoundedIcon className="icons" /></span>}
                             </li>
                         </ul>
                     </div>
