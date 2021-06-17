@@ -40,6 +40,17 @@ const CategorySidebar = () => {
                         </ul>
                     </li>
                 </ul>
+                <ul>
+                    <li className="dropdown-parent">
+                        <span>Color</span>
+                        <span className="choose"><ExpandMoreIcon /></span>
+                        <ul className="dropdown-child">
+                            <li>Green</li>
+                            <li>Blue</li>
+                            <li>Violet</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     );

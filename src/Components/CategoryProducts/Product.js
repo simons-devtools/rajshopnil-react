@@ -11,8 +11,8 @@ const Product = (props) => {
             <div className="productt-box">
                 <img src={photoUrl} alt="product-img" />
                 <h3>{name}</h3>
-                <h3>
-                    <span style={{ color: '#66b1ee' }}>Price: ${price}</span>
+                <h3 style={{ letterSpacing: '2px' }}>
+                    <span style={{ color: 'tomato' }}>Price: ${price}</span>
                     <span className="choose"><FavoriteBorderIcon /></span>
                 </h3>
             </div>
