@@ -1,7 +1,7 @@
 let filterMenu = [
     {
         "id": 1,
-        "dropdownItem": 'Dropdown menus 1',
+        "dropdownItem": 'Electronic Devices',
         "menuItem": [
             { "item": 'Smart phone', "route": '/product-collection/smart-phone' },
             { "item": 'Tablet phone', "route": '/product-collection/tablet' },
@@ -13,7 +13,7 @@ let filterMenu = [
     },
     {
         "id": 2,
-        "dropdownItem": 'Dropdown menus 2',
+        "dropdownItem": 'Electronic Accessories',
         "menuItem": [
             { "item": 'Smart phone', "route": '/product-collection/smart-phone' },
             { "item": 'Tablet phone', "route": '/product-collection/tablet' },
@@ -25,7 +25,7 @@ let filterMenu = [
     },
     {
         "id": 3,
-        "dropdownItem": 'Dropdown menus 3',
+        "dropdownItem": 'Mens Fashions',
         "menuItem": [
             { "item": 'Smart phone', "route": '/product-collection/smart-phone' },
             { "item": 'Tablet phone', "route": '/product-collection/tablet' },
@@ -37,7 +37,7 @@ let filterMenu = [
     },
     {
         "id": 4,
-        "dropdownItem": 'Dropdown menus 4',
+        "dropdownItem": 'TV & Home Appliances',
         "menuItem": [
             { "item": 'Smart phone', "route": '/product-collection/smart-phone' },
             { "item": 'Tablet phone', "route": '/product-collection/tablet' },
@@ -49,7 +49,7 @@ let filterMenu = [
     },
     {
         "id": 5,
-        "dropdownItem": 'Dropdown menus 5',
+        "dropdownItem": 'Womens Fashions',
         "menuItem": [
             { "item": 'Smart phone', "route": '/product-collection/smart-phone' },
             { "item": 'Tablet phone', "route": '/product-collection/tablet' },
@@ -61,7 +61,7 @@ let filterMenu = [
     },
     {
         "id": 6,
-        "dropdownItem": 'Dropdown menus 6',
+        "dropdownItem": 'Health and Beauty',
         "menuItem": [
             { "item": 'Smart phone', "route": '/product-collection/smart-phone' },
             { "item": 'Tablet phone', "route": '/product-collection/tablet' },
@@ -73,7 +73,7 @@ let filterMenu = [
     },
     {
         "id": 6,
-        "dropdownItem": 'Dropdown menus 7',
+        "dropdownItem": 'Sports and Outdoor',
         "menuItem": [
             { "item": 'Smart phone', "route": '/product-collection/smart-phone' },
             { "item": 'Tablet phone', "route": '/product-collection/tablet' },

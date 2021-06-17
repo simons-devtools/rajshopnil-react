@@ -33,6 +33,12 @@
     /* background-color: #fff; */
 }
 
+.choose {
+    color: #f7b0a4;
+    float: right;
+    vertical-align: middle;
+}
+
 .dropdown-parent:hover {
     cursor: pointer;
     color: tomato;
@@ -56,7 +62,7 @@
 .dropdown-child li:hover {
     color: #66b1ee;
     background-color: #fff;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 
@@ -82,12 +88,6 @@
 .productt-box img {
     width: 160px;
     height: 100px;
-}
-
-.choose {
-    color: #f7b0a4;
-    float: right;
-    vertical-align: middle;
 }
 
 .productt-box {
