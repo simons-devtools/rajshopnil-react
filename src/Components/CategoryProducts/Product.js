@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProductStyle.css';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { Link } from 'react-router-dom';
 
 const Product = (props) => {
@@ -10,7 +11,10 @@ const Product = (props) => {
             <div className="productt-box">
                 <img src={photoUrl} alt="product-img" />
                 <h3>{name}</h3>
-                <h4>Price: ${price}</h4>
+                <h3>
+                    <span style={{ color: '#66b1ee' }}>Price: ${price}</span>
+                    <span className="choose"><FavoriteBorderIcon /></span>
+                </h3>
             </div>
         </Link >
     );

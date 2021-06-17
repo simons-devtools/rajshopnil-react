@@ -30,8 +30,8 @@ const CategoryProducts = () => {
 
                 <div className="products-contents">
                     <h1>
-                        All <span style={{ color: 'tomato' }}>'{category}'</span> category products is below
-                        <span className="items">({categoryLength.length})Iteams</span>
+                        <span>All '{category}' category products is below</span>
+                        <span className="item">({categoryLength.length})Iteams</span>
                     </h1>
                     {
                         products.length <= 0 ? <img src={Loading} className="loading" alt="loading-img" /> :
