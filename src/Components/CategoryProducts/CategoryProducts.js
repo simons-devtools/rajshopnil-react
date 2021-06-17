@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../../images/icons/loading.gif';
+import CategorySidebar from './CategorySidebar';
 import Product from './Product';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import { Container } from '@material-ui/core';
@@ -19,19 +20,27 @@ const CategoryProducts = () => {
 
     return (
         <Container>
-            <div style={{ margin: '30px 0' }}>
-                <h1>Our all <span style={{ color: 'tomato' }}>'{category}'</span> category products is below</h1>
-                {
-                    products.length <= 0 ? <img src={Loading} className="loading" alt="loading-img" /> :
-                        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-                            {
-                                products.map(prod => prod.category === category ? <Product product={prod} key={prod.key} /> : '')
-                            }
-                        </div>
-                }
-            </div>
-            <div className="explore-btn">
-                <button>See More <DoubleArrowIcon className="icons" /></button>
+            <div className="categories-page">
+                <div className="sidebar-contents">
+                    <CategorySidebar />
+                </div>
+
+                <div className="products-contents">
+                    <h1>Our all <span style={{ color: 'tomato' }}>'{category}'</span> category products is below</h1>
+                    {
+                        products.length <= 0 ? <img src={Loading} className="loading" alt="loading-img" /> :
+                            <div>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                                    {
+                                        products.map(prod => prod.category === category ? <Product product={prod} key={prod.key} /> : '')
+                                    }
+                                </div>
+                                <div className="explore-btn">
+                                    <button>See More <DoubleArrowIcon className="icons" /></button>
+                                </div>
+                            </div>
+                    }
+                </div>
             </div>
         </Container>
     );
