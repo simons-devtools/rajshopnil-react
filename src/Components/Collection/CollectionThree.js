@@ -1,14 +1,14 @@
 import React from 'react';
-import '../Home/CollectionStyle.css';
+import './CollectionStyle.css';
 import HolderImage from '../../images/icons/loading.gif';
 import { Link } from 'react-router-dom';
 
-const CollectionSeven = (props) => {
-    const { group, category, name, photoUrl } = props.sevenCollection;
+const CollectionThree = (props) => {
+    const { name, photoUrl, group, category } = props.threeCollection;
 
     return (
         <Link to={`${group}/${category}`}>
-            <div className="collection-four">
+            <div className="collection-five">
                 {
                     photoUrl !== '' ? <img src={photoUrl} alt="product-img" /> : <img src={HolderImage} alt="loading-img" />
                 }
@@ -18,4 +18,4 @@ const CollectionSeven = (props) => {
     );
 };
 
-export default CollectionSeven;
+export default CollectionThree;

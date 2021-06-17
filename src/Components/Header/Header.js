@@ -12,7 +12,6 @@ import Search from '../Search/Search';
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [userCart, setUserCart] = useContext(UserCartContext);
-    console.log(loggedInUser.photo);
 
     function loggedOutBtn() {
         let newCart;

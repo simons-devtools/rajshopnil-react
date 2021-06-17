@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Home/CollectionStyle.css';
+import './CollectionStyle.css';
 import HolderImage from '../../images/icons/loading.gif';
 import { Link } from 'react-router-dom';
 
