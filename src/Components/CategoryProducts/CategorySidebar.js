@@ -1,14 +1,18 @@
 import React from 'react';
-import filterMenu from './filterMenu';
+import megaMenu from './megaMenu';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link } from 'react-router-dom';
 
 const CategorySidebar = () => {
-    const allMenu = filterMenu;
-    // console.log('Manus', allMenu);
+    const allMenu = megaMenu;
+
+    // All filter products by: (price)
+    // const oneHandredFourtyNine = products.filter(prod => prod.price <= 149);
+    // const twoHandredFourtyNine = products.filter(prod => prod.price >= 150 && prod.price <= 249);
+    // const twoHandredFiftyUp = products.filter(prod => prod.price >= 250);
 
     return (
-        <div>
+        <div className="sticky-sidebar">
             <div className="sidebar-wrapper">
                 <h2>Filter all categories products</h2>
                 <ul>
@@ -28,7 +32,7 @@ const CategorySidebar = () => {
                 </ul>
             </div>
             <div className="sidebar-wrapper">
-                <h2>Products filter by custom input</h2>
+                <h2>Products filter by custom filed</h2>
                 <ul>
                     <li className="dropdown-parent">
                         <span>Price</span>

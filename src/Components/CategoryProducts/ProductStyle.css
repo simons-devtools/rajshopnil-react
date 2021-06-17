@@ -14,7 +14,6 @@
 }
 
 /* Sidebar contents styles */
-
 .sidebar-wrapper {
     height: auto;
     padding: 5px 10px 20px 10px;
@@ -31,7 +30,6 @@
     padding: 5px;
     margin: 10px 5px 10px 20px;
     list-style: circle;
-    /* background-color: #fff; */
 }
 
 .choose {
@@ -43,7 +41,6 @@
 .dropdown-parent:hover {
     cursor: pointer;
     color: tomato;
-    background-color: #fff;
 }
 
 .dropdown-child {
@@ -76,11 +73,16 @@
 .dropdown-child li:hover {
     color: #66b1ee;
     background-color: #fff;
-    /* text-decoration: underline; */
 }
 
-/* Categories products styles */
+/* @media (height: 170px) {
+    .sticky-sidebar {
+        position: fixed;
+        top: 0;
+    }
+} */
 
+/* Categories products styles */
 .products-contents h1 {
     padding: 20px 10px;
     margin-bottom: 10px;
@@ -99,7 +101,6 @@
 .productt-box {
     padding: 5px;
     margin: 10px 0;
-    /* text-align: center; */
     background-color: #fff;
     box-shadow: 0 0 2px 0 #00000033;
 }
@@ -121,7 +122,6 @@
 }
 
 /* Media Queries styles */
-
 @media (max-width: 768px) {
     .sidebar-contents {
         display: none;
