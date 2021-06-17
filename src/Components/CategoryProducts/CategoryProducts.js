@@ -18,6 +18,9 @@ const CategoryProducts = () => {
             .then(data => setProducts(data));
     }, [])
 
+    // Products specific cateories length:
+    let categoryLength = products.filter(cat => cat.category === category);
+
     return (
         <Container>
             <div className="categories-page">
@@ -26,7 +29,10 @@ const CategoryProducts = () => {
                 </div>
 
                 <div className="products-contents">
-                    <h1>Our all <span style={{ color: 'tomato' }}>'{category}'</span> category products is below</h1>
+                    <h1>
+                        All <span style={{ color: 'tomato' }}>'{category}'</span> category products is below
+                        <span className="items">({categoryLength.length})Iteams</span>
+                    </h1>
                     {
                         products.length <= 0 ? <img src={Loading} className="loading" alt="loading-img" /> :
                             <div>
