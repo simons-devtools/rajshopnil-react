@@ -14,6 +14,7 @@
 }
 
 /* Sidebar contents styles */
+
 .sidebar-wrapper {
     height: auto;
     padding: 5px 10px 20px 10px;
@@ -47,6 +48,19 @@
 
 .dropdown-child {
     display: none;
+    animation-name: slideInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+    5% {
+        transform: translateY(5%);
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .dropdown-parent:hover .dropdown-child {
@@ -65,16 +79,8 @@
     /* text-decoration: underline; */
 }
 
-
-
-
-
-
-
-
-
-
 /* Categories products styles */
+
 .products-contents h1 {
     padding: 20px 10px;
     margin-bottom: 10px;
@@ -115,6 +121,7 @@
 }
 
 /* Media Queries styles */
+
 @media (max-width: 768px) {
     .sidebar-contents {
         display: none;

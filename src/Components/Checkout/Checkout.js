@@ -5,6 +5,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Container } from '@material-ui/core';
 import { UserContext } from '../../App';
 import { getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
+import { Link } from 'react-router-dom';
+import EmptyCartImg from '../../images/icons/empty1.jpg';
 
 const Checkout = () => {
     document.title = 'Devtools | Products Checkout Page';
@@ -44,15 +46,26 @@ const Checkout = () => {
                         </h1>
                     </div>
 
-                    <div className="checkout-props">
-                        {
-                            cart.map(pd => <CheckoutProduct
-                                key={pd._id}
-                                product={pd}
-                                removeFromCheckout={removeFromCheckout}
-                            />)
-                        }
-                    </div>
+                    {
+                        cart.length === 0 ?
+                            /* Empty content styles */
+                            <div className="empty-default">
+                                <img src={EmptyCartImg} alt="" />
+                                <h1>Horray! Your current cart is empty. . . . .!!</h1>
+                                <Link to="/home">
+                                    <button>Continue Shopping</button>
+                                </Link>
+                            </div> :
+                            <div className="checkout-props">
+                                {
+                                    cart.map(pd => <CheckoutProduct
+                                        key={pd._id}
+                                        product={pd}
+                                        removeFromCheckout={removeFromCheckout}
+                                    />)
+                                }
+                            </div>
+                    }
                 </div>
 
                 <div className="right-contents">

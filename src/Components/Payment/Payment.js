@@ -7,6 +7,7 @@ import Image3 from '../../images/product-pic/payoneer.png';
 import Image4 from '../../images/product-pic/paypal.png';
 import { getDatabaseCart, processOrder } from '../../utilities/databaseManager';
 import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Payment = () => {
     const history = useHistory();
@@ -101,9 +102,17 @@ const Payment = () => {
 
             {/* Payment details */}
             <div style={{ textAlign: 'center' }} className="pay-area">
-                <h3 style={{ color: 'green' }}>Please! wait, Your order is proccesing</h3>
+                {
+                    cart.length <= 0 ?
+                        <h3 style={{ color: 'green' }}>Sorry bro! You could not come to the right path</h3> :
+                        <h3 style={{ color: 'green' }}>Please! wait, Your order is proccesing</h3>
+                }
                 <h1 style={{ paddingTop: '10px' }}>You are welcome to continue shopping!</h1>
-                <button onClick={handleOrderConfirm} type="submit">Order Confirm</button>
+                {
+                    cart.length <= 0 ?
+                        <Link to="/home"><button type="button">Continue Shopping</button></Link> :
+                        <button onClick={handleOrderConfirm} type="submit">Payment Now</button>
+                }
             </div>
         </div>
     );

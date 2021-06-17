@@ -175,7 +175,7 @@ const Review = () => {
                             /* Empty content styles */
                             <div className="empty-default">
                                 <img src={EmptyCartImg} alt="" />
-                                <h1>Horray! Your current cart is empty. . . . .!!</h1>
+                                <h1>Horray! Your current wishlist is empty. . . . .!!</h1>
                                 <Link to="/home">
                                     <button>Continue Shopping</button>
                                 </Link>

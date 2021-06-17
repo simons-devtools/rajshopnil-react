@@ -12,7 +12,7 @@ import Search from '../Search/Search';
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [userCart, setUserCart] = useContext(UserCartContext);
-    const { isSiggedIn, photo } = loggedInUser;
+    console.log(loggedInUser.photo);
 
     function loggedOutBtn() {
         let newCart;
@@ -75,7 +75,7 @@ const Header = () => {
                                 </li>
                             </Link>
                             <li className="nav-item profile-photo">
-                                {isSiggedIn === true ? <img src={photo} alt="profile-img" /> : <span><AccountCircleRoundedIcon className="icons" /></span>}
+                                {loggedInUser.isSiggedIn ? <img src={loggedInUser.photo} alt="profile" /> : <span><AccountCircleRoundedIcon className="icons" /></span>}
                             </li>
                         </ul>
                     </div>
@@ -112,7 +112,9 @@ const Header = () => {
                             </Link>
                             <li className="nav-link">
                                 {
-                                    isSiggedIn ? <strong onClick={loggedOutBtn} style={{ fontSize: '14px', cursor: 'pointer' }}>Logout</strong> : <Link to="/login" className="nav-link">Login</Link>
+                                    loggedInUser.isSiggedIn ?
+                                        <strong onClick={loggedOutBtn} style={{ fontSize: '14px', cursor: 'pointer' }}>Logout</strong> :
+                                        <Link to="/login" className="nav-link">Login</Link>
                                 }
                             </li>
                         </ul>
