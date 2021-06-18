@@ -61,7 +61,7 @@ nav {
     margin-bottom: 5px;
 }
 
-#cart-count {
+.cart-count {
     color: red;
     font-weight: bold;
     vertical-align: super;

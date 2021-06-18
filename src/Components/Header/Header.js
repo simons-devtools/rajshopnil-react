@@ -8,6 +8,7 @@ import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import { Container } from '@material-ui/core';
 import { UserContext, UserCartContext } from '../../App';
 import Search from '../Search/Search';
+import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -15,15 +16,23 @@ const Header = () => {
 
     function loggedOutBtn() {
         let newCart;
+        let savedCart;
+
+        // For empty the wishlist count:
         let currentCart = [...userCart];
         newCart = currentCart;
         newCart.length = 0;
-
         setUserCart(newCart);
+
+        // For empty the cart:
+        savedCart = getDatabaseCart();
+        savedCart.length = 0;
+        addToDatabaseCart(savedCart);
+
         setLoggedInUser({});
     }
 
-    // .....
+    // Humbarger/media-query toggle menu button:
     function toggleBtn() {
         const modalContent = document.getElementById("modalContent");
         modalContent.style.display = "block";
@@ -69,8 +78,8 @@ const Header = () => {
                             </Link>
                             <Link to="/review" refresh="true" className="count-cart">
                                 <li className="nav-item cartt">
-                                    <ShoppingBasketIcon className="icons" />
-                                    <span id="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
+                                    <ShoppingBasketIcon />
+                                    <span className="cart-count">{userCart.length > 0 ? userCart.length : 0}</span>
                                 </li>
                             </Link>
                             <li className="nav-item profile-photo">
