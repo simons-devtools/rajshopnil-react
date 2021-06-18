@@ -38,9 +38,9 @@ const CategorySidebar = () => {
                         <span>Price</span>
                         <span className="choose"><ExpandMoreIcon /></span>
                         <ul className="dropdown-child">
-                            <li>11 - 25</li>
-                            <li>26 - 40</li>
-                            <li>41 - 55</li>
+                            <li>1 - 149</li>
+                            <li>150 - 249</li>
+                            <li>250 - 350+</li>
                         </ul>
                     </li>
                 </ul>
