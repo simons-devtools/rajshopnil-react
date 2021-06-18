@@ -26,17 +26,23 @@ const Shipment = (props) => {
 
     // Order confirm/post submited func:
     const onSubmit = (data) => {
-        let newOrder = { ...loggedInUser, product: cart, shipment: data, orderTime: new Date() };
-        fetch('http://localhost:5200/addOrder', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newOrder)
-        })
-            .then(res => res.json())
-            .then(data => {
-                alert('Are you sure order this product?');
-                history.push('/payment');
+        if (cart.length <= 0) {
+            alert('Sorry bro! Please, continue shopping cart after follow this way.');
+            history.push('/review');
+        }
+        else {
+            let newOrder = { ...loggedInUser, product: cart, shipment: data, orderTime: new Date() };
+            fetch('http://localhost:5200/addOrder', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newOrder)
             })
+                .then(res => res.json())
+                .then(data => {
+                    alert('Hey bro! Your order is successfull complete.');
+                    history.push('/payment');
+                })
+        }
     };
 
     // Handle for the FORM toggle func:
@@ -65,6 +71,7 @@ const Shipment = (props) => {
         <div className="shipment-page">
             <h1>Shipping & Billing Info</h1>
 
+            {/* Users first interface form contents */}
             <div id="defaultModal" className="form-api">
                 <div style={{ borderBottom: '1px solid #e4dbec' }}>
                     <p>
@@ -99,6 +106,7 @@ const Shipment = (props) => {
                 <button onClick={handleFormMessage} type="button">Proceed To Payment</button>
             </div>
 
+            {/* Users second hidden form contents */}
             <div id="customModal" className="shipping-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="main-forms">
@@ -111,7 +119,6 @@ const Shipment = (props) => {
                     <button id="allowedBtn" type="submit">Proceed To Payment</button>
                 </form>
             </div>
-
         </div>
     );
 };
