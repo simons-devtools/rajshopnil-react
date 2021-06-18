@@ -31,6 +31,7 @@ const CategorySidebar = () => {
                     }
                 </ul>
             </div>
+            
             <div className="sidebar-wrapper">
                 <h2>Products filter by custom filed</h2>
                 <ul>
