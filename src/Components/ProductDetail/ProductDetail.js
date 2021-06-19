@@ -10,6 +10,7 @@ import ProductControler from './ProductControler';
 
 const ProductDetail = () => {
     document.title = 'DevTools | Products Details';
+    const history = useHistory();
     const { prodKey } = useParams();
     const [product, setProduct] = useState({});
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -27,7 +28,6 @@ const ProductDetail = () => {
     }, [prodKey])
 
     // New cart product post to the mongodb cloud:
-    const history = useHistory();
     const addToCartHandler = (product) => {
         if (loggedInUser.isSiggedIn !== true) {
             history.push('/login');
@@ -45,6 +45,10 @@ const ProductDetail = () => {
                     // console.log('Cart data', data);
                     if (data.length === 0) {
                         postCartData(product);
+                    }
+                    else if (data.length > 4) {
+                        alert('Sorry bro! We cannot provid you more than 5 products for your wishlist. Please arrangement your cart.');
+                        history.push('/review');
                     }
                     else {
                         const toBeAddedKey = product.key;

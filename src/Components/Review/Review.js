@@ -114,11 +114,11 @@ const Review = () => {
     }
 
     // Delete mongodb/wishlish product EventHandler Func: Route: (/oneProductDelete/:id)
-    function handleDeleteProduct(id) {
-        let sameKeyProduct = cartProduct.find(pd => pd._id === id);
+    function handleDeleteProduct(addedKey) {
+        let sameKeyProduct = cartProduct.find(pd => pd._id === addedKey);
         const sameKey = sameKeyProduct.product.key;
 
-        fetch(`http://localhost:5200/deleteOne/${id}`, {
+        fetch(`http://localhost:5200/deleteOne/${addedKey}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -126,8 +126,8 @@ const Review = () => {
                 // console.log('Deleted is', result);
                 alert('Are you sure delete this product from your wishlist...??');
                 for (let i = 0; i < cartProduct.length; i++) {
-                    const product = cartProduct[i];
-                    if (product._id === id) {
+                    const prod = cartProduct[i];
+                    if (prod._id === addedKey) {
                         cartProduct.splice(i, 1);
                         let newCartProducts = [...cartProduct];
                         setCartProduct(newCartProducts);
@@ -145,9 +145,6 @@ const Review = () => {
                                 alert('Sorry! Something is wrong.');
                             }
                         }
-                    }
-                    else {
-                        alert('Sorry bro! Something is wrong. Please try again letter.');
                     }
                 }
             })
