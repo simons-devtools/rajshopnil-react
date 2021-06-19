@@ -1,4 +1,5 @@
 import './Search.css';
+import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -23,6 +24,22 @@ const Search = () => {
         searchProduct.style.display = "none";
         setSearch(event);
     }
+
+    // Popup modal open && close func:
+    // document.addEventListener("click", function (event) {
+    //     if (
+    //         event.target.matches(".close-modal") ||
+    //         !event.target.closest(".results")
+    //     ) {
+    //         closeModal();
+    //     }
+    // },
+    //     false
+    // );
+
+    // function closeModal() {
+    //     document.querySelector(".results").style.display = "none";
+    // }
 
     return (
         <div>
