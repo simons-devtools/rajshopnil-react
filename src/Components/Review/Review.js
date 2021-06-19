@@ -141,9 +141,6 @@ const Review = () => {
                                 setCart(fixedCart);
                                 removeFromDatabaseCart(sameKey);
                             }
-                            else {
-                                alert('Sorry! Something is wrong.');
-                            }
                         }
                     }
                 }
