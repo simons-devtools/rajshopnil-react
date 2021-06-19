@@ -1,5 +1,4 @@
 import './Search.css';
-import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';

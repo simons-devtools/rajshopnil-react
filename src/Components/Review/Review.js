@@ -30,9 +30,9 @@ const Review = () => {
         })
             .then(res => res.json())
             .then(data => {
-                setCartProduct(data);
-                setUserCart(data);
-            });
+                setCartProduct(data)
+                setUserCart(data)
+            })
     }, [loggedInUser.email])
 
     // Get users "CART PRODUCTS" from mongodb cloud:
