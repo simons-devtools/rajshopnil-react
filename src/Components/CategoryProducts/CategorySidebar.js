@@ -17,13 +17,13 @@ const CategorySidebar = () => {
                 <h2>Filter all categories products</h2>
                 <ul>
                     {
-                        allMenu.map(menu =>
+                        allMenu.map(menu => 
                             <li className="dropdown-parent">
                                 <span>{menu.dropdownItem}</span>
                                 <span><ExpandMoreIcon className="choose" /></span>
                                 <ul className="dropdown-child">
                                     {
-                                        menu.menuItem.map(sub => <Link to={sub.route} > <li>{sub.item}</li></Link>)
+                                        menu.menuItem.map(sub => <Link to={sub.route} key={sub.id} > <li>{sub.item}</li></Link>)
                                     }
                                 </ul>
                             </li>
