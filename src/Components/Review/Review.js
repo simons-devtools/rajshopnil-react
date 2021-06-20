@@ -21,7 +21,7 @@ const Review = () => {
 
     // Get users "WISHLIST PRODUCTS" from mongodb cloud:
     useEffect(() => {
-        fetch('http://localhost:5200/bookings?email=' + loggedInUser.email, {
+        fetch('https://spdevserver.herokuapp.com/bookings?email=' + loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ const Review = () => {
         let sameKeyProduct = cartProduct.find(pd => pd._id === addedKey);
         const sameKey = sameKeyProduct.product.key;
 
-        fetch(`http://localhost:5200/deleteOne/${addedKey}`, {
+        fetch(`https://spdevserver.herokuapp.com/deleteOne/${addedKey}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

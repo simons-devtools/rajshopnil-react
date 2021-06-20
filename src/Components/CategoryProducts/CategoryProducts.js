@@ -13,7 +13,7 @@ const CategoryProducts = () => {
 
     // Single product details handler:
     useEffect(() => {
-        fetch('http://localhost:5200/products')
+        fetch('https://spdevserver.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])

@@ -18,7 +18,7 @@ const ProductDetail = () => {
 
     // Single product find by key:
     useEffect(() => {
-        fetch('http://localhost:5200/products')
+        fetch('https://spdevserver.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 const newData = data.find(pd => pd.key === prodKey);
@@ -33,7 +33,7 @@ const ProductDetail = () => {
             history.push('/login');
         }
         else {
-            fetch('http://localhost:5200/bookings?email=' + loggedInUser.email, {
+            fetch('https://spdevserver.herokuapp.com/bookings?email=' + loggedInUser.email, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const ProductDetail = () => {
     // Post user new cart product func:
     const postCartData = (product) => {
         let newBooking = { ...loggedInUser, product };
-        fetch('http://localhost:5200/addBooking', {
+        fetch('https://spdevserver.herokuapp.com/addBooking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newBooking)
