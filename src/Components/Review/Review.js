@@ -38,13 +38,13 @@ const Review = () => {
     useEffect(() => {
         let cartBox = [...cartProduct];
         setUserCart(cartBox)
-    })
+    });
 
     // Get users "CART PRODUCTS" from mongodb cloud:
     useEffect(() => {
         const savedCart = getDatabaseCart();
         setCart(savedCart);
-    }, [])
+    }, [setCart]);
 
     // Increment button func:
     const OnIncrementClick = useCallback((e) => {
