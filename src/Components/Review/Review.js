@@ -36,7 +36,7 @@ const Review = () => {
 
     // For set the cart busket:
     useEffect(() => {
-        let cartBox = [...cartProduct];
+        let cartBox = cartProduct;
         setUserCart(cartBox)
     });
 
