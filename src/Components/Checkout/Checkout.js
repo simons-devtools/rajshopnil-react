@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import EmptyCartImg from '../../images/icons/empty1.jpg';
 
 const Checkout = () => {
-    document.title = 'Devtools | Products Checkout Page';
+    document.title = 'Rajshopnil | Products Checkout Page';
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [cart, setCart] = useState([]);

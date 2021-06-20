@@ -11,7 +11,7 @@ import { addToDatabaseCart, getDatabaseCart, removeFromDatabaseCart } from '../.
 import { Link } from 'react-router-dom';
 
 const Review = () => {
-    document.title = 'Devtools | Products Review Page';
+    document.title = 'Rajshopnil | User wishlist Page';
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [userCart, setUserCart] = useContext(UserCartContext);

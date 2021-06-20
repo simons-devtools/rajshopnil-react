@@ -9,7 +9,7 @@ import ProductFeature from './ProductFeature';
 import ProductControler from './ProductControler';
 
 const ProductDetail = () => {
-    document.title = 'DevTools | Products Details';
+    document.title = 'Rajshopnil | Products Detail Page';
     const history = useHistory();
     const { prodKey } = useParams();
     const [product, setProduct] = useState({});

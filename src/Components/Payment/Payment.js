@@ -10,6 +10,7 @@ import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const Payment = () => {
+    document.title = 'Rajshopnil | Products Payment Page';
     const history = useHistory();
     const [cart, setCart] = useState([]);
 

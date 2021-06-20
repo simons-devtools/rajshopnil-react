@@ -7,6 +7,7 @@ import { Container } from '@material-ui/core';
 import { useParams } from 'react-router';
 
 const CategoryProducts = () => {
+    document.title = 'Rajshopnil | All categories products Page';
     const { category } = useParams();
     const [products, setProducts] = useState([]);
     // const item = products.find(item => item.category === category);
