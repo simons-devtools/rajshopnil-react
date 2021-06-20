@@ -30,10 +30,15 @@ const Review = () => {
         })
             .then(res => res.json())
             .then(data => {
-                setCartProduct(data)
-                setUserCart(data)
+                setCartProduct(data);
             })
     }, [loggedInUser.email])
+
+    // For set the cart busket:
+    useEffect(() => {
+        let cartBox = [...cartProduct];
+        setUserCart(cartBox)
+    })
 
     // Get users "CART PRODUCTS" from mongodb cloud:
     useEffect(() => {
