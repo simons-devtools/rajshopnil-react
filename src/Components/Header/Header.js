@@ -64,7 +64,7 @@ const Header = () => {
                     {/* Navbar middle contents */}
                     <div className="navbar-one">
                         <div className="logos">
-                            <Link to="/home">DevTools</Link>
+                            <Link to="/home">Rajshopnil</Link>
                         </div>
                         <div>
                             <Search />
