@@ -16,15 +16,6 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    .products-details {
-        flex-basis: 100%;
-    }
-    .product-customer-info {
-        flex-basis: 100%;
-    }
-}
-
 .product-info {
     margin: 20px 0;
 }
@@ -59,4 +50,16 @@
 
 .small-photo img:hover {
     border: 1px solid tomato;
+}
+
+@media (max-width: 768px) {
+    .products-details {
+        flex-basis: 100%;
+    }
+    .product-customer-info {
+        flex-basis: 100%;
+    }
+    .big-photo img {
+        width: 100%;
+    }
 }
