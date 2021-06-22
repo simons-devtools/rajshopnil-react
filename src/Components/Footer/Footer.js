@@ -23,7 +23,7 @@ const Footer = () => {
                 <Container>
                     <div className="footer-flexbox">
                         <div className="footer-logo">
-                            <h2><a href="/">DEVTOOLS</a></h2>
+                            <h2><a href="/">RAJSHOPNIL</a></h2>
                             {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, nesciunt.</p> */}
                         </div>
                         <div className="footer-menus">

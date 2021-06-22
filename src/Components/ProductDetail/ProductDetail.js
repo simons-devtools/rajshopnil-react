@@ -23,7 +23,11 @@ const ProductDetail = () => {
             .then(data => {
                 const newData = data.find(pd => pd.key === prodKey);
                 // console.log(newData);
-                setProduct(newData);
+                if (newData) {
+                    setProduct(newData);
+                } else {
+                    alert('Something is wrong. Please try again latter.');
+                }
             })
     }, [prodKey])
 
