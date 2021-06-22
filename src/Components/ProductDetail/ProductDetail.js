@@ -7,6 +7,8 @@ import { UserCartContext, UserContext } from '../../App';
 import ProductBenefit from './ProductBenefit';
 import ProductFeature from './ProductFeature';
 import ProductControler from './ProductControler';
+import AlertWarning from './AlertWarning';
+import AlertSuccess from './AlertSuccess';
 
 const ProductDetail = () => {
     document.title = 'Rajshopnil | Products Detail Page';
@@ -18,7 +20,7 @@ const ProductDetail = () => {
 
     // Single product find by key:
     useEffect(() => {
-        fetch('https://rajshopnilserver.herokuapp.com/products')
+        fetch('http://localhost:5200/products')
             .then(res => res.json())
             .then(data => {
                 const newData = data.find(pd => pd.key === prodKey);
@@ -37,7 +39,7 @@ const ProductDetail = () => {
             history.push('/login');
         }
         else {
-            fetch('https://rajshopnilserver.herokuapp.com/wishlist?email=' + loggedInUser.email, {
+            fetch('http://localhost:5200/wishlist?email=' + loggedInUser.email, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -58,7 +60,10 @@ const ProductDetail = () => {
                         const toBeAddedKey = product.key;
                         let sameProduct = data.find(pd => pd.product.key === toBeAddedKey);
                         if (sameProduct) {
-                            alert('You are allready added this product! Please check your cart OR try to another product.....!!');
+                            const alertWarning = document.querySelector(".alert-warning");
+                            alertWarning.style.display = "block";
+                            const alertSuccess = document.querySelector(".alert-success");
+                            alertSuccess.style.display = "none";
                         }
                         else {
                             postCartData(product);
@@ -79,12 +84,24 @@ const ProductDetail = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert('Congratulation! You are added this product of your cart.....!!');
+                const alertSuccess = document.querySelector(".alert-success");
+                alertSuccess.style.display = "block";
             })
     }
 
     return (
         <Container>
+            {/* Alert messages contents */}
+            <div>
+                <div className="alert-warning">
+                    <AlertWarning />
+                </div>
+                <div className="alert-success">
+                    <AlertSuccess />
+                </div>
+            </div>
+
+            {/* Main contents */}
             <div className="product-detail-container">
 
                 <div className="products-details">

@@ -10,6 +10,7 @@
 }
 
 /* Colum no 03 styles */
+
 .product-customer-info {
     flex-basis: 30%;
     font-size: 12px;
@@ -25,6 +26,7 @@
 }
 
 /* Flex Layout: 02 */
+
 .product-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +34,7 @@
 }
 
 /* Products Images styles */
+
 .big-photo img {
     width: 400px;
     height: 320px;
@@ -50,6 +53,21 @@
 
 .small-photo img:hover {
     border: 1px solid tomato;
+}
+
+.alert-warning, .alert-success {
+    display: none;
+    margin-top: 10px;
+    animation: slidein 1s;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 @media (max-width: 768px) {
