@@ -20,7 +20,7 @@ const ProductDetail = () => {
 
     // Single product find by key:
     useEffect(() => {
-        fetch('http://localhost:5200/products')
+        fetch('https://rajshopnilserver.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 const newData = data.find(pd => pd.key === prodKey);
@@ -39,7 +39,7 @@ const ProductDetail = () => {
             history.push('/login');
         }
         else {
-            fetch('http://localhost:5200/wishlist?email=' + loggedInUser.email, {
+            fetch('https://rajshopnilserver.herokuapp.com/wishlist?email=' + loggedInUser.email, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
