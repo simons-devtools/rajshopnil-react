@@ -11,7 +11,7 @@ const Search = () => {
 
     const handleChange = event => {
         setSearch(event.target.value);
-        fetch(`https://spdevserver.herokuapp.com/search-products?name=${search}`)
+        fetch(`https://rajshopnilserver.herokuapp.com/search-products?name=${search}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data)

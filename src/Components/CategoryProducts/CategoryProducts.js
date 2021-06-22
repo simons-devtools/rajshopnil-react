@@ -14,7 +14,7 @@ const CategoryProducts = () => {
 
     // Single product details handler:
     useEffect(() => {
-        fetch('https://spdevserver.herokuapp.com/products')
+        fetch('https://rajshopnilserver.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])

@@ -22,7 +22,7 @@ const Home = () => {
 
     // All data loaded:
     useEffect(() => {
-        const url = 'https://spdevserver.herokuapp.com/products';
+        const url = 'https://rajshopnilserver.herokuapp.com/products';
         fetch(url)
             .then(res => res.json())
             .then(data => setAllCollection(data))

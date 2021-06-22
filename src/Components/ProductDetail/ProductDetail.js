@@ -18,7 +18,7 @@ const ProductDetail = () => {
 
     // Single product find by key:
     useEffect(() => {
-        fetch('https://spdevserver.herokuapp.com/products')
+        fetch('https://rajshopnilserver.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 const newData = data.find(pd => pd.key === prodKey);
@@ -33,7 +33,7 @@ const ProductDetail = () => {
             history.push('/login');
         }
         else {
-            fetch('https://spdevserver.herokuapp.com/bookings?email=' + loggedInUser.email, {
+            fetch('https://rajshopnilserver.herokuapp.com/bookings?email=' + loggedInUser.email, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const ProductDetail = () => {
     // Post user new cart product func:
     const postCartData = (product) => {
         let newBooking = { ...loggedInUser, product };
-        fetch('https://spdevserver.herokuapp.com/addBooking', {
+        fetch('https://rajshopnilserver.herokuapp.com/addBooking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newBooking)

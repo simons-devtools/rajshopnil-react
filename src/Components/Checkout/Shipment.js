@@ -32,7 +32,7 @@ const Shipment = (props) => {
         }
         else {
             let newOrder = { ...loggedInUser, product: cart, shipment: data, orderTime: new Date() };
-            fetch('https://spdevserver.herokuapp.com/addOrder', {
+            fetch('https://rajshopnilserver.herokuapp.com/addOrder', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newOrder)
