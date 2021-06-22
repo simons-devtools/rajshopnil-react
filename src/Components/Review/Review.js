@@ -21,7 +21,7 @@ const Review = () => {
 
     // Get users "WISHLIST PRODUCTS" from mongodb cloud:
     useEffect(() => {
-        fetch('https://rajshopnilserver.herokuapp.com/bookings?email=' + loggedInUser.email, {
+        fetch('https://rajshopnilserver.herokuapp.com/wishlist?email=' + loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
