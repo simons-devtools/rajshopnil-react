@@ -37,7 +37,7 @@ const ProductDetail = () => {
             history.push('/login');
         }
         else {
-            fetch('https://rajshopnilserver.herokuapp.com/bookings?email=' + loggedInUser.email, {
+            fetch('https://rajshopnilserver.herokuapp.com/wishlist?email=' + loggedInUser.email, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const ProductDetail = () => {
     // Post user new cart product func:
     const postCartData = (product) => {
         let newBooking = { ...loggedInUser, product };
-        fetch('https://rajshopnilserver.herokuapp.com/addBooking', {
+        fetch('https://rajshopnilserver.herokuapp.com/addWishlist', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newBooking)

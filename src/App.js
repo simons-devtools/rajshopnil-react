@@ -24,7 +24,7 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   const [userCart, setUserCart] = useState([]);
 
-  // https://spdevserver.herokuapp.com/
+  // https://rajshopnilserver.herokuapp.com/
 
 
   return (

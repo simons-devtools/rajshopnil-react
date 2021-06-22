@@ -93,7 +93,7 @@ const Payment = () => {
                                     <span className="right">{cart.length} psc</span>
                                 </article>
                                 <article className="payment-info">
-                                    <span><strong>Total Amount </strong>(1 items and shipping fee included)</span>
+                                    <span><strong>Total Amount </strong>({cart.length} items and shipping fee included)</span>
                                     <span className="right">${subTotal}</span>
                                 </article>
                             </div>
