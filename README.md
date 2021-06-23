@@ -1,22 +1,4 @@
-# React e-commerce app overview
-
-<!-- For the Paragraph section -->
-<!-- -------------------------------- -->
-React Router is a [Link-Text](http://github.com) library for authenticating users with biometric authentication methods like on both iOS and Android (experimental).
-
-
-<!-- For the Img, Gif, Videos import -->
-<!-- -------------------------------------- -->
-![Link-Text](https://cloud.githubusercontent.com/assets/image.gif)
-
-
-<!-- For the List ul -->
-<!-- --------------------- -->
-## Documentation
-- [Install](https://github.com/naoufal/app-name-id#install)
-- [Usage](https://github.com/naoufal/app-name-id#usage)
-- [Example](https://github.com/naoufal/app-name-id#example)
-
+# React e-commerce app overview (Rajshopnil)
 
 <!-- For the Background gray same to code-->
 <!-- ------------------------------------------- -->
