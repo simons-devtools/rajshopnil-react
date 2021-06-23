@@ -1,6 +1,8 @@
 # React e-commerce app overview (Rajshopnil)
 This is a React-router related web app. Click the link [Live...](https://rajshopnil.herokuapp.com).
 
+There has been react.js, express, react-router-dom, jwt, material-ui, firebase, mongodb, heroku, html5, css3, javaScript and etc......!
+
 ## What is included here:
 
 1.ES2015 Fundamentals
@@ -53,4 +55,4 @@ _More information on errors can be found in [Fllow Me](https://github.com/c-moX)
 Coming Soon:
 Crash Report integration with RAJSHOPNIL web application Analytics system. 
 
-### `npm install react-router`
+### `npm install`
