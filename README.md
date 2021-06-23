@@ -33,7 +33,7 @@ There has been react.js, express, react-router-dom, jwt, material-ui, firebase, 
 
 15.Testing
 
-## What is included here:
+## Table of the client side contents:
 
 There are various reasons why biomentric authentication may fail.  When it does fails, `appId.authenticate` will return an error code representing the reason.
 Below is a list of error codes that can be returned:
