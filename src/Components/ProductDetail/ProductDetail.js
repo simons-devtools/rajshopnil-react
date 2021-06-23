@@ -13,25 +13,23 @@ import AlertSuccess from './AlertSuccess';
 const ProductDetail = () => {
     document.title = 'Rajshopnil | Products Detail Page';
     const history = useHistory();
-    const { prodKey } = useParams();
+    const { prodCategory, prodKey } = useParams();
     const [product, setProduct] = useState({});
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [userCart, setUserCart] = useContext(UserCartContext);
 
     // Single product find by key:
     useEffect(() => {
-        fetch('https://rajshopnilserver.herokuapp.com/products')
+        fetch(`https://rajshopnilserver.herokuapp.com/product/${prodCategory}/${prodKey}`)
             .then(res => res.json())
             .then(data => {
-                const newData = data.find(pd => pd.key === prodKey);
-                // console.log(newData);
-                if (newData) {
-                    setProduct(newData);
-                } else {
-                    alert('Something is wrong. Please try again latter.');
-                }
+                // console.log(data);
+                setProduct(data);
             })
-    }, [prodKey])
+            .catch(err => {
+                alert('Something is wrong. Please try again');
+            })
+    }, [prodCategory, prodKey])
 
     // New cart product post to the mongodb cloud:
     const addToCartHandler = (product) => {

@@ -38,7 +38,7 @@ function App() {
             <Route path="/product-collection/:category">
               <CategoryProducts />
             </Route>
-            <Route path="/product/:category/:prodKey">
+            <Route path="/product/:prodCategory/:prodKey">
               <ProductDetail />
             </Route>
             <Route path="/login">
