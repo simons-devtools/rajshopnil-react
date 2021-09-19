@@ -1,7 +1,19 @@
-# React e-commerce app overview (Rajshopnil)
-This is a React-router related web app. Click the link [Live...](https://rajshopnil.herokuapp.com).
+## React e-commerce app overview
+This is a React-router related web app. [Live link...](https://rajshopnil.herokuapp.com).
 
 There has been react.js, express, react-router-dom, jwt, material-ui, firebase, mongodb, heroku, html5, css3, javaScript and etc......!
+
+## Rshopnil — Website | Client-code | Server-code
+June 2021 — July 2021
+
+1. A client can sign in with Google & can choose activities for a specific date.
+2. Again clients can see their registered tasks in their event dashboard.
+3. An admin can add a new admin which will be visible in the dashboard.
+4. An admin also can see the registered list with detailed information.
+
+## Technology Used:
+React.js, REST-API, React-router, Firebase, Node.js, Express.js, MongoDB, Heroku.
+
 
 ## What is included here:
 
